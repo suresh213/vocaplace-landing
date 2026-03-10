@@ -8,7 +8,7 @@ const Workflow: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16 text-center md:text-left">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tighter uppercase">
-            Your Dedicated Placement Team_
+            Your Dedicated Placement Team
           </h2>
           <p className="text-slate-600 max-w-2xl text-lg font-mono">
              We don't just teach; we bridge the gap between education and employment. Our ecosystem connects colleges directly with top hiring managers.

@@ -39,7 +39,7 @@ const Curriculum = () => {
             <span>2026 Curriculum Standards</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tighter uppercase">
-            OS & AI Tool Mastery_
+            OS & AI Tool Mastery
           </h2>
           <p className="text-slate-600 max-w-2xl mx-auto text-lg font-mono">
             Our curriculum bridges the gap between low-level operating systems and high-level AI applications. Designed specifically for the demands of 2026 hiring managers.

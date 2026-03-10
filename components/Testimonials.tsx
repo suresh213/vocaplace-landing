@@ -7,7 +7,7 @@ const Testimonials: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tighter uppercase">
-            Industry Feedback_
+            Industry Feedback
           </h2>
           <p className="text-slate-600 max-w-2xl mx-auto text-lg font-mono">
             Hear from the students we've trained, the colleges we've partnered with, and the hiring managers who recruit from our talent pool.

@@ -14,7 +14,7 @@ const Results: React.FC = () => {
               <span className="text-xs font-bold text-slate-900 uppercase tracking-widest">2026 Placement Data</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tighter uppercase leading-none">
-              Proven Outcomes_
+              Proven Outcomes
             </h2>
             <p className="text-slate-600 max-w-xl text-lg leading-relaxed font-mono">
               Real-world performance metrics from colleges and students using our AI curriculum. 
