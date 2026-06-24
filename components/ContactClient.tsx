@@ -1,8 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Check, ArrowRight, Phone, Mail, MapPin, Clock, Globe, MessageSquare, Users, Building, Briefcase, HeadphonesIcon } from 'lucide-react';
+"use client";
 
-const ContactPage: React.FC = () => {
+import React from 'react';
+import { Phone, Mail, MapPin, Globe, HeadphonesIcon, Users, Building, Briefcase, ArrowRight } from 'lucide-react';
+
+const ContactClient: React.FC = () => {
   return (
     <div className="pt-24 pb-16 bg-white">
       {/* Hero Section */}
@@ -20,7 +21,7 @@ const ContactPage: React.FC = () => {
               Have questions about our programs, partnerships, or career opportunities? Our team is ready to assist you. Reach out through any channel below.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#contact-form" className="inline-flex items-center justify-center gap-2 h-14 px-8 bg-slate-900 text-white font-bold uppercase tracking-widest hover:bg-slate-800 transition-colors border border-slate-900">
+              <a href="#contact-form" className="inline-flex items-center justify-center gap-2 h-14 px-8 bg-blue-900 text-white font-bold uppercase tracking-widest hover:bg-blue-800 transition-colors border border-blue-900 whitespace-nowrap">
                 Send a Message
                 <ArrowRight size={16} />
               </a>
@@ -29,17 +30,17 @@ const ContactPage: React.FC = () => {
           <div className="grid gap-6">
             {[
               { icon: Phone, title: 'Phone', value: '+91 98765 43210', desc: 'Mon - Sat, 9AM - 7PM' },
-              { icon: Mail, title: 'Email', value: 'info@eduai.com', desc: 'We respond within 24 hours' },
+              { icon: Mail, title: 'Email', value: 'info@vocaplace.com', desc: 'We respond within 24 hours' },
               { icon: MapPin, title: 'Office', value: 'Bangalore, Karnataka', desc: 'Visit by appointment' }
             ].map((contact, idx) => (
-              <div key={idx} className="p-6 border border-slate-200 bg-white hover:border-slate-400 transition-colors flex items-center gap-4">
-                <div className="w-12 h-12 bg-slate-900 flex items-center justify-center">
+              <div key={idx} className="p-6 border border-slate-200 bg-white hover:border-blue-900 transition-colors flex items-center gap-4 shadow-sm">
+                <div className="w-12 h-12 bg-blue-900 flex items-center justify-center shrink-0">
                   <contact.icon className="w-5 h-5 text-white" />
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 uppercase tracking-tight text-sm">{contact.title}</h3>
-                  <p className="text-slate-700 font-mono">{contact.value}</p>
-                  <p className="text-xs text-slate-500">{contact.desc}</p>
+                  <p className="text-slate-700 font-mono text-xs md:text-sm">{contact.value}</p>
+                  <p className="text-[10px] text-slate-500">{contact.desc}</p>
                 </div>
               </div>
             ))}
@@ -58,12 +59,12 @@ const ContactPage: React.FC = () => {
         <div className="grid md:grid-cols-4 gap-6">
           {[
             { icon: Users, title: 'Student Queries', desc: 'Admissions, courses, fees, scholarships' },
-            { icon: Building, title: 'College Partnerships', desc: 'Institutional collaborations, placement programs' },
-            { icon: Briefcase, title: 'Hiring Partners', desc: 'Talent acquisition, campus drives' },
+            { icon: Building, title: 'Agency Partnerships', desc: 'Agency collaborations, placement drives' },
+            { icon: Briefcase, title: 'Hiring Partners', desc: 'Talent acquisition, agency drives' },
             { icon: HeadphonesIcon, title: 'General Support', desc: 'Technical issues, account help' }
           ].map((option, idx) => (
-            <div key={idx} className="p-6 bg-white border border-slate-200 hover:border-slate-400 transition-colors text-center cursor-pointer">
-              <option.icon className="w-8 h-8 text-slate-900 mx-auto mb-4" />
+            <div key={idx} className="p-6 bg-white border border-slate-200 hover:border-blue-900 transition-colors text-center cursor-pointer shadow-sm">
+              <option.icon className="w-8 h-8 text-blue-900 mx-auto mb-4" />
               <h3 className="font-bold text-slate-900 uppercase tracking-tight text-sm mb-2">{option.title}</h3>
               <p className="text-xs text-slate-500 font-mono">{option.desc}</p>
             </div>
@@ -81,7 +82,7 @@ const ContactPage: React.FC = () => {
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           {[
-            { q: 'What programs do you offer?', a: 'We offer Full Stack Development, Data Analytics, and AI & Automation programs ranging from 3-6 months.' },
+            { q: 'What programs do you offer?', a: 'We offer our flagship Digital Marketing Mastery program covering SEO, Google Ads, social media advertising, and AI-driven workflows.' },
             { q: 'Do you provide placement support?', a: 'Yes, all our programs include placement support with access to 100+ hiring partners.' },
             { q: 'What are the eligibility criteria?', a: 'Most programs require 12th pass or equivalent. Specific requirements vary by program.' },
             { q: 'Is there scholarship available?', a: 'Yes, we offer merit-based scholarships and EMI options for eligible candidates.' }
@@ -103,10 +104,10 @@ const ContactPage: React.FC = () => {
           <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
             <div>
               <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-widest">I am a</label>
-              <div className="grid grid-cols-4 gap-3">
-                {['Student', 'Parent', 'College', 'Company'].map((type) => (
-                  <label key={type} className="flex items-center justify-center gap-2 p-3 border border-slate-300 cursor-pointer hover:border-slate-900 transition-colors">
-                    <input type="radio" name="userType" className="accent-slate-900" />
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                {['Student', 'Parent', 'Agency', 'Company'].map((type) => (
+                  <label key={type} className="flex items-center justify-center gap-2 p-3 border border-slate-300 cursor-pointer hover:border-blue-900 transition-colors">
+                    <input type="radio" name="userType" className="accent-blue-900" />
                     <span className="text-xs font-bold uppercase text-slate-700">{type}</span>
                   </label>
                 ))}
@@ -116,22 +117,22 @@ const ContactPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-widest">Full Name</label>
-                <input type="text" className="w-full bg-white border border-slate-300 p-3 text-slate-900 focus:outline-none focus:border-slate-900 transition-colors" required />
+                <input type="text" className="w-full bg-white border border-slate-300 p-3 text-slate-900 focus:outline-none focus:border-blue-900 transition-colors" required />
               </div>
               <div>
                 <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-widest">Email</label>
-                <input type="email" className="w-full bg-white border border-slate-300 p-3 text-slate-900 focus:outline-none focus:border-slate-900 transition-colors" required />
+                <input type="email" className="w-full bg-white border border-slate-300 p-3 text-slate-900 focus:outline-none focus:border-blue-900 transition-colors" required />
               </div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-widest">Phone</label>
-                <input type="tel" className="w-full bg-white border border-slate-300 p-3 text-slate-900 focus:outline-none focus:border-slate-900 transition-colors" required />
+                <input type="tel" className="w-full bg-white border border-slate-300 p-3 text-slate-900 focus:outline-none focus:border-blue-900 transition-colors" required />
               </div>
               <div>
                 <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-widest">Subject</label>
-                <select className="w-full bg-white border border-slate-300 p-3 text-slate-900 focus:outline-none focus:border-slate-900 transition-colors">
+                <select className="w-full bg-white border border-slate-300 p-3 text-slate-900 focus:outline-none focus:border-blue-900 transition-colors">
                   <option>General Inquiry</option>
                   <option>Admission Query</option>
                   <option>Partnership</option>
@@ -143,10 +144,10 @@ const ContactPage: React.FC = () => {
             
             <div>
               <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-widest">Message</label>
-              <textarea rows={5} className="w-full bg-white border border-slate-300 p-3 text-slate-900 focus:outline-none focus:border-slate-900 transition-colors resize-none" placeholder="Tell us how we can help you..." required></textarea>
+              <textarea rows={5} className="w-full bg-white border border-slate-300 p-3 text-slate-900 focus:outline-none focus:border-blue-900 transition-colors resize-none" placeholder="Tell us how we can help you..." required></textarea>
             </div>
             
-            <button type="submit" className="w-full h-14 bg-slate-900 text-white font-bold uppercase tracking-widest hover:bg-slate-800 transition-colors border border-slate-900">
+            <button type="submit" className="w-full h-14 bg-blue-900 text-white font-bold uppercase tracking-widest hover:bg-blue-800 transition-colors border border-blue-900">
               Send Message
             </button>
           </form>
@@ -158,13 +159,13 @@ const ContactPage: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div>
             <h2 className="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight">Visit Our Office_</h2>
-            <div className="p-6 border border-slate-200 bg-white">
+            <div className="p-6 border border-slate-200 bg-white shadow-sm">
               <div className="aspect-video bg-slate-100 flex items-center justify-center mb-6">
-                <MapPin className="w-12 h-12 text-slate-400" />
+                <MapPin className="w-12 h-12 text-blue-900" />
               </div>
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-bold text-slate-900 uppercase tracking-tight">EduAI Technologies Pvt Ltd</h3>
+                  <h3 className="font-bold text-slate-900 uppercase tracking-tight">Vocaplace Technologies Pvt Ltd</h3>
                   <p className="text-slate-500 text-sm font-mono mt-1">
                     123 Innovation Tower<br />
                     Tech Park, Electronic City<br />
@@ -172,14 +173,14 @@ const ContactPage: React.FC = () => {
                     Karnataka, India
                   </p>
                 </div>
-                <div className="pt-4 border-t border-slate-200 flex gap-4">
-                  <div className="flex items-center gap-2 text-slate-500 text-sm">
-                    <Phone className="w-4 h-4" />
+                <div className="pt-4 border-t border-slate-200 flex flex-col sm:flex-row gap-4">
+                  <div className="flex items-center gap-2 text-slate-500 text-xs md:text-sm">
+                    <Phone className="w-4 h-4 shrink-0" />
                     <span>+91 98765 43210</span>
                   </div>
-                  <div className="flex items-center gap-2 text-slate-500 text-sm">
-                    <Mail className="w-4 h-4" />
-                    <span>info@eduai.com</span>
+                  <div className="flex items-center gap-2 text-slate-500 text-xs md:text-sm">
+                    <Mail className="w-4 h-4 shrink-0" />
+                    <span>info@vocaplace.com</span>
                   </div>
                 </div>
               </div>
@@ -190,20 +191,20 @@ const ContactPage: React.FC = () => {
             <h2 className="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight">Other Ways to Connect_</h2>
             <div className="space-y-4">
               {[
-                { platform: 'LinkedIn', handle: '@eduai2026', desc: 'Follow us for updates' },
-                { platform: 'Instagram', handle: '@eduai.official', desc: 'See behind the scenes' },
-                { platform: 'Twitter', handle: '@eduai2026', desc: 'Latest news & articles' },
-                { platform: 'YouTube', handle: 'EduAI Official', desc: 'Tutorials & success stories' }
+                { platform: 'LinkedIn', handle: '@vocaplace', desc: 'Follow us for updates' },
+                { platform: 'Instagram', handle: '@vocaplace.official', desc: 'See behind the scenes' },
+                { platform: 'Twitter', handle: '@vocaplace', desc: 'Latest news & articles' },
+                { platform: 'YouTube', handle: 'Vocaplace Official', desc: 'Tutorials & success stories' }
               ].map((social, idx) => (
-                <div key={idx} className="p-4 border border-slate-200 bg-white flex items-center justify-between hover:border-slate-400 transition-colors">
+                <div key={idx} className="p-4 border border-slate-200 bg-white flex items-center justify-between hover:border-blue-900 transition-colors">
                   <div className="flex items-center gap-3">
-                    <Globe className="w-5 h-5 text-slate-400" />
+                    <Globe className="w-5 h-5 text-blue-900 shrink-0" />
                     <div>
                       <h3 className="font-bold text-slate-900 text-sm">{social.platform}</h3>
                       <p className="text-xs text-slate-500">{social.handle}</p>
                     </div>
                   </div>
-                  <span className="text-xs text-slate-500">{social.desc}</span>
+                  <span className="text-[10px] md:text-xs text-slate-500">{social.desc}</span>
                 </div>
               ))}
             </div>
@@ -214,4 +215,4 @@ const ContactPage: React.FC = () => {
   );
 };
 
-export default ContactPage;
+export default ContactClient;

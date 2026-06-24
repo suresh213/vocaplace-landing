@@ -1,10 +1,12 @@
+"use client";
+
 import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 
 const faqs = [
   {
-    q: "Do I need prior coding experience?",
-    a: "No, our programs are designed for beginners. We start from the fundamentals and gradually move to advanced concepts. However, dedication and consistent practice are required."
+    q: "Do I need prior marketing or technical experience?",
+    a: "No, our program is designed for beginners. We start from the absolute fundamentals of SEO and digital media, and gradually build up to advanced AI-driven workflows."
   },
   {
     q: "How does the placement support work?",
@@ -12,7 +14,7 @@ const faqs = [
   },
   {
     q: "What is the role of the AI Mentor?",
-    a: "Your AI Mentor is available 24/7 to answer your doubts, review your code, and provide personalized feedback. It acts as a teaching assistant to ensure you never get stuck."
+    a: "Your AI Mentor is available 24/7 to answer your doubts, review your marketing task submissions, and provide personalized feedback on your campaign strategies."
   },
   {
     q: "Are the classes live or recorded?",
@@ -32,7 +34,7 @@ const FAQ: React.FC = () => {
         
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="border border-slate-200 bg-slate-50">
+            <div key={index} className="border border-slate-200 bg-slate-50 transition-colors hover:border-blue-900">
               <button 
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full flex items-center justify-between p-6 text-left hover:bg-white transition-colors"
@@ -40,7 +42,7 @@ const FAQ: React.FC = () => {
                 <span className="text-sm md:text-base font-bold text-slate-900 uppercase tracking-tight pr-8">
                   {faq.q}
                 </span>
-                {openIndex === index ? <Minus size={20} className="text-slate-900" /> : <Plus size={20} className="text-slate-900" />}
+                {openIndex === index ? <Minus size={20} className="text-blue-900" /> : <Plus size={20} className="text-blue-900" />}
               </button>
               
               {openIndex === index && (
