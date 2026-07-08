@@ -1,218 +1,185 @@
 "use client";
 
-import React from 'react';
-import { Phone, Mail, MapPin, Globe, HeadphonesIcon, Users, Building, Briefcase, ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { Phone, Mail, MapPin, MessageCircle, Users, Building, Briefcase, HeadphonesIcon, ArrowRight, CheckCircle } from 'lucide-react';
 
 const ContactClient: React.FC = () => {
-  return (
-    <div className="pt-24 pb-16 bg-white">
-      {/* Hero Section */}
-      <section className="px-6 max-w-7xl mx-auto mb-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div className="flex items-center gap-3 mb-6">
-              <HeadphonesIcon className="w-5 h-5 text-slate-600" />
-              <span className="text-xs font-bold uppercase tracking-widest text-slate-500">Get in Touch</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 uppercase tracking-tighter leading-tight">
-              We are Here to Help_
-            </h1>
-            <p className="text-slate-500 text-lg md:text-xl mb-8 font-mono max-w-xl">
-              Have questions about our programs, partnerships, or career opportunities? Our team is ready to assist you. Reach out through any channel below.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#contact-form" className="inline-flex items-center justify-center gap-2 h-14 px-8 bg-blue-900 text-white font-bold uppercase tracking-widest hover:bg-blue-800 transition-colors border border-blue-900 whitespace-nowrap">
-                Send a Message
-                <ArrowRight size={16} />
-              </a>
-            </div>
-          </div>
-          <div className="grid gap-6">
-            {[
-              { icon: Phone, title: 'Phone', value: '+91 98765 43210', desc: 'Mon - Sat, 9AM - 7PM' },
-              { icon: Mail, title: 'Email', value: 'info@vocaplace.com', desc: 'We respond within 24 hours' },
-              { icon: MapPin, title: 'Office', value: 'Bangalore, Karnataka', desc: 'Visit by appointment' }
-            ].map((contact, idx) => (
-              <div key={idx} className="p-6 border border-slate-200 bg-white hover:border-blue-900 transition-colors flex items-center gap-4 shadow-sm">
-                <div className="w-12 h-12 bg-blue-900 flex items-center justify-center shrink-0">
-                  <contact.icon className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 uppercase tracking-tight text-sm">{contact.title}</h3>
-                  <p className="text-slate-700 font-mono text-xs md:text-sm">{contact.value}</p>
-                  <p className="text-[10px] text-slate-500">{contact.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+ const [submitted, setSubmitted] = useState(false);
 
-      {/* Contact Options */}
-      <section className="px-6 max-w-7xl mx-auto mb-24 bg-slate-50 py-16 border-y border-slate-200">
-        <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 uppercase tracking-tighter">How Can We Help?_</h2>
-          <p className="text-slate-500 max-w-2xl text-lg font-mono">
-            Choose the right department to get the fastest response.
-          </p>
-        </div>
-        <div className="grid md:grid-cols-4 gap-6">
-          {[
-            { icon: Users, title: 'Student Queries', desc: 'Admissions, courses, fees, scholarships' },
-            { icon: Building, title: 'Agency Partnerships', desc: 'Agency collaborations, placement drives' },
-            { icon: Briefcase, title: 'Hiring Partners', desc: 'Talent acquisition, agency drives' },
-            { icon: HeadphonesIcon, title: 'General Support', desc: 'Technical issues, account help' }
-          ].map((option, idx) => (
-            <div key={idx} className="p-6 bg-white border border-slate-200 hover:border-blue-900 transition-colors text-center cursor-pointer shadow-sm">
-              <option.icon className="w-8 h-8 text-blue-900 mx-auto mb-4" />
-              <h3 className="font-bold text-slate-900 uppercase tracking-tight text-sm mb-2">{option.title}</h3>
-              <p className="text-xs text-slate-500 font-mono">{option.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+ return (
+ <div className="bg-white">
+ {/* Hero */}
+ <section className="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 pt-32 pb-20 px-6">
+ <div className="max-w-4xl mx-auto text-center">
+ <span className="inline-block px-4 py-1.5 bg-white/10 border border-white/20 text-blue-100 text-sm font-semibold rounded-full mb-5">
+ We'd Love to Hear from You
+ </span>
+ <h1 className="text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
+ Let's Talk About Your<br />
+ <span className="text-amber-400">Digital Marketing Career</span>
+ </h1>
+ <p className="text-blue-200 text-lg max-w-2xl mx-auto mb-8">
+ Whether you're a student ready to start, a professional looking to switch careers, or a company wanting to hire — our team is here to help.
+ </p>
+ {/* Quick contact pills */}
+ <div className="flex flex-wrap justify-center gap-4">
+ <a href="tel:+919876543210"className="flex items-center gap-2 px-5 py-3 bg-white/10 border border-white/20 rounded-full text-white text-sm font-medium hover:bg-white/20 transition-colors">
+ <Phone size={15} className="text-amber-400"/>
+ +91 98765 43210
+ </a>
+ <a href="mailto:hello@vocaplace.com"className="flex items-center gap-2 px-5 py-3 bg-white/10 border border-white/20 rounded-full text-white text-sm font-medium hover:bg-white/20 transition-colors">
+ <Mail size={15} className="text-amber-400"/>
+ hello@vocaplace.com
+ </a>
+ </div>
+ </div>
+ </section>
 
-      {/* FAQ Teaser */}
-      <section className="px-6 max-w-7xl mx-auto mb-24">
-        <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 uppercase tracking-tighter">Quick Answers_</h2>
-          <p className="text-slate-500 max-w-2xl text-lg font-mono">
-            Common questions we receive.
-          </p>
-        </div>
-        <div className="grid md:grid-cols-2 gap-6">
-          {[
-            { q: 'What programs do you offer?', a: 'We offer our flagship Digital Marketing Mastery program covering SEO, Google Ads, social media advertising, and AI-driven workflows.' },
-            { q: 'Do you provide placement support?', a: 'Yes, all our programs include placement support with access to 100+ hiring partners.' },
-            { q: 'What are the eligibility criteria?', a: 'Most programs require 12th pass or equivalent. Specific requirements vary by program.' },
-            { q: 'Is there scholarship available?', a: 'Yes, we offer merit-based scholarships and EMI options for eligible candidates.' }
-          ].map((faq, idx) => (
-            <div key={idx} className="p-6 border border-slate-200 bg-white">
-              <h3 className="font-bold text-slate-900 uppercase tracking-tight text-sm mb-3">{faq.q}</h3>
-              <p className="text-slate-500 text-sm font-mono">{faq.a}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+ {/* Contact Type Cards */}
+ <section className="py-16 px-6 bg-slate-50 border-b border-slate-100">
+ <div className="max-w-5xl mx-auto">
+ <h2 className="text-2xl font-bold text-slate-900 text-center mb-10">How Can We Help You?</h2>
+ <div className="grid md:grid-cols-4 gap-5">
+ {[
+ { icon: Users, title: 'Student Enquiry', desc: 'Course details, fees, admission process, demo classes', color: 'bg-blue-50 border-blue-100 text-blue-900' },
+ { icon: Building, title: 'Agency Partnership', desc: 'Collaborate with us to hire trained talent from our pool', color: 'bg-green-50 border-green-100 text-green-800' },
+ { icon: Briefcase, title: 'Corporate Training', desc: 'Upskill your team with customised digital marketing workshops', color: 'bg-purple-50 border-purple-100 text-purple-800' },
+ { icon: HeadphonesIcon, title: 'General Support', desc: 'Technical help, account queries, portal access issues', color: 'bg-amber-50 border-amber-100 text-amber-800' },
+ ].map((item, i) => (
+ <div key={i} className={`p-6 rounded-2xl border ${item.color} text-center hover: transition-all duration-300`}>
+ <item.icon size={28} className="mx-auto mb-3 opacity-80"/>
+ <h3 className="font-bold text-sm mb-2">{item.title}</h3>
+ <p className="text-xs leading-relaxed opacity-70">{item.desc}</p>
+ </div>
+ ))}
+ </div>
+ </div>
+ </section>
 
-      {/* Contact Form */}
-      <section id="contact-form" className="px-6 max-w-3xl mx-auto mb-12">
-        <div className="bg-slate-50 p-6 border border-slate-200">
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2 uppercase tracking-tight text-center">Send Us a Message_</h2>
-          <p className="text-slate-500 text-center mb-8 font-mono">Fill out the form below and our team will get back to you within 24 hours.</p>
-          
-          <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-            <div>
-              <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-widest">I am a</label>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                {['Student', 'Parent', 'Agency', 'Company'].map((type) => (
-                  <label key={type} className="flex items-center justify-center gap-2 p-3 border border-slate-300 cursor-pointer hover:border-blue-900 transition-colors">
-                    <input type="radio" name="userType" className="accent-blue-900" />
-                    <span className="text-xs font-bold uppercase text-slate-700">{type}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-widest">Full Name</label>
-                <input type="text" className="w-full bg-white border border-slate-300 p-3 text-slate-900 focus:outline-none focus:border-blue-900 transition-colors" required />
-              </div>
-              <div>
-                <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-widest">Email</label>
-                <input type="email" className="w-full bg-white border border-slate-300 p-3 text-slate-900 focus:outline-none focus:border-blue-900 transition-colors" required />
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-widest">Phone</label>
-                <input type="tel" className="w-full bg-white border border-slate-300 p-3 text-slate-900 focus:outline-none focus:border-blue-900 transition-colors" required />
-              </div>
-              <div>
-                <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-widest">Subject</label>
-                <select className="w-full bg-white border border-slate-300 p-3 text-slate-900 focus:outline-none focus:border-blue-900 transition-colors">
-                  <option>General Inquiry</option>
-                  <option>Admission Query</option>
-                  <option>Partnership</option>
-                  <option>Hiring</option>
-                  <option>Support</option>
-                </select>
-              </div>
-            </div>
-            
-            <div>
-              <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-widest">Message</label>
-              <textarea rows={5} className="w-full bg-white border border-slate-300 p-3 text-slate-900 focus:outline-none focus:border-blue-900 transition-colors resize-none" placeholder="Tell us how we can help you..." required></textarea>
-            </div>
-            
-            <button type="submit" className="w-full h-14 bg-blue-900 text-white font-bold uppercase tracking-widest hover:bg-blue-800 transition-colors border border-blue-900">
-              Send Message
-            </button>
-          </form>
-        </div>
-      </section>
+ {/* Main Content: Form + Info */}
+ <section id="contact-form"className="py-16 px-6">
+ <div className="max-w-5xl mx-auto grid lg:grid-cols-5 gap-12">
 
-      {/* Office Location */}
-      <section className="px-6 max-w-7xl mx-auto mb-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight">Visit Our Office_</h2>
-            <div className="p-6 border border-slate-200 bg-white shadow-sm">
-              <div className="aspect-video bg-slate-100 flex items-center justify-center mb-6">
-                <MapPin className="w-12 h-12 text-blue-900" />
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="font-bold text-slate-900 uppercase tracking-tight">Vocaplace Technologies Pvt Ltd</h3>
-                  <p className="text-slate-500 text-sm font-mono mt-1">
-                    123 Innovation Tower<br />
-                    Tech Park, Electronic City<br />
-                    Bangalore - 560100<br />
-                    Karnataka, India
-                  </p>
-                </div>
-                <div className="pt-4 border-t border-slate-200 flex flex-col sm:flex-row gap-4">
-                  <div className="flex items-center gap-2 text-slate-500 text-xs md:text-sm">
-                    <Phone className="w-4 h-4 shrink-0" />
-                    <span>+91 98765 43210</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-slate-500 text-xs md:text-sm">
-                    <Mail className="w-4 h-4 shrink-0" />
-                    <span>info@vocaplace.com</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight">Other Ways to Connect_</h2>
-            <div className="space-y-4">
-              {[
-                { platform: 'LinkedIn', handle: '@vocaplace', desc: 'Follow us for updates' },
-                { platform: 'Instagram', handle: '@vocaplace.official', desc: 'See behind the scenes' },
-                { platform: 'Twitter', handle: '@vocaplace', desc: 'Latest news & articles' },
-                { platform: 'YouTube', handle: 'Vocaplace Official', desc: 'Tutorials & success stories' }
-              ].map((social, idx) => (
-                <div key={idx} className="p-4 border border-slate-200 bg-white flex items-center justify-between hover:border-blue-900 transition-colors">
-                  <div className="flex items-center gap-3">
-                    <Globe className="w-5 h-5 text-blue-900 shrink-0" />
-                    <div>
-                      <h3 className="font-bold text-slate-900 text-sm">{social.platform}</h3>
-                      <p className="text-xs text-slate-500">{social.handle}</p>
-                    </div>
-                  </div>
-                  <span className="text-[10px] md:text-xs text-slate-500">{social.desc}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+ {/* Form */}
+ <div className="lg:col-span-3">
+ <h2 className="text-2xl font-bold text-slate-900 mb-2">Send Us a Message</h2>
+ <p className="text-slate-500 text-sm mb-8">Our counselors respond within 24 hours on business days.</p>
+
+ {submitted ? (
+ <div className="bg-green-50 border border-green-200 rounded-2xl p-10 text-center">
+ <CheckCircle size={48} className="text-green-500 mx-auto mb-4"/>
+ <h3 className="text-xl font-bold text-slate-900 mb-2">Message Sent!</h3>
+ <p className="text-slate-500 text-sm">Our team will reach out to you within 24 hours.</p>
+ </div>
+ ) : (
+ <form className="space-y-5"onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}>
+ {/* Who are you */}
+ <div>
+ <label className="block text-sm font-semibold text-slate-700 mb-3">I am a</label>
+ <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+ {['Student', 'Professional', 'Company', 'Parent'].map((type) => (
+ <label key={type} className="flex items-center justify-center gap-2 p-3 border border-slate-200 rounded-xl cursor-pointer hover:border-blue-900 transition-colors text-sm font-medium text-slate-700">
+ <input type="radio"name="userType"className="accent-blue-900"/>
+ {type}
+ </label>
+ ))}
+ </div>
+ </div>
+
+ <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+ <div>
+ <label className="block text-sm font-semibold text-slate-700 mb-2">Full Name</label>
+ <input type="text"placeholder="Your name"className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-slate-900 text-sm focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all"required />
+ </div>
+ <div>
+ <label className="block text-sm font-semibold text-slate-700 mb-2">Phone Number</label>
+ <input type="tel"placeholder="+91 00000 00000"className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-slate-900 text-sm focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all"required />
+ </div>
+ </div>
+
+ <div>
+ <label className="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
+ <input type="email"placeholder="you@example.com"className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-slate-900 text-sm focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all"required />
+ </div>
+
+ <div>
+ <label className="block text-sm font-semibold text-slate-700 mb-2">Subject</label>
+ <select className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-slate-900 text-sm focus:outline-none focus:border-blue-600 transition-all">
+ <option>Course Enquiry</option>
+ <option>Admission Process</option>
+ <option>Placement Support</option>
+ <option>Agency Partnership</option>
+ <option>Corporate Training</option>
+ <option>General Support</option>
+ </select>
+ </div>
+
+ <div>
+ <label className="block text-sm font-semibold text-slate-700 mb-2">Message</label>
+ <textarea rows={4} placeholder="Tell us how we can help you..."className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-slate-900 text-sm focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all resize-none"required />
+ </div>
+
+ <button type="submit"className="w-full h-14 bg-blue-900 text-white font-bold rounded-xl hover:bg-blue-800 transition-colors flex items-center justify-center gap-2 text-base">
+ Send Message
+ <ArrowRight size={18} />
+ </button>
+ </form>
+ )}
+ </div>
+
+ {/* Sidebar info */}
+ <div className="lg:col-span-2 space-y-6">
+ <div className="bg-slate-50 rounded-2xl border border-slate-100 p-6">
+ <h3 className="font-bold text-slate-900 mb-5 text-base">Contact Details</h3>
+ <div className="space-y-4">
+ {[
+ { icon: Phone, label: 'Phone', value: '+91 98765 43210', sub: 'Mon–Sat, 9AM–7PM' },
+ { icon: Mail, label: 'Email', value: 'hello@vocaplace.com', sub: 'Reply within 24 hours' },
+ { icon: MapPin, label: 'Office', value: 'Bangalore, Karnataka, India', sub: 'Visit by appointment' },
+ { icon: MessageCircle, label: 'WhatsApp', value: 'Chat with us', sub: 'Quick response guaranteed' },
+ ].map((item, i) => (
+ <div key={i} className="flex items-start gap-4">
+ <div className="w-10 h-10 bg-blue-900 rounded-xl flex items-center justify-center shrink-0">
+ <item.icon size={16} className="text-white"/>
+ </div>
+ <div>
+ <div className="text-xs font-semibold text-slate-400">{item.label}</div>
+ <div className="text-sm font-bold text-slate-900">{item.value}</div>
+ <div className="text-xs text-slate-400">{item.sub}</div>
+ </div>
+ </div>
+ ))}
+ </div>
+ </div>
+
+ <div className="bg-gradient-to-br from-blue-900 to-blue-700 rounded-2xl p-6 text-white">
+ <h3 className="font-bold mb-3 text-base">Book a Free Demo Class</h3>
+ <p className="text-blue-200 text-sm leading-relaxed mb-4">
+ Experience our teaching style before you enroll. Our free demo class is 60 minutes with live Q&A.
+ </p>
+ <a
+ href="https://student.vocaplace.com"
+ className="flex items-center gap-2 px-5 py-3 bg-amber-400 text-blue-950 font-bold text-sm rounded-xl hover:bg-amber-300 transition-colors"
+ >
+ Book Free Demo
+ <ArrowRight size={15} />
+ </a>
+ </div>
+
+ <div className="bg-green-50 rounded-2xl border border-green-100 p-6">
+ <h3 className="font-bold text-slate-900 mb-2 text-sm">Response Time Guarantee</h3>
+ {['Phone calls — within 2 hours', 'WhatsApp — within 30 mins', 'Email — within 24 hours'].map((item, i) => (
+ <div key={i} className="flex items-center gap-2 text-sm text-slate-600 mt-2">
+ <CheckCircle size={14} className="text-green-500 shrink-0"/>
+ {item}
+ </div>
+ ))}
+ </div>
+ </div>
+ </div>
+ </section>
+ </div>
+ );
 };
 
 export default ContactClient;
