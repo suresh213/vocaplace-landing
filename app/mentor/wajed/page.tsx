@@ -13,7 +13,7 @@ export const metadata: Metadata = {
  alternates: {
  canonical: '/mentor/wajed',
  },
- keywords: ['Wajed Sk', 'digital marketing trainer India', 'Victoria University faculty', 'Unacademy digital marketing', 'digital marketing mentor'],
+ keywords: ['Wajed Sk digital marketing', 'best digital marketing trainer in India', 'Victoria University digital marketing faculty', 'Unacademy digital marketing mentor', 'top marketing educators India'],
  openGraph: {
  title: 'Wajed Sk — Lead Digital Marketing Instructor | Vocaplace',
  description: '20+ years experience · Victoria University Australia · Unacademy Chief Instructor · IIM & Google Speaker',

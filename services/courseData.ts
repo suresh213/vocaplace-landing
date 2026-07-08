@@ -60,11 +60,11 @@ export const coursesData: CourseDetail[] = [
     durationInDays: 120,
     durationInMonths: 4,
     categories: [
-      "Digital Marketing",
-      "SEO",
-      "Google Ads",
-      "Social Media Marketing",
-      "AI Tools"
+      "Pay After Placement Digital Marketing",
+      "AI Marketing Automation Course",
+      "Performance Marketing Course India",
+      "Practical SEO Training",
+      "Job Guarantee Marketing Program"
     ],
     level: "beginner",
     language: "english",

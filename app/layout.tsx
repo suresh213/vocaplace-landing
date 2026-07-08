@@ -12,8 +12,16 @@ const inter = Inter({
 
 export const metadata: Metadata = {
  metadataBase: new URL('https://vocaplace.com'),
- title: 'Vocaplace - Digital Marketing Mastery Course (SEO, Google Ads, Social Media & AI)',
- description: 'Become a certified digital marketing expert in 120 days. Master SEO, Google Ads, Meta Campaigns, and AI Automation with Vocaplace.',
+ title: 'Pay After Placement Digital Marketing Course & AI Automation | Vocaplace',
+ description: '100% Job Guarantee Digital Marketing Course in India. Learn SEO, Performance Marketing, and AI Automation from top industry experts. Pay only after you get placed.',
+ keywords: [
+   'pay after placement digital marketing course',
+   'digital marketing course with placement guarantee',
+   'AI marketing automation course India',
+   'performance marketing course with placement',
+   '100% job guarantee digital marketing',
+   'learn SEO and Google ads'
+ ],
  openGraph: {
  images: [{ url: '/logo.jpeg', width: 1200, height: 1200, alt: 'Vocaplace' }],
  },
