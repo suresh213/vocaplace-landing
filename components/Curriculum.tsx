@@ -37,7 +37,7 @@ const Curriculum = () => {
  iconColor:"bg-purple-700",
  },
  {
- title:"AI Tools & Automation",
+ title: "AI Marketing Automation",
  duration:"Module 4",
  outcome:"Work 10x faster using AI",
  tools: ["ChatGPT","Gemini","Canva AI","Zapier"],

@@ -15,9 +15,25 @@ import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 
 export default function Home() {
- return (
- <>
- <Hero />
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: 'Digital Marketing Mastery Course (SEO, Google Ads, Social Media & AI)',
+    description: 'Become a certified digital marketing expert in 120 days. Master SEO, Google Ads, Meta Campaigns, and AI Automation with Vocaplace. Pay after placement.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Vocaplace',
+      sameAs: 'https://vocaplace.com'
+    }
+  };
+
+  return (
+  <main>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+    />
+  <Hero />
  <Results />
  <Curriculum />
  <Workflow />
@@ -50,6 +66,6 @@ export default function Home() {
  <p className="text-blue-300 text-sm mt-5">No upfront fees · Next batch starts Monday · Limited seats</p>
  </div>
  </section>
- </>
- );
+  </main>
+  );
 }

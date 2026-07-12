@@ -36,9 +36,9 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.1 }}
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
             >
-              Get a High-Paying<br />
-              <span className="text-amber-400">Digital Marketing Job</span><br />
-              <span className="text-blue-200">Before You Pay a Rupee.</span>
+              Pay After Placement<br />
+              <span className="text-amber-400">Digital Marketing & AI</span><br />
+              <span className="text-blue-200">Automation Course.</span>
             </motion.h1>
 
             {/* Subtext */}
@@ -48,8 +48,8 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.2 }}
               className="text-lg text-blue-100 max-w-xl leading-relaxed"
             >
-              Master SEO, Google Ads, Social Media & AI tools in just 12 weeks.
-              Land a job first - pay only after you get placed. Zero financial risk.
+              Master SEO, Google Ads, Social Media, and AI-Driven Workflows in just 12 weeks.
+              Land a high-paying job first - pay only after you get placed. Zero upfront financial risk.
             </motion.p>
 
             {/* Benefit bullets */}

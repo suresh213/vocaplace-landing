@@ -30,8 +30,8 @@ export const metadata: Metadata = {
  images: ['/logo.jpeg'],
  },
  icons: {
- icon: '/logo.jpeg',
- apple: '/logo.jpeg',
+ icon: '/favicon.png',
+ apple: '/favicon.png',
  },
 };
 
