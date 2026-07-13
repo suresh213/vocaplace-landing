@@ -8,18 +8,16 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
- title: 'Meet Wajed Sk — Lead Instructor | Vocaplace Digital Marketing Academy',
- description: 'Learn about Wajed Sk — 20+ years experience, Victoria University Australia faculty, Unacademy Chief Instructor, IIM & Google guest speaker, and Vocaplace Lead Mentor.',
- alternates: {
- canonical: '/mentor/wajed',
- },
- keywords: ['Wajed Sk digital marketing', 'best digital marketing trainer in India', 'Victoria University digital marketing faculty', 'Unacademy digital marketing mentor', 'top marketing educators India'],
- openGraph: {
- title: 'Wajed Sk — Lead Digital Marketing Instructor | Vocaplace',
- description: '20+ years experience · Victoria University Australia · Unacademy Chief Instructor · IIM & Google Speaker',
- url: 'https://vocaplace.com/mentor/wajed',
- type: 'profile',
- },
+  title: 'Learn from Wajed Sk: Best Digital Marketing Mentor in India',
+  description: 'Learn from Wajed Sk — Victoria University faculty, trained 5,000+ students at Unacademy, IIM & Google speaker. 20+ years experience. Join the next Vocaplace cohort.',
+  alternates: { canonical: '/mentor/wajed' },
+  keywords: ['Wajed Sk digital marketing', 'best digital marketing trainer in India', 'Victoria University digital marketing faculty', 'Unacademy digital marketing mentor', 'top marketing educators India'],
+  openGraph: {
+    title: 'Wajed Sk — Lead Digital Marketing Instructor | Vocaplace',
+    description: '20+ years experience · Victoria University Australia · Unacademy Chief Instructor · IIM & Google Speaker',
+    url: 'https://vocaplace.com/mentor/wajed',
+    type: 'profile',
+  },
 };
 
 const expertise = [

@@ -14,8 +14,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
  metadataBase: new URL('https://vocaplace.com'),
- title: 'Pay After Placement Digital Marketing Course & AI Automation | Vocaplace',
- description: '100% Job Guarantee Digital Marketing Course in India. Learn SEO, Performance Marketing, and AI Automation from top industry experts. Pay only after you get placed.',
+ title: 'Pay After Placement Digital Marketing Course | Vocaplace',
+ description: 'Get a ₹4–8 LPA marketing job in 120 days. Learn SEO, Google Ads & AI. 100% job guarantee. Pay only after placement. Apply now.',
  keywords: [
    'pay after placement digital marketing course',
    'digital marketing course with placement guarantee',
@@ -30,6 +30,13 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     images: ['/logo.jpeg'],
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon.ico', type: 'image/x-icon' },
+    ],
+    shortcut: '/favicon.ico',
   },
 };
 

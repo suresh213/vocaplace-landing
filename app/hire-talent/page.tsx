@@ -4,11 +4,9 @@ import type { Metadata } from 'next';
 import HireTalentClientComponent from '../../components/HireTalentClient';
 
 export const metadata: Metadata = {
- title: 'Hire Job-Ready Marketing Talent - Vocaplace Placement Solutions',
- description: 'Access our verified pool of pre-trained digital marketing and performance campaign specialists. Skip onboarding delays and scale campaigns from day one.',
- alternates: {
- canonical: '/hire-talent',
- },
+  title: 'Hire Job-Ready Digital Marketing Experts | Vocaplace',
+  description: 'Hire AI-trained digital marketers who can run live campaigns from day one. Pre-vetted, portfolio-ready candidates. 90-day replacement guarantee. Post a role today.',
+  alternates: { canonical: '/hire-talent' },
 };
 
 export default function HireTalentPage() {

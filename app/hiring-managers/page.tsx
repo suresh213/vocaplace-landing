@@ -4,11 +4,9 @@ import { Check, ArrowRight, Users, Briefcase, Building, Globe, Shield, Clock, Tr
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
- title: 'For Hiring Managers & Team Leads - Vocaplace Talent Acquisition',
- description: 'Learn how Vocaplace helps marketing managers scale performance campaigns faster. Compare traditional hiring with pre-vetted agency-trained candidates.',
- alternates: {
- canonical: '/hiring-managers',
- },
+  title: 'Hire Pre-Trained Digital Marketing Talent | Vocaplace',
+  description: 'Stop 3–6 months onboarding. Hire agency-trained, AI-skilled marketers who run campaigns independently from week one.',
+  alternates: { canonical: '/hiring-managers' },
 };
 
 const HiringManagersPage: React.FC = () => {

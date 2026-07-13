@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
  }
 
  return {
- title: `${course.title} | Vocaplace`,
- description: course.description,
+ title: `${course.title} with 100% Placement Guarantee | Vocaplace`,
+ description: `Is the ${course.title} worth it? Get a 100% placement guarantee with Vocaplace. ${course.description}`,
  keywords: course.categories,
  alternates: {
  canonical: `/courses/${course.slug}`,

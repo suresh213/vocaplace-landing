@@ -5,9 +5,9 @@ import { Check, ArrowRight, Users, Award, TrendingUp, Briefcase, Globe, Star, Ch
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
- title: 'About Vocaplace - Bridging the Gap in Digital Marketing Education',
- description: 'Learn about the mission, vision, and expert mentorship behind Vocaplace, India\'s leading pay-after-placement digital marketing academy.',
- alternates: { canonical: '/about' },
+  title: 'About Vocaplace | 100% Job Guarantee Marketing Bootcamp',
+  description: 'Vocaplace is India\'s premier 120-day digital marketing bootcamp. Learn AI, SEO & Google Ads. We offer a 100% job guarantee. Pay only after placement.',
+  alternates: { canonical: '/about' },
 };
 
 export default function AboutPage() {

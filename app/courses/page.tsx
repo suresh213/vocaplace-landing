@@ -6,9 +6,9 @@ import { coursesData } from '../../services/courseData';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
- title: 'Our Programs - Vocaplace Digital Marketing Academy',
- description: 'Explore our flagship Pay After Placement digital marketing course. Get placed first, pay after. Trained by expert faculty with 20+ years experience.',
- alternates: { canonical: '/courses' },
+  title: 'Pay After Placement Digital Marketing Course India | Vocaplace',
+  description: '₹4–8 LPA digital marketing job in 120 days. AI, SEO & Google Ads. 100% job guarantee. Pay after you get placed. Enroll now.',
+  alternates: { canonical: '/courses' },
 };
 
 const CoursesPage: React.FC = () => {
