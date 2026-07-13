@@ -48,13 +48,6 @@ At Vocaplace, we have engineered our 120-day intensive program to be the premier
 
 Our graduates don't just learn marketing; they become indispensable AI-augmented marketers. 
 
-### How to Choose the Right PAP Program
-
-When evaluating a pay after placement digital marketing course, always ask the following questions:
-- *Who is the mentor?* Ensure they have actual agency or big-tech experience, not just academic credentials.
-- *What is the minimum CTC guarantee?* 
-- *Do they teach AI?* Any course in 2026 that doesn't heavily integrate Generative AI is already obsolete.
-
 Stop gambling with your career. Join a program that bets on your success. Explore the [Vocaplace Digital Marketing Mastery Course](/courses/digital-marketing-mastery) today.`,
     slug: "top-pay-after-placement-digital-marketing-courses",
     tags: ["pay after placement digital marketing course", "digital marketing course with placement guarantee", "Career Guide"],
@@ -63,7 +56,7 @@ Stop gambling with your career. Join a program that bets on your success. Explor
     author: {
       name: "Vocaplace Editorial",
       role: "Career Advisors",
-      avatar: "/logo.jpeg"
+      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80"
     },
     coverImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
     metaTitle: "Best Pay After Placement Digital Marketing Courses India (2026)",
@@ -81,7 +74,7 @@ Stop gambling with your career. Join a program that bets on your success. Explor
   },
   {
     title: "Is a Digital Marketing Job Guarantee Real? What to Look For",
-    "excerpt": "Many institutes promise a 100% job guarantee in digital marketing. We break down the fine print, how ISAs work, and what makes a program legitimate.",
+    excerpt: "Many institutes promise a 100% job guarantee in digital marketing. We break down the fine print, how ISAs work, and what makes a program legitimate.",
     content: `### The Truth About Job Guarantees in EdTech
 
 If you've searched for digital marketing courses recently, you've likely been bombarded with ads promising a "100% Job Guarantee Digital Marketing Course." But in an industry known for aggressive marketing, how can you tell if these promises are legitimate or just a gimmick to get your upfront tuition?
@@ -105,11 +98,6 @@ At Vocaplace, our entire business model is built around our students getting hir
 - **Agency-Level Portfolios:** Our students don't just pass multiple-choice tests. They build live portfolios, run real ad campaigns, and demonstrate ROI—making them irresistible to employers.
 - **Dedicated Career Coaches:** We conduct extensive mock interviews, salary negotiation training, and LinkedIn profile optimization.
 
-### Red Flags to Avoid
-- Institutes that demand 100% tuition upfront while still claiming a "job guarantee."
-- Programs with massive batch sizes (50+ students). You cannot get the 1-on-1 mentorship required for guaranteed placement in a crowd.
-- Curriculums that haven't been updated to include AI tools like ChatGPT, Claude, and Midjourney.
-
 If you're serious about your career, demand a program that puts its money where its mouth is. Check out the [Vocaplace ISA Program](/courses/digital-marketing-mastery).`,
     slug: "digital-marketing-job-guarantee-real-or-fake",
     tags: ["100% job guarantee digital marketing", "digital marketing job guarantee", "Career Guide"],
@@ -118,7 +106,7 @@ If you're serious about your career, demand a program that puts its money where 
     author: {
       name: "Wajed Sk",
       role: "Lead Instructor",
-      avatar: "/mentor/wajed-profile.jpg"
+      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80"
     },
     coverImage: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80",
     metaTitle: "Is a 100% Job Guarantee Digital Marketing Course Real?",
@@ -149,12 +137,6 @@ An AI marketing automation course India doesn't just teach you the basics of SEO
 
 Modern marketing agencies don't want to hire a junior SEO executive who takes 4 hours to write a blog post. They want to hire an AI-augmented marketer who can use programmatic SEO and advanced LLM prompting to generate 40 optimized, high-quality blog posts in the same amount of time.
 
-### Core AI Skills Every Marketer Needs Today
-1. **Advanced Prompt Engineering:** Going beyond basic ChatGPT prompts to create multi-step agentic workflows for market research and copy generation.
-2. **Programmatic SEO:** Using AI APIs to dynamically generate thousands of highly targeted landing pages.
-3. **Automated Performance Marketing:** Utilizing Google's Performance Max (PMax) and AI-driven bidding strategies rather than manual bid adjustments.
-4. **Predictive Analytics:** Using machine learning tools to forecast Customer Lifetime Value (LTV) and churn rates.
-
 ### The Vocaplace Advantage
 The [Vocaplace Digital Marketing Mastery Course](/courses/digital-marketing-mastery) is fundamentally an AI marketing automation course disguised as a digital marketing bootcamp. 
 
@@ -168,7 +150,7 @@ By the time you graduate in 120 days, you will have the output capacity of a 3-p
     author: {
       name: "Vocaplace Editorial",
       role: "Tech Analysts",
-      avatar: "/logo.jpeg"
+      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80"
     },
     coverImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
     metaTitle: "Why You Need an AI Marketing Automation Course in 2026",
@@ -226,7 +208,7 @@ If you are ready to commit 4 months to completely transform your career trajecto
     author: {
       name: "Vocaplace Editorial",
       role: "Career Advisors",
-      avatar: "/logo.jpeg"
+      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80"
     },
     coverImage: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80",
     metaTitle: "Become a Digital Marketing Expert Fast (120-Day Roadmap)",
@@ -262,14 +244,6 @@ If you are searching for the *best digital marketing trainer in India*, Wajed Sk
 - **EdTech Pioneer:** Chief Digital Marketing Instructor at Unacademy, one of India's largest learning platforms.
 - **Corporate Speaker:** Frequent guest speaker and corporate trainer at premier institutions like IIM (Indian Institutes of Management), Google, and various fortune 500 summits.
 
-### The "Agency-Style" Mentorship Approach
-
-What makes Wajed Sk the most sought-after digital marketing mentor is his teaching philosophy. At Vocaplace, Wajed doesn't just lecture; he *directs*. 
-
-The classroom operates like a high-performance marketing agency. Wajed acts as the Chief Marketing Officer (CMO), and the students act as his marketing team. You are given real-world briefs, strict deadlines, and brutal, constructive feedback on your ad copy, SEO audits, and AI prompts.
-
-This is why our students are so highly valued by employers. They don't just know the theory; they have already been battle-tested by one of the toughest and most experienced mentors in the industry.
-
 ### Get Mentored by Wajed Sk
 
 Don't settle for junior instructors reading off a PowerPoint slide. If you want to learn advanced performance marketing and AI automation, learn it from the master. 
@@ -282,7 +256,7 @@ Don't settle for junior instructors reading off a PowerPoint slide. If you want 
     author: {
       name: "Vocaplace Editorial",
       role: "Student Success",
-      avatar: "/logo.jpeg"
+      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80"
     },
     coverImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
     metaTitle: "Meet Wajed Sk: The Best Digital Marketing Trainer in India",

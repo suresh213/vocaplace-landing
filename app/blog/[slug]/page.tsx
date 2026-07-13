@@ -67,7 +67,30 @@ export default async function Page({ params }: PageProps) {
  );
  }
 
-  const jsonLd = post.faqs && post.faqs.length > 0 ? {
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.metaTitle,
+    description: post.metaDescription,
+    image: [post.coverImage],
+    datePublished: new Date(post.date).toISOString(),
+    dateModified: new Date(post.date).toISOString(),
+    author: [{
+      '@type': 'Person',
+      name: post.author.name,
+      url: 'https://vocaplace.com/about'
+    }],
+    publisher: {
+      '@type': 'Organization',
+      name: 'Vocaplace',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://vocaplace.com/logo.png'
+      }
+    }
+  };
+
+  const faqJsonLd = post.faqs && post.faqs.length > 0 ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: post.faqs.map((faq) => ({
@@ -82,10 +105,14 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <>
-      {jsonLd && (
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      {faqJsonLd && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       )}
       <BlogDetailClient post={post} />
