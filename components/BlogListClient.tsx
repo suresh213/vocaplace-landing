@@ -25,55 +25,95 @@ const BlogListClient: React.FC = () => {
  return matchesSearch && matchesTag;
  });
 
- return (
- <div className="pt-24 pb-16 bg-white min-h-[85vh]">
- <div className="max-w-7xl mx-auto px-6">
- 
- {/* Header */}
- <section className="mb-12 text-center max-w-2xl mx-auto">
- <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
- Vocaplace Insights
- </h1>
- <p className="text-slate-500 text-sm md:text-base">
- Advanced SEO, growth tactics, conversion optimization, and AI automation guides curated by performance marketing experts.
- </p>
- </section>
+  // Curated category filter list
+  const primaryCategories = [
+    { label: 'All Articles', filter: null },
+    { label: 'Competitor Reviews', filter: 'Course Comparison' },
+    { label: 'City Guides', filter: 'City Guide' },
+    { label: 'Career & Salary', filter: 'Career Guide' },
+    { label: 'AI & Performance', filter: 'Performance Marketing' },
+    { label: 'Google & SEO', filter: 'SEO' },
+  ];
 
- {/* Filter bar */}
- <section className="mb-12 flex flex-col md:flex-row gap-4 items-center justify-between border-b-2 border-slate-100 pb-8">
- 
- {/* Tags */}
- <div className="flex flex-wrap gap-2 justify-center md:justify-start">
- <button
- onClick={() => setSelectedTag(null)}
- className={`h-9 px-4 text-xs font-bold border transition-colors ${ selectedTag === null ? 'bg-blue-900 text-white border-blue-900' : 'bg-white text-slate-500 border-slate-200 hover:border-blue-900 hover:text-blue-900' }`}
- >
- All Articles
- </button>
- {allTags.map(tag => (
- <button
- key={tag}
- onClick={() => setSelectedTag(tag)}
- className={`h-9 px-4 text-xs font-bold border transition-colors ${ selectedTag === tag ? 'bg-blue-900 text-white border-blue-900' : 'bg-white text-slate-500 border-slate-200 hover:border-blue-900 hover:text-blue-900' }`}
- >
- {tag}
- </button>
- ))}
- </div>
+  return (
+    <div className="pt-24 pb-20 bg-white min-h-[85vh]">
+      <div className="max-w-7xl mx-auto px-6">
+        
+        {/* Header */}
+        <section className="mb-10 text-center max-w-3xl mx-auto">
+          <span className="inline-block px-3 py-1 bg-blue-100 text-blue-900 text-xs font-bold rounded-full mb-3">
+            Industry Insights &amp; Career Playbooks
+          </span>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">
+            Vocaplace Career &amp; Growth Insights
+          </h1>
+          <p className="text-slate-500 text-sm md:text-base leading-relaxed">
+            Data-backed breakdowns on Performance Marketing, AI Automation, Salary Trends, and how to land a ₹4–8 LPA role with our 100% Job Guarantee.
+          </p>
+        </section>
 
- {/* Search bar */}
- <div className="relative w-full md:w-80">
- <input
- type="text"
- placeholder="Search articles..."
- value={searchQuery}
- onChange={(e) => setSearchQuery(e.target.value)}
- className="w-full h-10 pl-10 pr-4 bg-white border border-slate-200 text-slate-900 text-xs focus:outline-none focus:border-blue-900 transition-colors"
- />
- <Search className="absolute left-3.5 top-3 w-4 h-4 text-slate-400 pointer-events-none"/>
- </div>
+        {/* Featured Lead Magnet Banner */}
+        <section className="mb-12 p-8 bg-gradient-to-r from-blue-900 via-slate-900 to-slate-950 text-white rounded-2xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-800">
+          <div className="space-y-2 text-center md:text-left">
+            <div className="inline-flex items-center gap-2 px-2.5 py-0.5 bg-amber-400 text-slate-950 text-[10px] font-bold rounded">
+              🎯 100% Placement Guarantee
+            </div>
+            <h2 className="text-xl md:text-2xl font-bold">
+              Ready to Launch Your Digital Marketing Career in 120 Days?
+            </h2>
+            <p className="text-xs text-slate-300 max-w-xl">
+              Pay your core tuition only after securing an offer letter of ₹4–8 LPA. Direct live mentorship by Victoria University Australia faculty Wajed Sk.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3 shrink-0 w-full md:w-auto">
+            <Link
+              href="/contact"
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-xl text-center transition-colors shadow whitespace-nowrap"
+            >
+              Apply for Next Cohort →
+            </Link>
+            <Link
+              href="/courses/digital-marketing-mastery"
+              className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white text-xs font-semibold rounded-xl text-center transition-colors border border-white/20 whitespace-nowrap"
+            >
+              Explore Course
+            </Link>
+          </div>
+        </section>
 
- </section>
+        {/* Filter bar */}
+        <section className="mb-10 flex flex-col md:flex-row gap-4 items-center justify-between border-b border-slate-200 pb-6">
+          
+          {/* Curated Categories */}
+          <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+            {primaryCategories.map(cat => (
+              <button
+                key={cat.label}
+                onClick={() => setSelectedTag(cat.filter)}
+                className={`h-9 px-4 text-xs font-bold rounded-lg border transition-colors ${ 
+                  selectedTag === cat.filter 
+                    ? 'bg-blue-900 text-white border-blue-900 shadow-sm' 
+                    : 'bg-white text-slate-600 border-slate-200 hover:border-blue-900 hover:text-blue-900' 
+                }`}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Search bar */}
+          <div className="relative w-full md:w-80">
+            <input
+              type="text"
+              placeholder="Search 40+ guides &amp; topics..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full h-10 pl-10 pr-4 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 text-xs focus:outline-none focus:border-blue-900 focus:bg-white transition-colors"
+            />
+            <Search className="absolute left-3.5 top-3 w-4 h-4 text-slate-400 pointer-events-none"/>
+          </div>
+
+        </section>
 
  {/* Blog Grid */}
  {filteredPosts.length === 0 ? (

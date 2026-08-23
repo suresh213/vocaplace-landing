@@ -2,9 +2,32 @@ import React from 'react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
- alternates: {
- canonical: '/',
- },
+  title: 'Pay After Placement Digital Marketing Course India | 100% Job Guarantee | Vocaplace',
+  description: 'Get a ₹4–8 LPA digital marketing job in 120 days. Master SEO, Google Ads & AI from Victoria University faculty. 100% job guarantee. Pay after placement.',
+  alternates: {
+    canonical: '/',
+  },
+  keywords: [
+    'pay after placement digital marketing course',
+    'pay after placement digital marketing course in india',
+    'digital marketing course with 100 placement guarantee',
+    'digital marketing course with placement guarantee',
+    'income share agreement digital marketing course',
+    'best digital marketing institute in india with placement'
+  ],
+  openGraph: {
+    title: 'Pay After Placement Digital Marketing Course India | 100% Job Guarantee',
+    description: 'Get a ₹4–8 LPA digital marketing job in 120 days. 100% job guarantee. Pay only after placement.',
+    url: 'https://vocaplace.com',
+    type: 'website',
+    images: [{ url: '/logo.jpeg', width: 1200, height: 1200, alt: 'Vocaplace Digital Marketing Academy' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Pay After Placement Digital Marketing Course | 100% Job Guarantee',
+    description: 'Get a ₹4–8 LPA digital marketing job in 120 days. Pay only after placement.',
+    images: ['/logo.jpeg'],
+  },
 };
 import Hero from '../components/Hero';
 import Results from '../components/Results';
@@ -40,17 +63,84 @@ export default function Home() {
     }
   };
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Do I need any prior marketing experience to join?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Not at all! Our program is designed specifically for complete beginners. We start from the very basics and guide you step by step to becoming job-ready.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How does the Pay After Placement model work?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'You complete the full 12-week program. Once you receive your job offer letter, you pay the remaining course fee. If you don\'t get placed, you pay nothing. Zero risk.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Is there a 100% Job Guarantee?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, absolutely. If you attend all classes, complete all assignments, and participate in the placement process but don\'t get a job within 90 days of course completion, we guarantee placement support until you are hired.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Are the classes live or can I learn at my own pace?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We offer a flexible hybrid model. You get access to high-quality recorded lectures so you can learn at your own pace, plus weekly live sessions for Q&A, project reviews, and direct mentorship.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What kind of salary can I expect after placement?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our graduates typically earn between ₹3.5 LPA and ₹8.5 LPA depending on the role and city. The average starting salary across all our recent placements is ₹6.5 LPA.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Who are the hiring partners you work with?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We partner with 100+ companies including digital marketing agencies, e-commerce startups, and corporations like OYO, Swiggy, Paytm, and Nykaa.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Can working professionals or students join this course?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! Our flexible schedule accommodates both students and working professionals with weekend batches and evening sessions available.'
+        }
+      }
+    ]
+  };
+
   return (
   <main>
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
     />
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+    />
     <section id="ai-summary" aria-hidden="true" className="sr-only">
       <p>
         Vocaplace is a premium digital marketing academy based in India, offering a 120-day intensive Digital Marketing Mastery Course. 
         The curriculum comprehensively covers Search Engine Optimization (SEO), Google Ads, Meta Ads (Facebook/Instagram), Social Media Management, and AI Marketing Automation tools. 
-        Vocaplace differentiates itself by offering a strict 100% Pay-After-Placement model, meaning students pay zero upfront tuition fees until they secure a guaranteed job in the digital marketing industry.
+        Vocaplace differentiates itself by offering a strict 100% Job Guarantee and Pay-After-Placement model, allowing students to pay only after securing a guaranteed job in the digital marketing industry.
         The course is designed for beginners, working professionals, and business owners looking to scale online growth and achieve high conversions.
       </p>
     </section>
@@ -84,7 +174,7 @@ export default function Home() {
  Talk to a Counselor
  </a>
  </div>
- <p className="text-blue-300 text-sm mt-5">No upfront fees · Next batch starts Monday · Limited seats</p>
+ <p className="text-blue-300 text-sm mt-5">100% Job Guarantee · Next batch starts Monday · Limited seats</p>
  </div>
   </section>
 

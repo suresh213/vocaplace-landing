@@ -12,21 +12,21 @@ const Footer: React.FC = () => {
  {/* Brand */}
  <div className="col-span-2 md:col-span-1">
  <div className="flex items-center gap-2 mb-4">
- <Image src="/logo.jpeg"alt="Vocaplace"width={36} height={36} className="rounded-full object-contain bg-white"/>
+ <Image src="/logo.jpeg" alt="Vocaplace" width={36} height={36} className="rounded-full object-contain bg-white"/>
  <span className="text-lg font-bold text-white">Vocaplace</span>
  </div>
  <p className="text-slate-400 text-sm leading-relaxed mb-5">
  India's #1 Pay After Placement digital marketing academy. 
- Learn, get placed, then pay — zero financial risk.
+ Learn, get placed, then pay with our 100% job guarantee.
  </p>
  <div className="flex items-center gap-3">
- <a href="#"aria-label="Instagram"className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-900 transition-colors">
+ <a href="https://www.instagram.com/vocaplace" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-900 transition-colors">
  <Instagram size={15} />
  </a>
- <a href="#"aria-label="LinkedIn"className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-900 transition-colors">
+ <a href="https://www.linkedin.com/company/vocaplace" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-900 transition-colors">
  <Linkedin size={15} />
  </a>
- <a href="#"aria-label="YouTube"className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-900 transition-colors">
+ <a href="https://www.youtube.com/@vocaplace" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-900 transition-colors">
  <Youtube size={15} />
  </a>
  </div>
@@ -36,9 +36,10 @@ const Footer: React.FC = () => {
  <div>
  <h4 className="font-bold text-white mb-5 text-sm">Programs</h4>
  <ul className="space-y-3 text-sm">
- <li><Link href="/courses"className="hover:text-white transition-colors">All Programs</Link></li>
- <li><Link href="/courses/digital-marketing-mastery"className="hover:text-white transition-colors">Digital Marketing Mastery</Link></li>
- <li><a href="https://student.vocaplace.com"className="hover:text-white transition-colors">Student Portal</a></li>
+ <li><Link href="/courses" className="hover:text-white transition-colors">All Programs</Link></li>
+ <li><Link href="/courses/digital-marketing-mastery" className="hover:text-white transition-colors">Digital Marketing Mastery</Link></li>
+ <li><Link href="/compare" className="hover:text-white transition-colors">Compare Institutes</Link></li>
+ <li><a href="https://student.vocaplace.com" className="hover:text-white transition-colors">Student Portal</a></li>
  </ul>
  </div>
 
@@ -46,10 +47,10 @@ const Footer: React.FC = () => {
  <div>
  <h4 className="font-bold text-white mb-5 text-sm">Company</h4>
  <ul className="space-y-3 text-sm">
- <li><Link href="/about"className="hover:text-white transition-colors">About Us</Link></li>
- <li><Link href="/blog"className="hover:text-white transition-colors">Blog & Insights</Link></li>
- <li><Link href="/hire-talent"className="hover:text-white transition-colors">Hire Our Graduates</Link></li>
- <li><Link href="/contact"className="hover:text-white transition-colors">Contact Us</Link></li>
+ <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+ <li><Link href="/blog" className="hover:text-white transition-colors">Blog & Insights</Link></li>
+ <li><Link href="/hire-talent" className="hover:text-white transition-colors">Hire Our Graduates</Link></li>
+ <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
  </ul>
  </div>
 
@@ -59,11 +60,11 @@ const Footer: React.FC = () => {
  <ul className="space-y-3 text-sm">
  <li className="flex items-center gap-2">
  <Phone size={14} className="text-blue-400 shrink-0"/>
- <a href="tel:+918527647899"className="hover:text-white transition-colors">+91 85276 47899</a>
+ <a href="tel:+918527647899" className="hover:text-white transition-colors">+91 85276 47899</a>
  </li>
  <li className="flex items-center gap-2">
  <Mail size={14} className="text-blue-400 shrink-0"/>
- <a href="mailto:hello@vocaplace.com"className="hover:text-white transition-colors">hello@vocaplace.com</a>
+ <a href="mailto:hello@vocaplace.com" className="hover:text-white transition-colors">hello@vocaplace.com</a>
  </li>
  </ul>
  </div>
@@ -73,9 +74,9 @@ const Footer: React.FC = () => {
  <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
  <p>© 2026 Vocaplace Technologies Pvt. Ltd. All rights reserved.</p>
  <div className="flex gap-6">
- <a href="#"className="hover:text-white transition-colors">Privacy Policy</a>
- <a href="#"className="hover:text-white transition-colors">Terms of Service</a>
- <a href="#"className="hover:text-white transition-colors">Refund Policy</a>
+ <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+ <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+ <Link href="/refund" className="hover:text-white transition-colors">Refund Policy</Link>
  </div>
  </div>
  </div>

@@ -10,8 +10,31 @@ export const metadata: Metadata = {
 };
 
 const HiringManagersPage: React.FC = () => {
- return (
- <div className="pt-24 pb-16 bg-white">
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://vocaplace.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'For Hiring Managers',
+        item: 'https://vocaplace.com/hiring-managers',
+      },
+    ],
+  };
+
+  return (
+    <div className="pt-24 pb-16 bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
  {/* Hero Section */}
  <section className="px-6 max-w-7xl mx-auto mb-24">
  <div className="grid lg:grid-cols-2 gap-12 items-center">

@@ -63,7 +63,68 @@ const sectors = [
 ];
 
 export default function MentorPage() {
+  const personJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Wajed Sk',
+    jobTitle: 'Lead Digital Marketing Instructor',
+    worksFor: {
+      '@type': 'EducationalOrganization',
+      name: 'Vocaplace',
+      url: 'https://vocaplace.com',
+    },
+    affiliation: [
+      {
+        '@type': 'EducationalOrganization',
+        name: 'Victoria University, Australia',
+      },
+      {
+        '@type': 'EducationalOrganization',
+        name: 'Unacademy',
+      },
+    ],
+    image: 'https://vocaplace.com/mentor.jpeg',
+    description: '20+ years digital marketing experience, Victoria University Australia online faculty, former Unacademy Chief Instructor, IIM & Google MSME trainer.',
+    knowsAbout: [
+      'Digital Marketing Strategy',
+      'AI in Marketing & Automation',
+      'Search Engine Optimization (SEO)',
+      'Performance Marketing',
+      'Google Ads',
+      'Meta Advertising',
+    ],
+    url: 'https://vocaplace.com/mentor/wajed',
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://vocaplace.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Our Mentor',
+        item: 'https://vocaplace.com/mentor/wajed',
+      },
+    ],
+  };
+
  return (
+ <>
+ <script
+ type="application/ld+json"
+ dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+ />
+ <script
+ type="application/ld+json"
+ dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+ />
  <div className="pt-24 pb-16 bg-white">
 
  {/* Hero */}
@@ -246,6 +307,7 @@ export default function MentorPage() {
  </div>
  </div>
  </section>
- </div>
- );
+    </div>
+    </>
+  );
 }

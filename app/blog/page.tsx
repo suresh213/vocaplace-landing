@@ -12,5 +12,53 @@ export const metadata: Metadata = {
 };
 
 export default function BlogListPage() {
- return <BlogListClient />;
+  const blogSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: 'Vocaplace Digital Marketing & AI Insights Blog',
+    description: 'Expert guides on SEO, Google Ads, Meta Ads, and AI marketing automation from Vocaplace industry mentors.',
+    url: 'https://vocaplace.com/blog',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Vocaplace',
+      url: 'https://vocaplace.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://vocaplace.com/logo.webp'
+      }
+    }
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://vocaplace.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: 'https://vocaplace.com/blog',
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <BlogListClient />
+    </>
+  );
 }

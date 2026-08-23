@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
               className="text-lg text-blue-100 max-w-xl leading-relaxed"
             >
               Master SEO, Google Ads, Social Media, and AI-Driven Workflows in just 12 weeks.
-              Land a high-paying job first - pay only after you get placed. Zero upfront financial risk.
+              Land a high-paying job first - pay only after you get placed with a 100% job guarantee.
             </motion.p>
 
             {/* Benefit bullets */}

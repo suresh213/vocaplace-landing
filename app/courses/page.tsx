@@ -12,11 +12,66 @@ export const metadata: Metadata = {
 };
 
 const CoursesPage: React.FC = () => {
- const course = coursesData.find(c => c.slug === 'digital-marketing-mastery');
- if (!course) return null;
+  const course = coursesData.find(c => c.slug === 'digital-marketing-mastery');
+  if (!course) return null;
 
- return (
- <div className="bg-white">
+  const coursesListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Vocaplace Digital Marketing Courses',
+    description: 'Comprehensive pay after placement digital marketing training programs with 100% job guarantee.',
+    itemListElement: coursesData.map((c, idx) => ({
+      '@type': 'ListItem',
+      position: idx + 1,
+      item: {
+        '@type': 'Course',
+        name: c.title,
+        description: c.description,
+        provider: {
+          '@type': 'Organization',
+          name: 'Vocaplace',
+          sameAs: 'https://vocaplace.com'
+        },
+        offers: {
+          '@type': 'Offer',
+          category: 'Pay After Placement',
+          price: '0',
+          priceCurrency: 'INR'
+        },
+        url: `https://vocaplace.com/courses/${c.slug}`
+      }
+    }))
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://vocaplace.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Courses',
+        item: 'https://vocaplace.com/courses',
+      },
+    ],
+  };
+
+  return (
+    <div className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(coursesListSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
  {/* Hero */}
  <section className="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 pt-32 pb-20 px-6">
  <div className="max-w-4xl mx-auto text-center">

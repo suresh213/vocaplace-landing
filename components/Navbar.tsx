@@ -59,6 +59,12 @@ const Navbar: React.FC = () => {
  Blog
  </Link>
  <Link 
+   href="/compare"
+   className={`text-xs font-semibold transition-colors ${isActive('/compare') ? 'text-blue-900' : 'text-slate-500 hover:text-blue-900'}`}
+ >
+   Compare
+ </Link>
+ <Link 
    href="/mentor/wajed"
    className={`text-xs font-semibold transition-colors ${isActive('/mentor/wajed') ? 'text-blue-900' : 'text-slate-500 hover:text-blue-900'}`}
  >
@@ -91,6 +97,9 @@ const Navbar: React.FC = () => {
  </Link>
  <Link href="/courses"onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-900 py-3 border-b border-slate-100">
  Courses
+ </Link>
+ <Link href="/compare" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-900 py-3 border-b border-slate-100">
+ Compare Institutes
  </Link>
  <Link href="/hire-talent"onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-900 py-3 border-b border-slate-100">
  Hire Talent

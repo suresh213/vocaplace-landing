@@ -11,8 +11,57 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+  const aboutPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: 'About Vocaplace Digital Marketing Academy',
+    description: 'Vocaplace is India\'s premier 120-day digital marketing bootcamp with 100% job guarantee and Pay After Placement model.',
+    mainEntity: {
+      '@type': 'EducationalOrganization',
+      name: 'Vocaplace',
+      url: 'https://vocaplace.com',
+      foundingDate: '2023',
+      description: 'Pay After Placement Digital Marketing Academy based in India.',
+      numberOfEmployees: {
+        '@type': 'QuantitativeValue',
+        value: '50+'
+      },
+      alumni: {
+        '@type': 'QuantitativeValue',
+        value: '5000+'
+      }
+    }
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://vocaplace.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'About Us',
+        item: 'https://vocaplace.com/about',
+      },
+    ],
+  };
+
  return (
  <div className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
 
  {/* Hero */}
  <section className="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 pt-32 pb-20 px-6">

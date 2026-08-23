@@ -375,7 +375,7 @@ const CourseDetailClient: React.FC<CourseDetailClientProps> = ({ course }) => {
  <span>ISA Pay-After-Placement</span>
  </div>
  <p className="text-[10px] text-green-700 leading-relaxed">
- Pay ₹0 upfront fee. Pay only once you secure a job paying at least ₹5 LPA.
+ Pay only once you secure a job paying at least ₹4–8 LPA with our 100% job guarantee.
  </p>
  <div className="text-[9px] font-bold text-green-800 mt-1">
  *Terms &amp; conditions apply.
@@ -385,10 +385,10 @@ const CourseDetailClient: React.FC<CourseDetailClientProps> = ({ course }) => {
  <div className="border border-slate-200 bg-white p-4 space-y-2">
  <div className="flex items-center gap-2 text-xs font-bold text-slate-700">
  <Award className="w-4 h-4 text-slate-500"/>
- <span>Upfront Discount</span>
+ <span>Flexible Payment</span>
  </div>
  <p className="text-[10px] text-slate-500 leading-relaxed">
- Save 15% on total tuition when paying upfront. EMI options also available.
+ Flexible payment and no-cost EMI options available.
  </p>
  </div>
  )}

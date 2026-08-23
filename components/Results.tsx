@@ -39,7 +39,7 @@ const steps = [
  {
  num:"05",
  title:"Pay After Placement",
- desc:"Once you receive your offer letter, you pay the course fee. Zero financial risk — your success is our commitment.",
+ desc:"Once you receive your offer letter, you pay the course fee in installments with our 100% job guarantee.",
  icon:"✅",
  },
 ];
@@ -77,10 +77,10 @@ const Results: React.FC = () => {
  Your Learning Journey
  </span>
  <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
- From Beginner to Placed — In Just 12 Weeks
+ From Beginner to Placed — In Just 120 Days
  </h2>
  <p className="text-slate-500 text-lg max-w-2xl mx-auto">
- A clear, simple path from zero to a high-paying digital marketing career. No confusion, no risk.
+ A clear, simple path from zero to a ₹4–8 LPA digital marketing career with a 100% job guarantee.
  </p>
  </div>
 
@@ -128,7 +128,7 @@ const Results: React.FC = () => {
  </div>
  </div>
  <div className="flex flex-col items-center gap-3 shrink-0">
- {["No upfront fees","Job or money back","Lifetime placement support"].map((item, i) => (
+ {["100% Job Guarantee","Pay After Placement","Lifetime placement support"].map((item, i) => (
  <div key={i} className="flex items-center gap-2 text-sm text-blue-100">
  <CheckCircle size={16} className="text-green-400 shrink-0"/>
  {item}

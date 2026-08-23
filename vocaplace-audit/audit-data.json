@@ -1,0 +1,64 @@
+{
+  "summary": {
+    "domain": "https://vocaplace.com",
+    "health_score": 98,
+    "grade": "A+",
+    "business_type": "EdTech / Career Accelerator",
+    "total_pages_indexed": 24,
+    "top_findings": [
+      "All 24 pages statically pre-rendered with Next.js SSG for optimal Core Web Vitals.",
+      "Comprehensive Schema.org structured data (Course, FAQPage, Organization, Person, Article, BreadcrumbList) validated.",
+      "All meta titles and descriptions strictly optimized under Google character limits with high-converting hooks.",
+      "Cloudflare WAF 'Block AI Scrapers' setting should be checked to allow ChatGPT/Claude indexation."
+    ],
+    "quick_wins": [
+      "Submit sitemap.xml in Google Search Console.",
+      "Update GTM and Meta Pixel placeholder IDs in app/layout.tsx prior to ad launch.",
+      "Disable Cloudflare AI Scraper blocking to allow AI Overviews and ChatGPT citations."
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 98,
+      "status": "pass",
+      "weight": "22%"
+    },
+    {
+      "name": "Content Quality & E-E-A-T",
+      "score": 98,
+      "status": "pass",
+      "weight": "23%"
+    },
+    {
+      "name": "On-Page SEO",
+      "score": 99,
+      "status": "pass",
+      "weight": "20%"
+    },
+    {
+      "name": "Schema & Structured Data",
+      "score": 100,
+      "status": "pass",
+      "weight": "10%"
+    },
+    {
+      "name": "Performance & Core Web Vitals",
+      "score": 96,
+      "status": "pass",
+      "weight": "10%"
+    },
+    {
+      "name": "AI Search Readiness (AEO/GEO)",
+      "score": 98,
+      "status": "pass",
+      "weight": "10%"
+    },
+    {
+      "name": "Images & Media",
+      "score": 98,
+      "status": "pass",
+      "weight": "5%"
+    }
+  ]
+}

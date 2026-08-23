@@ -1,184 +1,314 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, Share2, Award, ChevronRight } from 'lucide-react';
-import { BlogPost } from '../services/blogData';
+import { ArrowLeft, Calendar, Clock, Share2, Award, ChevronRight, CheckCircle2, ChevronDown, Sparkles, PhoneCall } from 'lucide-react';
+import { BlogPost, blogPosts } from '../services/blogData';
 
 import ReactMarkdown from 'react-markdown';
 
 interface BlogDetailClientProps {
- post: BlogPost;
+  post: BlogPost;
 }
 
 const BlogDetailClient: React.FC<BlogDetailClientProps> = ({ post }) => {
- // Extract Table of Contents items (any line starting with ### or ####)
- const tocItems = post.content
- .split('\n')
- .filter(line => line.trim().startsWith('###') || line.trim().startsWith('####'))
- .map(line => {
- const isSub = line.trim().startsWith('####');
- const text = line.replace('####', '').replace('###', '').trim();
- return { text, isSub };
- });
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
- const handleShare = () => {
- if (typeof window !== 'undefined' && navigator.share) {
- navigator.share({
- title: post.title,
- text: post.excerpt,
- url: window.location.href,
- }).catch(console.error);
- } else if (typeof window !== 'undefined') {
- navigator.clipboard.writeText(window.location.href);
- alert('Link copied to clipboard!');
- }
- };
+  // Extract Table of Contents items (any line starting with ### or ####)
+  const tocItems = post.content
+    .split('\n')
+    .filter(line => line.trim().startsWith('###') || line.trim().startsWith('####'))
+    .map(line => {
+      const isSub = line.trim().startsWith('####');
+      const text = line.replace('####', '').replace('###', '').trim();
+      return { text, isSub };
+    });
 
- return (
- <div className="pt-24 pb-16 bg-white min-h-[85vh]">
- <div className="max-w-7xl mx-auto px-6">
- 
- {/* Breadcrumbs */}
- <div className="flex items-center gap-2 text-[10px] text-slate-400 mb-6">
- <Link href="/"className="hover:text-blue-900 transition-colors">Home</Link>
- <ChevronRight className="w-3 h-3"/>
- <Link href="/blog"className="hover:text-blue-900 transition-colors">Blog</Link>
- <ChevronRight className="w-3 h-3"/>
- <span className="text-slate-500 truncate max-w-[200px] md:max-w-none">{post.title}</span>
- </div>
+  // Get 3 related posts (sharing tags or top converting)
+  const relatedPosts = blogPosts
+    .filter(p => p.slug !== post.slug)
+    .slice(0, 3);
 
- {/* Action Bar */}
- <div className="mb-6">
- <Link 
- href="/blog"
- className="inline-flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-blue-900 transition-colors"
- >
- <ArrowLeft className="w-4 h-4"/>
- Back to Articles
- </Link>
- </div>
+  const handleShare = () => {
+    if (typeof window !== 'undefined' && navigator.share) {
+      navigator.share({
+        title: post.title,
+        text: post.excerpt,
+        url: window.location.href,
+      }).catch(console.error);
+    } else if (typeof window !== 'undefined') {
+      navigator.clipboard.writeText(window.location.href);
+      alert('Link copied to clipboard!');
+    }
+  };
 
- {/* Grid Layout: Main Article vs Sidebar */}
- <div className="grid lg:grid-cols-12 gap-12 items-start">
- 
- {/* Left: Main Content */}
- <main className="lg:col-span-8">
- <article>
- {/* Category Tags */}
- <div className="flex gap-1.5 flex-wrap mb-4">
- {post.tags.map(tag => (
- <span 
- key={tag}
- className="px-2 py-1 border border-blue-900/10 text-blue-900 bg-blue-50/50 text-[10px] font-bold"
- >
- {tag}
- </span>
- ))}
- </div>
+  return (
+    <div className="pt-24 pb-20 bg-white min-h-[85vh]">
+      <div className="max-w-7xl mx-auto px-6">
+        
+        {/* Breadcrumbs */}
+        <div className="flex items-center gap-2 text-[10px] text-slate-400 mb-6">
+          <Link href="/" className="hover:text-blue-900 transition-colors">Home</Link>
+          <ChevronRight className="w-3 h-3"/>
+          <Link href="/blog" className="hover:text-blue-900 transition-colors">Blog</Link>
+          <ChevronRight className="w-3 h-3"/>
+          <span className="text-slate-500 truncate max-w-[200px] md:max-w-none">{post.title}</span>
+        </div>
 
- {/* Title */}
- <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
- {post.title}
- </h1>
+        {/* Action Bar */}
+        <div className="mb-6">
+          <Link 
+            href="/blog" 
+            className="inline-flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-blue-900 transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4"/>
+            Back to Articles
+          </Link>
+        </div>
 
- {/* Meta information */}
- <div className="flex flex-wrap items-center gap-6 py-4 border-y border-slate-100 mb-8 text-[11px] text-slate-500">
- <div className="flex items-center gap-2">
- <Calendar className="w-4 h-4"/>
- <span>{post.date}</span>
- </div>
- <div className="flex items-center gap-2">
- <Clock className="w-4 h-4"/>
- <span>{post.readTime}</span>
- </div>
- <button 
- onClick={handleShare}
- className="flex items-center gap-2 ml-auto hover:text-blue-900 transition-colors cursor-pointer"
- >
- <Share2 className="w-4 h-4"/>
- <span>Share Article</span>
- </button>
- </div>
+        {/* Grid Layout: Main Article vs Sidebar */}
+        <div className="grid lg:grid-cols-12 gap-12 items-start">
+          
+          {/* Left: Main Content */}
+          <main className="lg:col-span-8">
+            <article>
+              {/* Category Tags */}
+              <div className="flex gap-1.5 flex-wrap mb-4">
+                {post.tags.map(tag => (
+                  <span 
+                    key={tag} 
+                    className="px-2 py-1 border border-blue-900/10 text-blue-900 bg-blue-50/50 text-[10px] font-bold"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
 
- {/* Featured Image */}
- <div className="aspect-[16/9] w-full overflow-hidden border border-slate-200 mb-8 bg-slate-100">
- <div
- className="w-full h-full bg-cover bg-center bg-no-repeat"
- style={{ backgroundImage: `url(${post.coverImage})` }}
- role="img"
- aria-label={post.title}
- />
- </div>
+              {/* Title */}
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+                {post.title}
+              </h1>
 
- {/* Parsed content */}
- <div className="prose prose-slate prose-h3:text-lg prose-h3:font-bold prose-h4:text-sm prose-h4:font-bold max-w-none">
- <ReactMarkdown>{post.content}</ReactMarkdown>
- </div>
- </article>
- </main>
+              {/* Meta information */}
+              <div className="flex flex-wrap items-center gap-6 py-4 border-y border-slate-100 mb-8 text-[11px] text-slate-500">
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4"/>
+                  <span>{post.date}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4"/>
+                  <span>{post.readTime}</span>
+                </div>
+                <button 
+                  onClick={handleShare}
+                  className="flex items-center gap-2 ml-auto hover:text-blue-900 transition-colors cursor-pointer"
+                >
+                  <Share2 className="w-4 h-4"/>
+                  <span>Share Article</span>
+                </button>
+              </div>
 
- {/* Right: Sidebar */}
- <aside className="lg:col-span-4 space-y-8 lg:sticky lg:top-20">
- 
- {/* Author details */}
- <div className="border border-slate-200 p-6 bg-slate-50">
- <span className="text-[10px] font-bold text-slate-400 block mb-4">Written By</span>
- <div className="flex items-start gap-4">
- <img
- src={post.author.avatar}
- alt={post.author.name}
- className="w-12 h-12 object-cover border border-slate-200"
- referrerPolicy="no-referrer"
- />
- <div>
- <h4 className="text-sm font-bold text-slate-900">{post.author.name}</h4>
- <p className="text-[10px] text-slate-500 leading-snug mt-1">{post.author.role}</p>
- </div>
- </div>
- </div>
+              {/* Featured Image */}
+              <div className="aspect-[16/9] w-full overflow-hidden border border-slate-200 mb-8 bg-slate-100">
+                <div
+                  className="w-full h-full bg-cover bg-center bg-no-repeat"
+                  style={{ backgroundImage: `url(${post.coverImage})` }}
+                  role="img"
+                  aria-label={post.title}
+                />
+              </div>
 
- {/* Table of Contents */}
- {tocItems.length > 0 && (
- <div className="border border-slate-200 p-6 bg-white">
- <span className="text-[10px] font-bold text-slate-400 block mb-4">Table of Contents</span>
- <nav className="space-y-3 text-xs">
- {tocItems.map((item, idx) => (
- <div 
- key={idx} 
- className={`flex items-start gap-2 text-slate-600 hover:text-blue-900 transition-colors ${item.isSub ? 'pl-4 text-[11px]' : ''}`}
- >
- <span className="text-[9px] text-blue-900 select-none mt-0.5">•</span>
- <span>{item.text}</span>
- </div>
- ))}
- </nav>
- </div>
- )}
+              {/* Parsed Markdown content */}
+              <div className="prose prose-slate prose-h3:text-xl prose-h3:font-bold prose-h3:text-slate-900 prose-h4:text-base prose-h4:font-bold prose-p:text-slate-600 prose-p:leading-relaxed max-w-none">
+                <ReactMarkdown>{post.content}</ReactMarkdown>
+              </div>
 
- {/* CTA Sidebar box */}
- <div className="bg-blue-900 text-white p-6 relative overflow-hidden">
- <div className="absolute top-0 right-0 p-4 opacity-10">
- <Award className="w-24 h-24"/>
- </div>
- <h3 className="text-lg font-bold mb-3">Become an Authority</h3>
- <p className="text-xs text-slate-200 leading-relaxed mb-6">
- Master the SEO, Ads, and AI-driven growth tactics described in this guide. Learn in a production environment with Vocaplace.
- </p>
- <Link 
- href="/courses"
- className="block w-full py-2.5 bg-white text-blue-900 text-center text-xs font-bold hover:bg-slate-100 transition-colors whitespace-nowrap"
- >
- Explore Program
- </Link>
- </div>
+              {/* Interactive FAQs if present */}
+              {post.faqs && post.faqs.length > 0 && (
+                <div className="mt-12 pt-8 border-t border-slate-200">
+                  <div className="flex items-center gap-2 mb-6">
+                    <Sparkles className="w-5 h-5 text-blue-900"/>
+                    <h3 className="text-xl font-bold text-slate-900">Frequently Asked Questions</h3>
+                  </div>
+                  <div className="space-y-3">
+                    {post.faqs.map((faq, idx) => (
+                      <div 
+                        key={idx} 
+                        className="border border-slate-200 bg-slate-50/50 rounded-xl overflow-hidden transition-colors"
+                      >
+                        <button
+                          onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                          className="w-full p-4 text-left flex items-center justify-between gap-4 font-bold text-sm text-slate-900 hover:text-blue-900"
+                        >
+                          <span>{faq.question}</span>
+                          <ChevronDown className={`w-4 h-4 shrink-0 transition-transform ${openFaq === idx ? 'rotate-180 text-blue-900' : 'text-slate-400'}`}/>
+                        </button>
+                        {openFaq === idx && (
+                          <div className="p-4 pt-0 text-xs text-slate-600 leading-relaxed border-t border-slate-100 bg-white">
+                            {faq.answer}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
- </aside>
+              {/* High-Converting In-Content Lead Magnet Box */}
+              <div className="my-12 p-8 bg-gradient-to-br from-blue-900 via-slate-900 to-slate-950 text-white rounded-2xl shadow-xl relative overflow-hidden">
+                <div className="relative z-10">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-400 text-slate-950 text-xs font-bold rounded-full mb-4">
+                    🎯 100% Job Guarantee • Pay After Placement
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-extrabold mb-3 leading-snug">
+                    Launch Your ₹4–8 LPA Digital Marketing Career in 120 Days
+                  </h3>
+                  <p className="text-slate-300 text-xs md:text-sm leading-relaxed mb-6 max-w-2xl">
+                    Don&apos;t risk your money on theoretical courses. Learn live campaign management from <strong>Wajed Sk</strong> (Victoria University Australia faculty) and pay tuition only after securing your offer letter.
+                  </p>
+                  
+                  <div className="grid sm:grid-cols-3 gap-3 mb-6 text-xs text-slate-200">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-green-400 shrink-0"/>
+                      <span>100% Job Guarantee</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-green-400 shrink-0"/>
+                      <span>Live Ad Budgets</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-green-400 shrink-0"/>
+                      <span>200+ Hiring Partners</span>
+                    </div>
+                  </div>
 
- </div>
- </div>
- </div>
- );
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Link
+                      href="/contact"
+                      className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs rounded-xl text-center transition-colors shadow-lg flex items-center justify-center gap-2"
+                    >
+                      <PhoneCall className="w-4 h-4"/> Apply for Next Batch (Pay After Placement)
+                    </Link>
+                    <Link
+                      href="/courses/digital-marketing-mastery"
+                      className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold text-xs rounded-xl text-center transition-colors border border-white/20"
+                    >
+                      View 120-Day Curriculum →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Related Posts Section */}
+              <div className="mt-12 pt-8 border-t border-slate-200">
+                <h3 className="text-lg font-bold text-slate-900 mb-6">Related Career &amp; Strategy Guides</h3>
+                <div className="grid sm:grid-cols-3 gap-4">
+                  {relatedPosts.map(rel => (
+                    <Link 
+                      key={rel.slug} 
+                      href={`/blog/${rel.slug}`}
+                      className="p-4 border border-slate-200 rounded-xl hover:border-blue-900 transition-all flex flex-col group bg-slate-50/50 hover:bg-white"
+                    >
+                      <span className="text-[9px] font-bold text-blue-900 uppercase tracking-wider mb-2">
+                        {rel.tags[0]}
+                      </span>
+                      <h4 className="text-xs font-bold text-slate-900 group-hover:text-blue-900 transition-colors line-clamp-2 mb-2 leading-snug">
+                        {rel.title}
+                      </h4>
+                      <span className="text-[10px] text-slate-400 mt-auto">{rel.readTime}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+            </article>
+          </main>
+
+          {/* Right: Sidebar */}
+          <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-20">
+            
+            {/* Author details */}
+            <div className="border border-slate-200 p-6 bg-slate-50 rounded-xl">
+              <span className="text-[10px] font-bold text-slate-400 block mb-4">Written By</span>
+              <div className="flex items-start gap-4">
+                <img
+                  src={post.author.avatar}
+                  alt={post.author.name}
+                  className="w-12 h-12 rounded-full object-cover border border-slate-200"
+                  referrerPolicy="no-referrer"
+                />
+                <div>
+                  <h4 className="text-sm font-bold text-slate-900">{post.author.name}</h4>
+                  <p className="text-[10px] text-slate-500 leading-snug mt-1">{post.author.role}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Table of Contents */}
+            {tocItems.length > 0 && (
+              <div className="border border-slate-200 p-6 bg-white rounded-xl">
+                <span className="text-[10px] font-bold text-slate-400 block mb-4">Table of Contents</span>
+                <nav className="space-y-3 text-xs">
+                  {tocItems.map((item, idx) => (
+                    <div 
+                      key={idx} 
+                      className={`flex items-start gap-2 text-slate-600 hover:text-blue-900 transition-colors ${item.isSub ? 'pl-4 text-[11px]' : ''}`}
+                    >
+                      <span className="text-[9px] text-blue-900 select-none mt-0.5">•</span>
+                      <span>{item.text}</span>
+                    </div>
+                  ))}
+                </nav>
+              </div>
+            )}
+
+            {/* Sidebar High-Converting CTA Box */}
+            <div className="bg-slate-900 text-white p-6 rounded-2xl relative overflow-hidden border border-slate-800 shadow-lg">
+              <div className="absolute top-0 right-0 p-4 opacity-10">
+                <Award className="w-24 h-24"/>
+              </div>
+              <div className="inline-block px-2.5 py-1 bg-green-500/20 text-green-400 text-[10px] font-bold rounded mb-3">
+                100% Placement Guarantee
+              </div>
+              <h3 className="text-lg font-bold mb-2">Digital Marketing Mastery</h3>
+              <p className="text-xs text-slate-300 leading-relaxed mb-6">
+                Get a ₹4–8 LPA job in 120 days. Learn Google Ads, SEO, and AI workflows from Victoria University faculty. Pay only after placement.
+              </p>
+              <Link 
+                href="/courses/digital-marketing-mastery"
+                className="block w-full py-3 bg-blue-600 text-white text-center text-xs font-bold hover:bg-blue-500 transition-colors rounded-xl shadow"
+              >
+                Apply for Next Batch →
+              </Link>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+
+      {/* Floating Bottom Sticky Conversion Bar */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-slate-950/95 backdrop-blur-md border-t border-slate-800 py-3 px-6 shadow-2xl">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="flex items-center gap-3 text-center sm:text-left">
+            <span className="w-2 h-2 rounded-full bg-green-400 animate-ping hidden sm:inline-block"/>
+            <p className="text-xs text-slate-200">
+              <strong className="text-white">Next Cohort Starting Soon:</strong> 100% Job Guarantee (₹4–8 LPA) • Pay After Placement
+            </p>
+          </div>
+          <div className="flex items-center gap-3 w-full sm:w-auto justify-center">
+            <Link
+              href="/contact"
+              className="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-lg transition-colors shadow whitespace-nowrap"
+            >
+              Apply Now →
+            </Link>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  );
 };
 
 export default BlogDetailClient;

@@ -8,11 +8,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
  const baseUrl = 'https://vocaplace.com';
 
  // Base routes
- const routes = ['', '/about', '/contact', '/courses', '/hire-talent', '/hiring-managers', '/blog', '/mentor/wajed'].map((route) => ({
+ const routes = ['', '/about', '/contact', '/courses', '/compare', '/hire-talent', '/hiring-managers', '/blog', '/mentor/wajed', '/privacy', '/terms', '/refund'].map((route) => ({
  url: `${baseUrl}${route}`,
  lastModified: new Date(),
  changeFrequency: 'daily' as const,
- priority: route === '' ? 1.0 : 0.8,
+ priority: route === '' ? 1.0 : (['/privacy', '/terms', '/refund'].includes(route) ? 0.3 : 0.85),
  }));
 
  // Course routes
