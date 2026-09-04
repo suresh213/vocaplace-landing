@@ -39,8 +39,49 @@ export default function ComparePage() {
 
   const comparisonJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Table',
-    about: 'Digital Marketing Course Comparison in India (2026)',
+    '@type': 'WebPage',
+    name: 'Digital Marketing Course Comparison in India (2026)',
+    description: 'Compare Vocaplace, Kraftshala, IIDE, and UpGrad on fees, placement guarantee, and curriculum.',
+    url: 'https://vocaplace.com/compare',
+  };
+
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Which is better: IIDE, Kraftshala, or Vocaplace?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'While Kraftshala charges ₹1,75,820 with upfront loan liabilities and IIDE charges ₹1,00,000 to ₹6,50,000+ with only placement assistance, Vocaplace offers 100% Pay After Placement with a legally backed 100% Job Guarantee (₹4–8 LPA) mentored directly by Victoria University Australia faculty Wajed Sk.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What are Kraftshala course fees in 2026?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Kraftshala Marketing Launchpad fees in 2026 are ₹1,49,000 + 18% GST (total ₹1,75,820). Their 8X Impact track requires 20% upfront payment with the remainder paid after landing a job above ₹4.5 LPA.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Does UpGrad guarantee a digital marketing job placement?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'No. UpGrad online digital marketing certificate courses provide career assistance and resume reviews, but they do NOT offer a guaranteed job placement. High packages (₹30L+) cited in search results refer strictly to on-campus full-time MICA MBA graduates.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How does Vocaplace Pay After Placement model work?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'At Vocaplace, you complete 120 days of live training, manage real ad budgets, and pay your core tuition in installments only after securing a full-time marketing job paying at least ₹4–8 LPA.',
+        },
+      },
+    ],
   };
 
   const competitors = [
@@ -107,6 +148,10 @@ export default function ComparePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(comparisonJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       <div className="pt-28 pb-20 bg-white min-h-[90vh]">
@@ -240,23 +285,76 @@ export default function ComparePage() {
           {/* Deep Dive Section */}
           <div className="max-w-4xl mx-auto space-y-12 text-sm leading-relaxed text-slate-600">
             <section>
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">1. The Reality of Course Fees in India</h2>
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">IIDE vs Kraftshala vs Vocaplace: 2026 Comparison Breakdown</h2>
               <p className="mb-4">
-                Traditional institutes like Kraftshala (₹1,75,820 with GST), IIDE (₹1,00,000+), and UpGrad (₹1,10,000+) place 100% of the financial risk on the student. If hiring slows down or you struggle in interviews, you remain burdened with bank loans.
+                When choosing between <strong>IIDE, Kraftshala, and Vocaplace</strong>, the deciding factor comes down to <em>financial risk</em> and <em>placement accountability</em>:
+              </p>
+              <ul className="list-disc pl-5 space-y-2 mb-4">
+                <li><strong>Kraftshala (Marketing Launchpad):</strong> Charges <strong>₹1,49,000 + 18% GST (₹1,75,820)</strong>. While Kraftshala offers an 8X Impact model, students must pay 20% upfront (₹35,000+) and are locked into loan agreements unless their CTC falls below ₹4.5 LPA under strict fine-print conditions.</li>
+                <li><strong>IIDE (Indian Institute of Digital Education):</strong> Charges <strong>₹1,00,000 to ₹1,50,000</strong> for online courses and upwards of <strong>₹6,45,000+</strong> for postgraduate degrees, with 100% upfront tuition and placement assistance only (no placement guarantee).</li>
+                <li><strong>Vocaplace:</strong> Offers <strong>100% Pay After Placement</strong> with a legally backed <strong>100% Job Guarantee (₹4–8 LPA)</strong>. You pay your tuition in monthly installments only after receiving an official employment offer letter.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">Kraftshala Fees Structure 2026: The ₹1,75,820 Reality</h2>
+              <p className="mb-4">
+                Students searching for <em>kraftshala fees</em> are often surprised by the total financial commitment. With GST, Kraftshala exceeds ₹1.75 Lakhs. If you take an NBFC loan with 24 to 36 months of EMIs, the interest increases your effective cost even further.
               </p>
               <p>
-                <strong>Vocaplace eliminates this risk completely.</strong> You learn in live interactive cohorts for 120 days and pay tuition only after you secure an offer letter of ₹4–8 LPA.
+                Vocaplace eliminates education debt. Our incentive is 100% aligned with yours: we only get compensated when you succeed in the industry.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">2. Why Live Faculty Matters (Victoria University Faculty vs Pre-recorded Videos)</h2>
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">UpGrad Digital Marketing Course Review: Real Career Outcomes</h2>
               <p className="mb-4">
-                Many online bootcamps rely on pre-recorded video lectures recorded in 2021, with teaching assistants handling queries. 
+                UpGrad partners with MICA for online executive certificates priced at ₹1,10,000 to ₹1,50,000 + GST. While MICA has strong brand heritage, online certificate programs do <strong>not</strong> include campus placements. The widely advertised ₹30L+ placement packages apply solely to full-time, on-campus MBA students.
               </p>
               <p>
-                At Vocaplace, your lead instructor is <strong>Wajed Sk</strong> — Online Faculty at Victoria University Australia, former Unacademy Chief Instructor, and corporate trainer who has guided 5,000+ students to successful placements.
+                At Vocaplace, all 120 days are dedicated to live campaign execution, client portfolios, and personalized interview pipelines across 100+ hiring partners.
               </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">Why Live Faculty Matters: Victoria University Faculty vs Pre-recorded Videos</h2>
+              <p className="mb-4">
+                Many online bootcamps rely on pre-recorded video lectures recorded years ago, with teaching assistants handling queries. 
+              </p>
+              <p>
+                At Vocaplace, your lead instructor is <strong>Wajed Sk</strong> — Online Faculty at Victoria University Australia, former Chief Digital Marketing Instructor at Unacademy, and corporate trainer who has guided 5,000+ students to successful placements.
+              </p>
+            </section>
+
+            {/* Frequently Asked Questions */}
+            <section className="pt-6 border-t border-slate-200">
+              <h2 className="text-2xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
+              <div className="space-y-4">
+                <div className="p-5 border border-slate-200 rounded-xl bg-slate-50/50">
+                  <h3 className="font-bold text-slate-900 text-sm mb-2">Which is better: IIDE, Kraftshala, or Vocaplace?</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    While Kraftshala charges ₹1,75,820 with upfront loan liabilities and IIDE charges ₹1,00,000 to ₹6,50,000+ with only placement assistance, Vocaplace offers 100% Pay After Placement with a legally backed 100% Job Guarantee (₹4–8 LPA) mentored directly by Victoria University Australia faculty Wajed Sk.
+                  </p>
+                </div>
+                <div className="p-5 border border-slate-200 rounded-xl bg-slate-50/50">
+                  <h3 className="font-bold text-slate-900 text-sm mb-2">What are Kraftshala course fees in 2026?</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Kraftshala Marketing Launchpad fees in 2026 are ₹1,49,000 + 18% GST (total ₹1,75,820). Their 8X Impact track requires 20% upfront payment with the remainder paid after landing a job above ₹4.5 LPA.
+                  </p>
+                </div>
+                <div className="p-5 border border-slate-200 rounded-xl bg-slate-50/50">
+                  <h3 className="font-bold text-slate-900 text-sm mb-2">Does UpGrad guarantee a digital marketing job placement?</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    No. UpGrad online digital marketing certificate courses provide career assistance and resume reviews, but they do NOT offer a guaranteed job placement. High packages (₹30L+) cited in search results refer strictly to on-campus full-time MICA MBA graduates.
+                  </p>
+                </div>
+                <div className="p-5 border border-slate-200 rounded-xl bg-slate-50/50">
+                  <h3 className="font-bold text-slate-900 text-sm mb-2">How does Vocaplace Pay After Placement model work?</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    At Vocaplace, you complete 120 days of live training, manage real ad budgets, and pay your core tuition in installments only after securing a full-time marketing job paying at least ₹4–8 LPA.
+                  </p>
+                </div>
+              </div>
             </section>
 
             {/* High-Converting CTA Box */}

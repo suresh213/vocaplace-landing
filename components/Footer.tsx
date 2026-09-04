@@ -71,6 +71,26 @@ const Footer: React.FC = () => {
 
  </div>
 
+      {/* Placement Hubs by City */}
+      <div className="py-6 border-t border-slate-800 text-xs text-slate-400">
+        <p className="font-semibold text-slate-300 mb-3">Placement Hubs Across India:</p>
+        <div className="flex flex-wrap gap-x-4 gap-y-2 text-[11px]">
+          <Link href="/blog/digital-marketing-course-in-bangalore-with-placement-guarantee" className="hover:text-white transition-colors">Bangalore</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-delhi-ncr-with-100-placement" className="hover:text-white transition-colors">Delhi NCR (Gurgaon &amp; Noida)</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-mumbai-with-placement-guarantee" className="hover:text-white transition-colors">Mumbai</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-hyderabad-with-job-guarantee" className="hover:text-white transition-colors">Hyderabad</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-pune-with-placement" className="hover:text-white transition-colors">Pune</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-chennai-with-job-guarantee" className="hover:text-white transition-colors">Chennai</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-kolkata-with-placement" className="hover:text-white transition-colors">Kolkata</Link>
+        </div>
+      </div>
+
  <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
  <p>© 2026 Vocaplace Technologies Pvt. Ltd. All rights reserved.</p>
  <div className="flex gap-6">

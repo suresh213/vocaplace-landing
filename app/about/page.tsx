@@ -20,15 +20,12 @@ export default function AboutPage() {
       '@type': 'EducationalOrganization',
       name: 'Vocaplace',
       url: 'https://vocaplace.com',
+      logo: 'https://vocaplace.com/logo.webp',
       foundingDate: '2023',
       description: 'Pay After Placement Digital Marketing Academy based in India.',
       numberOfEmployees: {
         '@type': 'QuantitativeValue',
-        value: '50+'
-      },
-      alumni: {
-        '@type': 'QuantitativeValue',
-        value: '5000+'
+        value: 50
       }
     }
   };

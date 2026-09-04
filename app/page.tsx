@@ -46,6 +46,8 @@ export default function Home() {
     provider: {
       '@type': 'Organization',
       name: 'Vocaplace',
+      url: 'https://vocaplace.com',
+      logo: 'https://vocaplace.com/logo.webp',
       sameAs: 'https://vocaplace.com'
     },
     aggregateRating: {
@@ -59,7 +61,8 @@ export default function Home() {
       '@type': 'Offer',
       category: 'Pay After Placement',
       price: '0',
-      priceCurrency: 'INR'
+      priceCurrency: 'INR',
+      url: 'https://vocaplace.com/courses/digital-marketing-mastery'
     }
   };
 
@@ -80,7 +83,7 @@ export default function Home() {
         name: 'How does the Pay After Placement model work?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'You complete the full 12-week program. Once you receive your job offer letter, you pay the remaining course fee. If you don\'t get placed, you pay nothing. Zero risk.'
+          text: 'You complete the 120-day live intensive program. Once you receive your qualifying job offer letter, you pay your course tuition in manageable monthly installments. If you don\'t get placed, you owe nothing.'
         }
       },
       {

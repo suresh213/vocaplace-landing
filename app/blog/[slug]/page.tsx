@@ -69,25 +69,34 @@ export default async function Page({ params }: PageProps) {
 
   const articleJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.metaTitle,
+    '@type': 'BlogPosting',
+    headline: post.title,
+    name: post.title,
     description: post.metaDescription,
     image: [post.coverImage],
     datePublished: new Date(post.date).toISOString(),
     dateModified: new Date(post.date).toISOString(),
-    author: [{
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://vocaplace.com/blog/${post.slug}`,
+    },
+    author: {
       '@type': 'Person',
       name: post.author.name,
-      url: 'https://vocaplace.com/about'
-    }],
+      jobTitle: post.author.role,
+      image: post.author.avatar,
+      url: 'https://vocaplace.com/about',
+    },
     publisher: {
       '@type': 'Organization',
       name: 'Vocaplace',
+      url: 'https://vocaplace.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://vocaplace.com/logo.png'
-      }
-    }
+        url: 'https://vocaplace.com/logo.webp',
+      },
+    },
+    inLanguage: 'en-IN',
   };
 
   const faqJsonLd = post.faqs && post.faqs.length > 0 ? {
