@@ -23,9 +23,9 @@ const ContactClient: React.FC = () => {
  </p>
  {/* Quick contact pills */}
  <div className="flex flex-wrap justify-center gap-4">
- <a href="tel:+919876543210"className="flex items-center gap-2 px-5 py-3 bg-white/10 border border-white/20 rounded-full text-white text-sm font-medium hover:bg-white/20 transition-colors">
+ <a href="tel:+918527647899" className="flex items-center gap-2 px-5 py-3 bg-white/10 border border-white/20 rounded-full text-white text-sm font-medium hover:bg-white/20 transition-colors">
  <Phone size={15} className="text-amber-400"/>
- +91 98765 43210
+ +91 85276 47899
  </a>
  <a href="mailto:hello@vocaplace.com"className="flex items-center gap-2 px-5 py-3 bg-white/10 border border-white/20 rounded-full text-white text-sm font-medium hover:bg-white/20 transition-colors">
  <Mail size={15} className="text-amber-400"/>
@@ -133,10 +133,10 @@ const ContactClient: React.FC = () => {
  <h3 className="font-bold text-slate-900 mb-5 text-base">Contact Details</h3>
  <div className="space-y-4">
  {[
- { icon: Phone, label: 'Phone', value: '+91 98765 43210', sub: 'Mon–Sat, 9AM–7PM' },
- { icon: Mail, label: 'Email', value: 'hello@vocaplace.com', sub: 'Reply within 24 hours' },
+ { icon: Phone, label: 'Phone', value: '+91 85276 47899', href: 'tel:+918527647899', sub: 'Mon–Sat, 9AM–7PM' },
+ { icon: Mail, label: 'Email', value: 'hello@vocaplace.com', href: 'mailto:hello@vocaplace.com', sub: 'Reply within 24 hours' },
  { icon: MapPin, label: 'Office', value: 'Bangalore, Karnataka, India', sub: 'Visit by appointment' },
- { icon: MessageCircle, label: 'WhatsApp', value: 'Chat with us', sub: 'Quick response guaranteed' },
+ { icon: MessageCircle, label: 'WhatsApp', value: 'Chat with Admissions', href: 'https://wa.me/918527647899?text=Hi%20Vocaplace%2C%20I%20want%20to%20know%20more%20about%20the%20Pay%20After%20Placement%20Digital%20Marketing%20Course', sub: 'Quick response guaranteed' },
  ].map((item, i) => (
  <div key={i} className="flex items-start gap-4">
  <div className="w-10 h-10 bg-blue-900 rounded-xl flex items-center justify-center shrink-0">
@@ -144,7 +144,13 @@ const ContactClient: React.FC = () => {
  </div>
  <div>
  <div className="text-xs font-semibold text-slate-400">{item.label}</div>
+ {item.href ? (
+ <a href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined} className="text-sm font-bold text-slate-900 hover:text-blue-900 transition-colors">
+ {item.value}
+ </a>
+ ) : (
  <div className="text-sm font-bold text-slate-900">{item.value}</div>
+ )}
  <div className="text-xs text-slate-400">{item.sub}</div>
  </div>
  </div>

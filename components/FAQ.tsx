@@ -10,7 +10,7 @@ const faqs = [
  },
  {
  q:"How does the Pay After Placement model work?",
- a:"It's simple — you pay a small, refundable registration fee to secure your seat. You then complete the full 12-week program. Once you receive your job offer letter, you pay the remaining course fee. If you don't get placed, you pay nothing. Zero risk."
+ a:"It's simple — you pay a small, refundable registration fee to secure your seat. You then complete the full 12-week program. Once you receive your job offer letter, you pay the remaining course fee. If you don't get placed, you pay nothing, backed by our 100% Job Guarantee."
  },
  {
  q:"Is there a 100% Job Guarantee?",
