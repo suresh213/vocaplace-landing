@@ -149,11 +149,62 @@ export default async function Page({ params }: PageProps) {
     ],
   };
 
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is the duration of the Digital Marketing Mastery course?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The program is a 120-day (4 months) intensive cohort combining live interactive evening sessions, hands-on campaign management, and 1-on-1 mentor reviews.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How does the Pay After Placement model work?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'You learn and manage live campaigns during the 120-day course. You pay your core tuition fee in monthly installments only after receiving an official employment offer letter paying at least ₹4–8 LPA.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is there a 100% job guarantee?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. Vocaplace provides a legally backed 100% Job Guarantee. If you complete the course requirements and do not secure a qualifying role, you owe zero remaining tuition.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Who teaches the Digital Marketing Mastery course?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The course is led directly by Wajed Sk, an Online Faculty member at Victoria University Australia and former Chief Digital Marketing Instructor at Unacademy with 20+ years of industry leadership.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What tools and platforms will I master?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'You will master Google Ads (Search, Display, Performance Max), Meta Ads Manager, GA4, Search Console, Ahrefs, SEMrush, ChatGPT, Gemini, Zapier AI automations, and Canva.',
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <script
         type="application/ld+json"

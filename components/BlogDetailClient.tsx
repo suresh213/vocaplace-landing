@@ -6,6 +6,10 @@ import { ArrowLeft, Calendar, Clock, Share2, Award, ChevronRight, CheckCircle2, 
 import { BlogPost, blogPosts } from '../services/blogData';
 
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+
+const slugify = (text: string) =>
+  text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
 interface BlogDetailClientProps {
   post: BlogPost;
@@ -14,14 +18,15 @@ interface BlogDetailClientProps {
 const BlogDetailClient: React.FC<BlogDetailClientProps> = ({ post }) => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  // Extract Table of Contents items (any line starting with ### or ####)
+  // Extract Table of Contents items (any line starting with ##, ###, or ####)
   const tocItems = post.content
     .split('\n')
-    .filter(line => line.trim().startsWith('###') || line.trim().startsWith('####'))
+    .filter(line => line.trim().startsWith('##') || line.trim().startsWith('###') || line.trim().startsWith('####'))
     .map(line => {
-      const isSub = line.trim().startsWith('####');
-      const text = line.replace('####', '').replace('###', '').trim();
-      return { text, isSub };
+      const isSub = line.trim().startsWith('####') || line.trim().startsWith('###');
+      const text = line.replace(/^[#]+\s*/, '').trim();
+      const id = slugify(text);
+      return { text, isSub, id };
     });
 
   // Get 3 related posts (sharing tags or top converting)
@@ -119,8 +124,65 @@ const BlogDetailClient: React.FC<BlogDetailClientProps> = ({ post }) => {
               </div>
 
               {/* Parsed Markdown content */}
-              <div className="prose prose-slate prose-h3:text-xl prose-h3:font-bold prose-h3:text-slate-900 prose-h4:text-base prose-h4:font-bold prose-p:text-slate-600 prose-p:leading-relaxed max-w-none">
-                <ReactMarkdown>{post.content}</ReactMarkdown>
+              <div className="prose prose-slate max-w-none">
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  components={{
+                    table: ({ node, ...props }) => (
+                      <div className="overflow-x-auto my-8 rounded-xl border border-slate-200 shadow-sm bg-white not-prose">
+                        <table className="min-w-full divide-y divide-slate-200 text-left text-xs sm:text-sm" {...props} />
+                      </div>
+                    ),
+                    thead: ({ node, ...props }) => <thead className="bg-slate-50 font-bold text-slate-900 border-b border-slate-200" {...props} />,
+                    th: ({ node, ...props }) => (
+                      <th className="px-4 py-3 font-semibold text-slate-800 text-xs uppercase tracking-wider whitespace-nowrap bg-slate-100/75" {...props} />
+                    ),
+                    td: ({ node, ...props }) => (
+                      <td className="px-4 py-3 text-slate-600 border-t border-slate-100 leading-relaxed" {...props} />
+                    ),
+                    tr: ({ node, ...props }) => <tr className="hover:bg-slate-50/60 transition-colors" {...props} />,
+                    a: ({ node, href, children, ...props }) => {
+                      const isInternal = href && (href.startsWith('/') || href.startsWith('#'));
+                      if (isInternal) {
+                        return (
+                          <Link href={href} className="text-blue-600 hover:text-blue-800 font-semibold underline underline-offset-2" {...props}>
+                            {children}
+                          </Link>
+                        );
+                      }
+                      return (
+                        <a href={href} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 font-semibold underline underline-offset-2" {...props}>
+                          {children}
+                        </a>
+                      );
+                    },
+                    h2: ({ node, children, ...props }) => {
+                      const text = React.Children.toArray(children).join('');
+                      const id = slugify(text);
+                      return <h2 id={id} className="scroll-mt-24 text-2xl font-bold text-slate-900 mt-10 mb-4 tracking-tight" {...props}>{children}</h2>;
+                    },
+                    h3: ({ node, children, ...props }) => {
+                      const text = React.Children.toArray(children).join('');
+                      const id = slugify(text);
+                      return <h3 id={id} className="scroll-mt-24 text-xl font-bold text-slate-900 mt-8 mb-3 tracking-tight" {...props}>{children}</h3>;
+                    },
+                    h4: ({ node, children, ...props }) => {
+                      const text = React.Children.toArray(children).join('');
+                      const id = slugify(text);
+                      return <h4 id={id} className="scroll-mt-24 text-base font-bold text-slate-900 mt-6 mb-2" {...props}>{children}</h4>;
+                    },
+                    p: ({ node, ...props }) => <p className="text-slate-600 leading-relaxed my-4 text-sm sm:text-base" {...props} />,
+                    ul: ({ node, ...props }) => <ul className="list-disc pl-6 space-y-2 my-4 text-slate-600 text-sm sm:text-base" {...props} />,
+                    ol: ({ node, ...props }) => <ol className="list-decimal pl-6 space-y-2 my-4 text-slate-600 text-sm sm:text-base" {...props} />,
+                    li: ({ node, ...props }) => <li className="leading-relaxed" {...props} />,
+                    blockquote: ({ node, ...props }) => (
+                      <blockquote className="border-l-4 border-blue-600 bg-blue-50/50 p-4 rounded-r-lg my-5 text-slate-700 text-sm not-italic" {...props} />
+                    ),
+                    hr: ({ node, ...props }) => <hr className="my-8 border-slate-200" {...props} />,
+                  }}
+                >
+                  {post.content}
+                </ReactMarkdown>
               </div>
 
               {/* Interactive FAQs if present */}
@@ -221,6 +283,63 @@ const BlogDetailClient: React.FC<BlogDetailClientProps> = ({ post }) => {
                 </div>
               </div>
 
+              {/* Internal SEO Hub: Core Programs & Comparisons */}
+              <div className="mt-10 p-6 bg-slate-50 border border-slate-200 rounded-2xl">
+                <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-blue-900" />
+                  <span>Explore Vocaplace Core Programs &amp; Admissions</span>
+                </h4>
+                <div className="grid sm:grid-cols-2 gap-3 text-xs">
+                  <Link 
+                    href="/" 
+                    className="p-3 bg-white rounded-xl border border-slate-200 hover:border-blue-900 hover:shadow-sm transition-all group"
+                  >
+                    <span className="font-bold text-slate-900 group-hover:text-blue-900 block mb-1">
+                      Pay After Placement Digital Marketing Course
+                    </span>
+                    <span className="text-[11px] text-slate-500 leading-snug block">
+                      100% Job Guarantee (₹4–8 LPA). Pay tuition only after you secure an official offer letter.
+                    </span>
+                  </Link>
+
+                  <Link 
+                    href="/courses/digital-marketing-mastery" 
+                    className="p-3 bg-white rounded-xl border border-slate-200 hover:border-blue-900 hover:shadow-sm transition-all group"
+                  >
+                    <span className="font-bold text-slate-900 group-hover:text-blue-900 block mb-1">
+                      120-Day Digital Marketing Mastery Syllabus
+                    </span>
+                    <span className="text-[11px] text-slate-500 leading-snug block">
+                      Live campaign execution in Google Ads, Meta Ads, Technical SEO, and AI Automation.
+                    </span>
+                  </Link>
+
+                  <Link 
+                    href="/compare" 
+                    className="p-3 bg-white rounded-xl border border-slate-200 hover:border-blue-900 hover:shadow-sm transition-all group"
+                  >
+                    <span className="font-bold text-slate-900 group-hover:text-blue-900 block mb-1">
+                      Kraftshala vs IIDE vs Vocaplace (2026 Breakdown)
+                    </span>
+                    <span className="text-[11px] text-slate-500 leading-snug block">
+                      Compare fees, placement refund terms, salary benchmarks, and live faculty.
+                    </span>
+                  </Link>
+
+                  <Link 
+                    href="/mentor/wajed" 
+                    className="p-3 bg-white rounded-xl border border-slate-200 hover:border-blue-900 hover:shadow-sm transition-all group"
+                  >
+                    <span className="font-bold text-slate-900 group-hover:text-blue-900 block mb-1">
+                      Learn from Mentor Wajed Sk
+                    </span>
+                    <span className="text-[11px] text-slate-500 leading-snug block">
+                      Online Faculty at Victoria University Australia. 20+ years of growth leadership.
+                    </span>
+                  </Link>
+                </div>
+              </div>
+
             </article>
           </main>
 
@@ -250,13 +369,14 @@ const BlogDetailClient: React.FC<BlogDetailClientProps> = ({ post }) => {
                 <span className="text-[10px] font-bold text-slate-400 block mb-4">Table of Contents</span>
                 <nav className="space-y-3 text-xs">
                   {tocItems.map((item, idx) => (
-                    <div 
+                    <a 
                       key={idx} 
-                      className={`flex items-start gap-2 text-slate-600 hover:text-blue-900 transition-colors ${item.isSub ? 'pl-4 text-[11px]' : ''}`}
+                      href={`#${item.id}`}
+                      className={`flex items-start gap-2 text-slate-600 hover:text-blue-900 transition-colors ${item.isSub ? 'pl-4 text-[11px]' : 'font-medium'}`}
                     >
                       <span className="text-[9px] text-blue-900 select-none mt-0.5">•</span>
-                      <span>{item.text}</span>
-                    </div>
+                      <span className="hover:underline line-clamp-1">{item.text}</span>
+                    </a>
                   ))}
                 </nav>
               </div>

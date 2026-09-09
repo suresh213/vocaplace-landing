@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Search, Megaphone, Globe, Bot } from 'lucide-react';
 
@@ -105,7 +106,7 @@ const Curriculum = () => {
  initial={{ opacity: 0, y: 16 }}
  whileInView={{ opacity: 1, y: 0 }}
  viewport={{ once: true }}
- className="text-center mt-10"
+ className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10"
  >
  <a
  href="https://student.vocaplace.com"
@@ -113,6 +114,12 @@ const Curriculum = () => {
  >
  Download Full Syllabus
  </a>
+ <Link
+ href="/courses/digital-marketing-mastery"
+ className="inline-flex items-center gap-2 px-8 py-4 bg-slate-100 text-slate-800 font-semibold rounded-xl hover:bg-slate-200 transition-colors text-base border border-slate-200"
+ >
+ Explore 120-Day Modules &amp; Fees →
+ </Link>
  </motion.div>
  </div>
  </section>

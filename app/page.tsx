@@ -161,7 +161,7 @@ export default function Home() {
  Ready to Start Your Digital Marketing Career?
  </h2>
  <p className="text-blue-200 text-base md:text-lg mb-8 max-w-xl mx-auto">
- Join 5,000+ students who transformed their careers. Pay only after you get placed. Zero risk, 100% commitment.
+ Join 5,000+ students who transformed their careers. Pay only after you get placed. 100% Job Guarantee, 100% commitment.
  </p>
  <div className="flex flex-col sm:flex-row justify-center gap-4">
  <a

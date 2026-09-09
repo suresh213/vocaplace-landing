@@ -32,44 +32,46 @@ const Footer: React.FC = () => {
  </div>
  </div>
 
- {/* Programs */}
- <div>
- <h4 className="font-bold text-white mb-5 text-sm">Programs</h4>
- <ul className="space-y-3 text-sm">
- <li><Link href="/courses" className="hover:text-white transition-colors">All Programs</Link></li>
- <li><Link href="/courses/digital-marketing-mastery" className="hover:text-white transition-colors">Digital Marketing Mastery</Link></li>
- <li><Link href="/compare" className="hover:text-white transition-colors">Compare Institutes</Link></li>
- <li><a href="https://student.vocaplace.com" className="hover:text-white transition-colors">Student Portal</a></li>
- </ul>
- </div>
+  {/* Programs */}
+  <div>
+  <h4 className="font-bold text-white mb-5 text-sm">Programs</h4>
+  <ul className="space-y-3 text-sm">
+  <li><Link href="/" className="hover:text-white transition-colors">Pay After Placement</Link></li>
+  <li><Link href="/courses" className="hover:text-white transition-colors">All Programs</Link></li>
+  <li><Link href="/courses/digital-marketing-mastery" className="hover:text-white transition-colors">Digital Marketing Mastery</Link></li>
+  <li><Link href="/compare" className="hover:text-white transition-colors">Compare Institutes</Link></li>
+  <li><a href="https://student.vocaplace.com" className="hover:text-white transition-colors">Student Portal</a></li>
+  </ul>
+  </div>
 
- {/* Company */}
- <div>
- <h4 className="font-bold text-white mb-5 text-sm">Company</h4>
- <ul className="space-y-3 text-sm">
- <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
- <li><Link href="/blog" className="hover:text-white transition-colors">Blog & Insights</Link></li>
- <li><Link href="/hire-talent" className="hover:text-white transition-colors">Hire Our Graduates</Link></li>
- <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
- </ul>
- </div>
+  {/* Company */}
+  <div>
+  <h4 className="font-bold text-white mb-5 text-sm">Company</h4>
+  <ul className="space-y-3 text-sm">
+  <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+  <li><Link href="/mentor/wajed" className="hover:text-white transition-colors">Lead Mentor (Wajed Sk)</Link></li>
+  <li><Link href="/blog" className="hover:text-white transition-colors">Blog & Insights</Link></li>
+  <li><Link href="/hire-talent" className="hover:text-white transition-colors">Hire Our Graduates</Link></li>
+  <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
+  </ul>
+  </div>
 
- {/* Contact */}
- <div>
- <h4 className="font-bold text-white mb-5 text-sm">Contact Us</h4>
- <ul className="space-y-3 text-sm">
- <li className="flex items-center gap-2">
- <Phone size={14} className="text-blue-400 shrink-0"/>
- <a href="tel:+918527647899" className="hover:text-white transition-colors">+91 85276 47899</a>
- </li>
- <li className="flex items-center gap-2">
- <Mail size={14} className="text-blue-400 shrink-0"/>
- <a href="mailto:hello@vocaplace.com" className="hover:text-white transition-colors">hello@vocaplace.com</a>
- </li>
- </ul>
- </div>
+  {/* Contact */}
+  <div>
+  <h4 className="font-bold text-white mb-5 text-sm">Contact Us</h4>
+  <ul className="space-y-3 text-sm">
+  <li className="flex items-center gap-2">
+  <Phone size={14} className="text-blue-400 shrink-0"/>
+  <a href="tel:+918527647899" className="hover:text-white transition-colors">+91 85276 47899</a>
+  </li>
+  <li className="flex items-center gap-2">
+  <Mail size={14} className="text-blue-400 shrink-0"/>
+  <a href="mailto:hello@vocaplace.com" className="hover:text-white transition-colors">hello@vocaplace.com</a>
+  </li>
+  </ul>
+  </div>
 
- </div>
+  </div>
 
       {/* Placement Hubs by City */}
       <div className="py-6 border-t border-slate-800 text-xs text-slate-400">
@@ -88,6 +90,16 @@ const Footer: React.FC = () => {
           <Link href="/blog/digital-marketing-course-in-chennai-with-job-guarantee" className="hover:text-white transition-colors">Chennai</Link>
           <span className="text-slate-700">•</span>
           <Link href="/blog/digital-marketing-course-in-kolkata-with-placement" className="hover:text-white transition-colors">Kolkata</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-ahmedabad-with-100-placement" className="hover:text-white transition-colors">Ahmedabad</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-jaipur-with-placement-guarantee" className="hover:text-white transition-colors">Jaipur</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-kochi-with-job-guarantee" className="hover:text-white transition-colors">Kochi</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-chandigarh-with-placement" className="hover:text-white transition-colors">Chandigarh</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-indore-with-placement-guarantee" className="hover:text-white transition-colors">Indore</Link>
         </div>
       </div>
 
