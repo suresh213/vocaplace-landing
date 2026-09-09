@@ -67,7 +67,7 @@ export default function MentorPage() {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Wajed Sk',
-    jobTitle: 'Lead Digital Marketing Instructor',
+    jobTitle: 'Lead Digital Marketing Instructor & Online Faculty at Victoria University Australia',
     worksFor: {
       '@type': 'EducationalOrganization',
       name: 'Vocaplace',

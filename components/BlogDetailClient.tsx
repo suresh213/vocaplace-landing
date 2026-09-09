@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, Share2, Award, ChevronRight, CheckCircle2, ChevronDown, Sparkles, PhoneCall } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, Share2, Award, ChevronRight, CheckCircle2, ChevronDown, Sparkles, PhoneCall, MessageCircle } from 'lucide-react';
 import { BlogPost, blogPosts } from '../services/blogData';
 
 import ReactMarkdown from 'react-markdown';
@@ -226,7 +226,7 @@ const BlogDetailClient: React.FC<BlogDetailClientProps> = ({ post }) => {
                     Launch Your ₹4–8 LPA Digital Marketing Career in 120 Days
                   </h3>
                   <p className="text-slate-300 text-xs md:text-sm leading-relaxed mb-6 max-w-2xl">
-                    Don&apos;t risk your money on theoretical courses. Learn live campaign management from <strong>Wajed Sk</strong> (Victoria University Australia faculty) and pay tuition only after securing your offer letter.
+                    Skip outdated theoretical courses. Learn live campaign management from <strong>Wajed Sk</strong> (Victoria University Australia faculty) and pay tuition only after securing your offer letter.
                   </p>
                   
                   <div className="grid sm:grid-cols-3 gap-3 mb-6 text-xs text-slate-200">
@@ -247,13 +247,21 @@ const BlogDetailClient: React.FC<BlogDetailClientProps> = ({ post }) => {
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Link
                       href="/contact"
-                      className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs rounded-xl text-center transition-colors shadow-lg flex items-center justify-center gap-2"
+                      className="px-5 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs rounded-xl text-center transition-colors shadow-lg flex items-center justify-center gap-2"
                     >
-                      <PhoneCall className="w-4 h-4"/> Apply for Next Batch (Pay After Placement)
+                      <PhoneCall className="w-4 h-4"/> Apply for Next Batch
                     </Link>
+                    <a
+                      href="https://wa.me/918527647899?text=Hi%20Vocaplace%2C%20I%20am%20reading%20your%20blog%20and%20want%20to%20know%20more%20about%20the%20Pay%20After%20Placement%20course"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-5 py-3 bg-green-600 hover:bg-green-500 text-white font-bold text-xs rounded-xl text-center transition-colors shadow-lg flex items-center justify-center gap-2"
+                    >
+                      <MessageCircle className="w-4 h-4"/> Chat on WhatsApp
+                    </a>
                     <Link
                       href="/courses/digital-marketing-mastery"
-                      className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold text-xs rounded-xl text-center transition-colors border border-white/20"
+                      className="px-5 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold text-xs rounded-xl text-center transition-colors border border-white/20"
                     >
                       View 120-Day Curriculum →
                     </Link>

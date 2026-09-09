@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
  }
 
   return {
-    title: `${course.title} — Pay After Placement (100% Job Guarantee) | Vocaplace`,
+    title: 'Pay After Placement Digital Marketing Course | 100% Job Guarantee',
     description: `Master SEO, Performance Ads, Meta & AI in 120 days. Get a ₹4–8 LPA job with our 100% placement guarantee. Learn from Victoria University faculty. Pay after placement.`,
     keywords: [
       ...course.categories,
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       canonical: `/courses/${course.slug}`,
     },
     openGraph: {
-      title: `${course.title} — 100% Job Guarantee | Vocaplace`,
+      title: 'Pay After Placement Digital Marketing Course | 100% Job Guarantee',
       description: `Get placed in a ₹4–8 LPA digital marketing role in 120 days. Pay after placement.`,
       url: `https://vocaplace.com/courses/${course.slug}`,
       images: [
@@ -92,8 +92,12 @@ export default async function Page({ params }: PageProps) {
     instructor: {
       '@type': 'Person',
       name: 'Wajed Sk',
-      jobTitle: 'Lead Digital Marketing Instructor',
+      jobTitle: 'Lead Digital Marketing Instructor & Online Faculty at Victoria University Australia',
       url: 'https://vocaplace.com/mentor/wajed',
+      worksFor: {
+        '@type': 'EducationalOrganization',
+        name: 'Victoria University Australia',
+      },
     },
     educationalCredentialAwarded: 'Digital Marketing & AI Specialist Certificate',
     timeRequired: `P${course.durationInMonths}M`,
@@ -119,6 +123,7 @@ export default async function Page({ params }: PageProps) {
       instructor: {
         '@type': 'Person',
         name: 'Wajed Sk',
+        jobTitle: 'Online Faculty at Victoria University Australia & Former Chief Digital Marketing Instructor at Unacademy',
         url: 'https://vocaplace.com/mentor/wajed',
       },
     },

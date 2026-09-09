@@ -48,8 +48,8 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.2 }}
               className="text-lg text-blue-100 max-w-xl leading-relaxed"
             >
-              Master SEO, Google Ads, Social Media, and AI-Driven Workflows in just 12 weeks.
-              Land a high-paying job first - pay only after you get placed with a 100% job guarantee.
+              Master SEO, Performance Google Ads, Meta Ads, and AI Automation in 120 days.
+              Land a ₹4–8 LPA marketing job first — pay tuition only after placement with our 100% job guarantee.
             </motion.p>
 
             {/* Benefit bullets */}
@@ -60,10 +60,10 @@ const Hero: React.FC = () => {
               className="space-y-3"
             >
               {[
-                "100% Job Placement Guarantee",
-                "Pay Only After You Get Hired",
-                "10+ Modules with Live Projects",
-                "1-on-1 Mentorship from Industry Experts",
+                "100% Job Guarantee (₹4–8 LPA Salary Package)",
+                "Pay Tuition Only After Securing Offer Letter",
+                "Direct Mentorship by Victoria University Faculty (Wajed Sk)",
+                "Live Ad Spend Budgets & Generative AI Tools from Day 1",
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 text-blue-100 text-sm font-medium">
                   <CheckCircle size={18} className="text-green-400 shrink-0" />
@@ -81,16 +81,16 @@ const Hero: React.FC = () => {
             >
               <a
                 href="https://student.vocaplace.com"
-                className="h-14 px-8 bg-amber-400 text-blue-950 text-base font-bold flex items-center justify-center gap-2 hover:bg-amber-300 transition-colors rounded-lg whitespace-nowrap"
+                className="h-14 px-8 bg-amber-400 text-blue-950 text-base font-bold flex items-center justify-center gap-2 hover:bg-amber-300 transition-colors rounded-lg whitespace-nowrap shadow-lg shadow-amber-400/20"
               >
-                Start Your Free Journey
+                Apply (Pay After Placement)
                 <ArrowRight size={18} />
               </a>
               <Link
-                href="/courses"
+                href="/courses/digital-marketing-mastery"
                 className="h-14 px-8 bg-white/10 border border-white/30 text-white text-base font-semibold flex items-center justify-center hover:bg-white/20 transition-colors rounded-lg whitespace-nowrap"
               >
-                View Course Details
+                Explore 120-Day Curriculum
               </Link>
             </motion.div>
 
