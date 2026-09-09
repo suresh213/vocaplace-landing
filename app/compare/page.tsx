@@ -4,10 +4,13 @@ import Link from 'next/link';
 import { ShieldCheck, Check, X, Star, ArrowRight, Award, GraduationCap, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Kraftshala vs Vocaplace vs IIDE vs UpGrad: Best Course Comparison (2026)',
-  description: 'Unbiased 2026 comparison of India\'s top digital marketing courses. Compare Kraftshala, Vocaplace, IIDE, and UpGrad fees, placement guarantees, and average salaries.',
+  title: 'Kraftshala vs IIDE vs Vocaplace (2026): Fees, Placements & Real Reviews',
+  description: 'Unbiased 2026 comparison of Kraftshala vs IIDE vs Vocaplace vs UpGrad. Compare course fees, placement guarantees, syllabus & ₹4–8 LPA salary outcomes.',
   alternates: { canonical: '/compare' },
   keywords: [
+    'Kraftshala vs IIDE',
+    'IIDE vs Kraftshala',
+    'Kraftshala fees 2026',
     'Kraftshala alternatives',
     'Kraftshala vs Vocaplace',
     'IIDE vs Vocaplace',
@@ -198,7 +201,7 @@ export default function ComparePage() {
                   ))}
                 </tr>
                 <tr>
-                  <td className="p-5 font-bold text-slate-900 bg-slate-50/50">Upfront Financial Risk</td>
+                  <td className="p-5 font-bold text-slate-900 bg-slate-50/50">Payment Model & Liability</td>
                   {competitors.map((c, i) => (
                     <td key={i} className={`p-5 ${c.isHero ? 'bg-blue-50/40 font-bold text-green-700' : 'text-slate-600'}`}>
                       {c.upfront}
@@ -287,7 +290,10 @@ export default function ComparePage() {
             <section>
               <h2 className="text-2xl font-bold text-slate-900 mb-4">IIDE vs Kraftshala vs Vocaplace: 2026 Comparison Breakdown</h2>
               <p className="mb-4">
-                When choosing between <strong>IIDE, Kraftshala, and Vocaplace</strong>, the deciding factor comes down to <em>financial risk</em> and <em>placement accountability</em>:
+                When choosing between <strong>IIDE, Kraftshala, and Vocaplace</strong>, the deciding factor comes down to <em>fee structure accountability</em> and <em>verifiable placement guarantees</em>:
+              </p>
+              <p className="mb-4 text-xs text-blue-900 font-semibold bg-blue-50/50 p-3 rounded-lg border border-blue-100">
+                Looking for syllabus module comparisons and student reviews? Read our complete <Link href="/blog/kraftshala-vs-vocaplace-vs-iide-digital-marketing-course-comparison" className="underline hover:text-blue-700">Kraftshala vs Vocaplace vs IIDE In-Depth Editorial Review</Link>.
               </p>
               <ul className="list-disc pl-5 space-y-2 mb-4">
                 <li><strong>Kraftshala (Marketing Launchpad):</strong> Charges <strong>₹1,49,000 + 18% GST (₹1,75,820)</strong>. While Kraftshala offers an 8X Impact model, students must pay 20% upfront (₹35,000+) and are locked into loan agreements unless their CTC falls below ₹4.5 LPA under strict fine-print conditions.</li>

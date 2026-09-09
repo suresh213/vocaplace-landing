@@ -137,7 +137,7 @@ export default function AboutPage() {
  Vocaplace was founded in 2023 by industry veterans who had witnessed firsthand the frustrating gap between academic marketing theory and real-world campaign requirements. Talented graduates couldn't run campaigns. Agencies couldn't find ready-to-hire talent.
  </p>
  <p className="text-slate-600 leading-relaxed mb-4 text-sm">
- We decided to build the bridge ourselves — a comprehensive, placement-first academy that transforms motivated learners into job-ready professionals in just 12 weeks. And with the pay-after-placement model, we eliminated all financial risk for students.
+ We decided to build the bridge ourselves — a comprehensive, placement-first academy that transforms motivated learners into job-ready professionals in just 12 weeks. And with our pay-after-placement model and 100% job guarantee, we aligned our success directly with student outcomes.
  </p>
  <p className="text-slate-600 leading-relaxed text-sm">
  Today, 5,000+ students have been placed, 100+ companies trust us for their marketing hires, and our 94% placement rate speaks for itself. We're just getting started.
