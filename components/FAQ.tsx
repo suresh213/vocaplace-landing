@@ -9,6 +9,10 @@ const faqs = [
  a:"Not at all! Our program is designed specifically for complete beginners. We start from the very basics and guide you step by step to becoming job-ready. Many of our top performers had zero marketing background before joining."
  },
  {
+ q: "What are the course fees? (Vocaplace ki fee kitni hai?)",
+ a: "Under our Pay After Placement model, you do not pay your core tuition fee until you receive an offer letter paying ₹4–8 LPA. To confirm your seat in the cohort, you pay a small registration fee which is 100% refundable if you are not placed within 90 days of graduation. Tuition is paid in easy monthly installments from your salary only after placement."
+ },
+ {
  q:"How does the Pay After Placement model work?",
  a:"It's simple — you pay a small, refundable registration fee to secure your seat. You then complete the full 12-week program. Once you receive your job offer letter, you pay the remaining course fee. If you don't get placed, you pay nothing, backed by our 100% Job Guarantee."
  },

@@ -84,6 +84,22 @@ export default function ComparePage() {
           text: 'At Vocaplace, you complete 120 days of live training, manage real ad budgets, and pay your core tuition in installments only after securing a full-time marketing job paying at least ₹4–8 LPA.',
         },
       },
+      {
+        '@type': 'Question',
+        name: 'What are IIDE course fees in 2026?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'IIDE course fees in 2026 range from ₹1,00,000 to ₹1,65,000 + GST for online certifications, and ₹5,95,000 to ₹6,50,000+ for their Post Graduate Program in Digital Marketing. Unlike Vocaplace, IIDE requires upfront fee payments or bank loans and offers placement assistance rather than a guaranteed placement outcome.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What are digital marketing course fees in India under Pay After Placement?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Under Vocaplace’s Pay After Placement digital marketing program in India, you enroll and train for 120 days with live project budgets, and pay your tuition in easy installments only after landing a verified job offer paying ₹4–8 LPA.',
+        },
+      },
     ],
   };
 
@@ -358,6 +374,18 @@ export default function ComparePage() {
                   <h3 className="font-bold text-slate-900 text-sm mb-2">How does Vocaplace Pay After Placement model work?</h3>
                   <p className="text-xs text-slate-600 leading-relaxed">
                     At Vocaplace, you complete 120 days of live training, manage real ad budgets, and pay your core tuition in installments only after securing a full-time marketing job paying at least ₹4–8 LPA.
+                  </p>
+                </div>
+                <div className="p-5 border border-slate-200 rounded-xl bg-slate-50/50">
+                  <h3 className="font-bold text-slate-900 text-sm mb-2">What are IIDE course fees in 2026?</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    IIDE course fees in 2026 range from ₹1,00,000 to ₹1,65,000 + GST for online certifications, and ₹5,95,000 to ₹6,50,000+ for their Post Graduate Program in Digital Marketing. Unlike Vocaplace, IIDE requires upfront fee payments or bank loans and offers placement assistance rather than a guaranteed placement outcome.
+                  </p>
+                </div>
+                <div className="p-5 border border-slate-200 rounded-xl bg-slate-50/50">
+                  <h3 className="font-bold text-slate-900 text-sm mb-2">What are digital marketing course fees in India under Pay After Placement?</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Under Vocaplace’s Pay After Placement digital marketing program in India, you enroll and train for 120 days with live project budgets, and pay your tuition in easy installments only after landing a verified job offer paying ₹4–8 LPA.
                   </p>
                 </div>
               </div>

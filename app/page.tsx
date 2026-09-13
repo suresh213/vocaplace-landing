@@ -80,6 +80,14 @@ export default function Home() {
       },
       {
         '@type': 'Question',
+        name: 'What are the course fees? (Vocaplace ki fee kitni hai?)',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Under our Pay After Placement model, your core tuition fee is deferred until you receive an official job offer letter paying ₹4–8 LPA. A small registration fee confirms your cohort seat and is 100% refundable if you are not placed within 90 days of graduation under our 100% Job Guarantee.'
+        }
+      },
+      {
+        '@type': 'Question',
         name: 'How does the Pay After Placement model work?',
         acceptedAnswer: {
           '@type': 'Answer',
