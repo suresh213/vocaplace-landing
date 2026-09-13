@@ -54,7 +54,7 @@ export default function ComparePage() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Which is better: IIDE, Kraftshala, or Vocaplace?',
+        name: 'Kraftshala or IIDE: which is better? (IIDE vs Kraftshala vs Vocaplace)',
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'While Kraftshala charges ₹1,75,820 with upfront loan liabilities and IIDE charges ₹1,00,000 to ₹6,50,000+ with only placement assistance, Vocaplace offers 100% Pay After Placement with a legally backed 100% Job Guarantee (₹4–8 LPA) mentored directly by Victoria University Australia faculty Wajed Sk.',
@@ -304,9 +304,9 @@ export default function ComparePage() {
           {/* Deep Dive Section */}
           <div className="max-w-4xl mx-auto space-y-12 text-sm leading-relaxed text-slate-600">
             <section>
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">IIDE vs Kraftshala vs Vocaplace: 2026 Comparison Breakdown</h2>
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">Kraftshala or IIDE: Which is Better? (2026 Institute Comparison Breakdown)</h2>
               <p className="mb-4">
-                When choosing between <strong>IIDE, Kraftshala, and Vocaplace</strong>, the deciding factor comes down to <em>fee structure accountability</em> and <em>verifiable placement guarantees</em>:
+                When deciding whether <strong>Kraftshala or IIDE is better</strong>, or comparing them against <strong>Vocaplace</strong>, the deciding factor comes down to <em>fee structure accountability</em> and <em>verifiable placement guarantees</em>:
               </p>
               <p className="mb-4 text-xs text-blue-900 font-semibold bg-blue-50/50 p-3 rounded-lg border border-blue-100">
                 Looking for syllabus module comparisons and student reviews? Read our complete <Link href="/blog/kraftshala-vs-vocaplace-vs-iide-digital-marketing-course-comparison" className="underline hover:text-blue-700">Kraftshala vs Vocaplace vs IIDE In-Depth Editorial Review</Link>.
@@ -353,7 +353,7 @@ export default function ComparePage() {
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
               <div className="space-y-4">
                 <div className="p-5 border border-slate-200 rounded-xl bg-slate-50/50">
-                  <h3 className="font-bold text-slate-900 text-sm mb-2">Which is better: IIDE, Kraftshala, or Vocaplace?</h3>
+                  <h3 className="font-bold text-slate-900 text-sm mb-2">Kraftshala or IIDE: which is better? (IIDE vs Kraftshala vs Vocaplace)</h3>
                   <p className="text-xs text-slate-600 leading-relaxed">
                     While Kraftshala charges ₹1,75,820 with upfront loan liabilities and IIDE charges ₹1,00,000 to ₹6,50,000+ with only placement assistance, Vocaplace offers 100% Pay After Placement with a legally backed 100% Job Guarantee (₹4–8 LPA) mentored directly by Victoria University Australia faculty Wajed Sk.
                   </p>
