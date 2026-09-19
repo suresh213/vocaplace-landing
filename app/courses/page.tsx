@@ -198,6 +198,7 @@ const CoursesPage: React.FC = () => {
  </Link>
  <a
  href="https://student.vocaplace.com"
+ rel="nofollow noopener noreferrer"
  className="flex-1 h-14 bg-blue-900 text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-blue-800 transition-colors text-sm"
  >
  Enroll Now — Pay After Placement

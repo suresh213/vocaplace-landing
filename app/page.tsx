@@ -174,6 +174,7 @@ export default function Home() {
  <div className="flex flex-col sm:flex-row justify-center gap-4">
  <a
  href="https://student.vocaplace.com"
+ rel="nofollow noopener noreferrer"
  className="h-14 px-8 bg-amber-400 text-blue-950 text-base font-bold flex items-center justify-center gap-2 hover:bg-amber-300 transition-colors rounded-xl whitespace-nowrap"
  >
  Start Your Free Journey →

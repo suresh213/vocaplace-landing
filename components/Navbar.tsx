@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
  {/* Desktop Actions */}
  <div className="hidden lg:flex items-center gap-4">
  <Link href="/contact"className="text-xs font-semibold text-slate-500 hover:text-blue-900">Contact</Link>
- <a href="https://student.vocaplace.com"className="flex items-center h-9 px-5 bg-blue-900 text-white text-xs font-semibold hover:bg-blue-800 transition-colors rounded-lg">
+ <a href="https://student.vocaplace.com" rel="nofollow noopener noreferrer" className="flex items-center h-9 px-5 bg-blue-900 text-white text-xs font-semibold hover:bg-blue-800 transition-colors rounded-lg">
  Apply Now
  </a>
  </div>
@@ -119,7 +119,7 @@ const Navbar: React.FC = () => {
  </div>
  
  <div className="mt-auto space-y-3">
- <a href="https://student.vocaplace.com"className="block text-center w-full py-3 bg-blue-900 text-white text-sm font-semibold rounded-lg">
+ <a href="https://student.vocaplace.com" rel="nofollow noopener noreferrer" className="block text-center w-full py-3 bg-blue-900 text-white text-sm font-semibold rounded-lg">
  Apply Now
  </a>
  </div>

@@ -251,7 +251,7 @@ export default function AboutPage() {
  <h2 className="text-3xl font-bold text-slate-900 mb-4">Join Our Mission</h2>
  <p className="text-slate-500 text-lg mb-8">Whether you're a student or a company — there's a place for you in the Vocaplace ecosystem.</p>
  <div className="flex flex-col sm:flex-row justify-center gap-4">
- <a href="https://student.vocaplace.com"className="h-14 px-8 bg-blue-900 text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-blue-800 transition-colors">
+ <a href="https://student.vocaplace.com" rel="nofollow noopener noreferrer" className="h-14 px-8 bg-blue-900 text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-blue-800 transition-colors">
  For Students — Enroll Now
  <ArrowRight size={16} />
  </a>

@@ -165,6 +165,7 @@ const ContactClient: React.FC = () => {
  </p>
  <a
  href="https://student.vocaplace.com"
+ rel="nofollow noopener noreferrer"
  className="flex items-center gap-2 px-5 py-3 bg-amber-400 text-blue-950 font-bold text-sm rounded-xl hover:bg-amber-300 transition-colors"
  >
  Book Free Demo

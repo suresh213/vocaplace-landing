@@ -293,6 +293,7 @@ export default function MentorPage() {
  <div className="flex flex-col sm:flex-row justify-center gap-4">
  <a
  href="https://student.vocaplace.com"
+ rel="nofollow noopener noreferrer"
  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-blue-900 text-white font-bold rounded-xl hover:bg-blue-800 transition-colors"
  >
  Enroll Now — Pay After Placement

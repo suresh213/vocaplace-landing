@@ -110,6 +110,7 @@ const Curriculum = () => {
  >
  <a
  href="https://student.vocaplace.com"
+ rel="nofollow noopener noreferrer"
  className="inline-flex items-center gap-2 px-8 py-4 bg-blue-900 text-white font-bold rounded-xl hover:bg-blue-800 transition-colors text-base"
  >
  Download Full Syllabus

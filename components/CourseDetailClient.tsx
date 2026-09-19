@@ -14,6 +14,7 @@ const EnrollmentButton: React.FC<{ price: number; courseTitle: string }> = ({ pr
  return (
  <a
  href="https://student.vocaplace.com"
+ rel="nofollow noopener noreferrer"
  id="btn-enroll-action-sidebar"
  className="w-full py-3 bg-blue-900 text-white text-xs font-bold hover:bg-blue-800 transition-colors text-center block"
  >
@@ -149,6 +150,7 @@ const CourseDetailClient: React.FC<CourseDetailClientProps> = ({ course }) => {
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <a
                 href="https://student.vocaplace.com"
+                rel="nofollow noopener noreferrer"
                 id="btn-enroll-hero-bottom"
                 className="w-full sm:w-auto h-12 px-8 bg-blue-900 text-white text-xs font-bold flex items-center justify-center hover:bg-blue-800 transition-colors whitespace-nowrap"
               >

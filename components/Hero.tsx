@@ -81,6 +81,7 @@ const Hero: React.FC = () => {
             >
               <a
                 href="https://student.vocaplace.com"
+                rel="nofollow noopener noreferrer"
                 className="h-14 px-8 bg-amber-400 text-blue-950 text-base font-bold flex items-center justify-center gap-2 hover:bg-amber-300 transition-colors rounded-lg whitespace-nowrap shadow-lg shadow-amber-400/20"
               >
                 Apply (Pay After Placement)

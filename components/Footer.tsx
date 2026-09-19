@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
   <li><Link href="/courses/digital-marketing-mastery" className="hover:text-white transition-colors">Digital Marketing Mastery</Link></li>
   <li><Link href="/blog/top-pay-after-placement-digital-marketing-courses" className="hover:text-white transition-colors">Placement Guarantee Courses</Link></li>
   <li><Link href="/compare" className="hover:text-white transition-colors">Compare Institutes</Link></li>
-  <li><a href="https://student.vocaplace.com" className="hover:text-white transition-colors">Student Portal</a></li>
+  <li><a href="https://student.vocaplace.com" rel="nofollow noopener noreferrer" className="hover:text-white transition-colors">Student Portal</a></li>
   </ul>
   </div>
 
@@ -74,9 +74,27 @@ const Footer: React.FC = () => {
 
   </div>
 
+      {/* Popular Guides & Playbooks */}
+      <div className="py-5 border-t border-slate-800 text-xs text-slate-400">
+        <p className="font-semibold text-slate-300 mb-2">Popular Career &amp; Marketing Playbooks:</p>
+        <div className="flex flex-wrap gap-x-4 gap-y-2 text-[11px]">
+          <Link href="/blog/generative-engine-optimization-geo-how-to-rank-in-chatgpt-perplexity" className="hover:text-white transition-colors">Generative Engine Optimization (GEO)</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/how-to-automate-lead-generation-with-ai-and-zapier" className="hover:text-white transition-colors">AI Lead Automation with Zapier</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-tools-every-marketer-must-master-in-2026" className="hover:text-white transition-colors">Essential Marketing Tools 2026</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/b2c-ecommerce-marketing-scaling-d2c-brands-to-1-crore-monthly" className="hover:text-white transition-colors">Scaling D2C Brands to ₹1 Cr</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/internshala-digital-marketing-course-with-placement-guarantee-review" className="hover:text-white transition-colors">Internshala Course Review</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-fees-in-india-2026-guide" className="hover:text-white transition-colors">Course Fees Guide 2026</Link>
+        </div>
+      </div>
+
       {/* Placement Hubs by City */}
-      <div className="py-6 border-t border-slate-800 text-xs text-slate-400">
-        <p className="font-semibold text-slate-300 mb-3">Placement Hubs Across India:</p>
+      <div className="py-5 border-t border-slate-800 text-xs text-slate-400">
+        <p className="font-semibold text-slate-300 mb-2">Placement Hubs Across India:</p>
         <div className="flex flex-wrap gap-x-4 gap-y-2 text-[11px]">
           <Link href="/blog/digital-marketing-course-in-bangalore-with-placement-guarantee" className="hover:text-white transition-colors">Bangalore</Link>
           <span className="text-slate-700">•</span>

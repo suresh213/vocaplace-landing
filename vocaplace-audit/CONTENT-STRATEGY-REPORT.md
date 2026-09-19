@@ -20,7 +20,7 @@ By pairing **first-hand pedagogical authority (Wajed Sk's 20+ years experience)*
 | Competitor | Business & Fee Model | Strengths | Vulnerabilities & Gaps for Vocaplace to Exploit |
 |---|---|---|---|
 | **Kraftshala** | Upfront fee + Placement refund policy (8X Impact track has selective criteria) | High brand recognition, strong placement marketing | • Complex refund fine-print (long 15-month waiting window, ₹4.5 LPA floor)<br>• High upfront fees for general cohorts<br>• Lacks dedicated AI marketing automation specialization |
-| **IIDE** | High upfront tuition (₹1,00,000+) | Strong university partnerships, offline centers in Mumbai/Delhi | • **Zero financial risk sharing** (no Pay After Placement)<br>• High student churn and negative sentiment around tuition fees<br>• Curriculum is often slow to integrate modern AI tool stacks |
+| **IIDE** | High upfront tuition (₹1,00,000+) | Strong university partnerships, offline centers in Mumbai/Delhi | • **No Pay After Placement model** (100% upfront fees)<br>• High student churn and negative sentiment around tuition fees<br>• Curriculum is often slow to integrate modern AI tool stacks |
 | **UpGrad / Simplilearn** | High upfront tuition (₹60,000 – ₹1,50,000) | Huge domain authority, massive ad budgets | • Mass-market "diploma mill" reputation<br>• Low personalized mentorship (pre-recorded lectures, minimal live feedback)<br>• Poor placement accountability for freshers |
 
 ### 🎯 Key Gaps Where Vocaplace Wins:
@@ -36,7 +36,7 @@ By pairing **first-hand pedagogical authority (Wajed Sk's 20+ years experience)*
 - **Demographics:** Age 21–24, recent graduate (BBA, B.Com, BA, B.Tech), living in Tier-1/Tier-2 Indian cities.
 - **Pain Point:** Unemployed or stuck in ₹15k–₹20k/month customer support/BPO jobs with no career trajectory.
 - **Search Queries:** *"Digital marketing course with 100% placement guarantee India"*, *"Pay after placement courses for freshers"*, *"Digital marketing starting salary in India 2026"*.
-- **Conversion Trigger:** ₹4–8 LPA salary anchor, zero financial risk before placement, quick 120-day timeline.
+- **Conversion Trigger:** ₹4–8 LPA salary anchor, Pay After Placement before placement, quick 120-day timeline.
 
 ### Persona B: The Ambitious Career Switcher
 - **Demographics:** Age 24–29, working in traditional sales, operations, or non-tech jobs.
