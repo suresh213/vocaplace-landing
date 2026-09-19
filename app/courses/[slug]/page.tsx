@@ -176,10 +176,10 @@ export default async function Page({ params }: PageProps) {
       },
       {
         '@type': 'Question',
-        name: 'Is there a 100% job guarantee?',
+        name: 'How does this digital marketing course with placement guarantee work?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. Vocaplace provides a legally backed 100% Job Guarantee. If you complete the course requirements and do not secure a qualifying role, you owe zero remaining tuition.',
+          text: 'Vocaplace provides a legally backed 100% Job Guarantee (₹4–8 LPA). Operating under an Income Share Agreement (ISA) / Pay After Placement model, students pay tuition in manageable monthly installments only after securing a verified employment offer letter. If an eligible graduate does not secure a qualifying role, their remaining core tuition liability is completely waived.',
         },
       },
       {

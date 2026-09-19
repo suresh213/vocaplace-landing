@@ -100,61 +100,68 @@ const CourseDetailClient: React.FC<CourseDetailClientProps> = ({ course }) => {
  <div className="grid lg:grid-cols-12 gap-8 items-center relative z-10">
  {/* Left Column: Details */}
  <div className="lg:col-span-7 space-y-6">
- <div className="flex flex-wrap gap-2">
- {course.categories.map((cat, i) => (
- <span key={i} className="px-2 py-0.5 border border-blue-900/20 bg-white text-blue-900 text-[10px] font-bold">
- {cat}
- </span>
- ))}
- <span className="px-2 py-0.5 bg-blue-900 text-white text-[10px] font-bold">
- {course.level}
- </span>
- </div>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-50 border border-green-300 text-green-800 text-xs font-bold rounded-full">
+                <ShieldCheck className="w-3.5 h-3.5 text-green-600 shrink-0" />
+                100% Placement Guarantee (₹4–8 LPA) • Pay After Placement
+              </span>
+              {course.categories.map((cat, i) => (
+                <span key={i} className="px-2 py-0.5 border border-blue-900/20 bg-white text-blue-900 text-[10px] font-bold">
+                  {cat}
+                </span>
+              ))}
+              <span className="px-2 py-0.5 bg-blue-900 text-white text-[10px] font-bold">
+                {course.level}
+              </span>
+            </div>
 
- <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight">
- {course.title}
- </h1>
+            <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight">
+              Pay After Placement Digital Marketing Course
+            </h1>
+            <p className="text-sm md:text-base font-semibold text-blue-900">
+              120-Day Live Career Incubator with 100% Job Guarantee (₹4–8 LPA Package)
+            </p>
 
- <p className="text-slate-600 text-sm md:text-base leading-relaxed">
- {course.description}
- </p>
+            <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+              {course.description}
+            </p>
 
- {/* Specs Grid */}
- <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 py-4 border-y border-slate-200">
- <div>
- <div className="text-[10px] font-bold text-slate-400">Duration</div>
- <div className="text-sm font-bold text-slate-900 mt-1">{course.durationInMonths} Months ({course.durationInDays} Days)</div>
- </div>
- <div>
- <div className="text-[10px] font-bold text-slate-400">Rating</div>
- <div className="text-sm font-bold text-slate-900 mt-1">★ {course.rating} / 5.0</div>
- </div>
- <div>
- <div className="text-[10px] font-bold text-slate-400">Language</div>
- <div className="text-sm font-bold text-slate-900 mt-1">{course.language}</div>
- </div>
- <div>
- <div className="text-[10px] font-bold text-slate-400">Tuition</div>
- <div className="text-sm font-bold text-slate-900 mt-1">₹{course.price.toLocaleString('en-IN')}</div>
- </div>
- </div>
+            {/* Specs Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 py-4 border-y border-slate-200">
+              <div>
+                <div className="text-[10px] font-bold text-slate-400">Duration</div>
+                <div className="text-sm font-bold text-slate-900 mt-1">{course.durationInMonths} Months ({course.durationInDays} Days)</div>
+              </div>
+              <div>
+                <div className="text-[10px] font-bold text-slate-400">Rating</div>
+                <div className="text-sm font-bold text-slate-900 mt-1">★ {course.rating} / 5.0</div>
+              </div>
+              <div>
+                <div className="text-[10px] font-bold text-slate-400">Language</div>
+                <div className="text-sm font-bold text-slate-900 mt-1">{course.language}</div>
+              </div>
+              <div>
+                <div className="text-[10px] font-bold text-slate-400">Payment Model</div>
+                <div className="text-sm font-bold text-green-700 mt-1">Pay After Placement</div>
+              </div>
+            </div>
 
- <div className="flex flex-col sm:flex-row items-center gap-4">
- <a
- href="https://student.vocaplace.com"
- id="btn-enroll-hero-bottom"
- className="w-full sm:w-auto h-12 px-8 bg-blue-900 text-white text-xs font-bold flex items-center justify-center hover:bg-blue-800 transition-colors whitespace-nowrap"
- >
- Enroll in Program
- </a>
- {course.isaEnabled && (
- <div className="flex items-center gap-2 text-xs font-bold text-slate-800">
- <ShieldCheck className="w-5 h-5 text-green-600"/>
- <span>ISA Pay After Placement Option Available</span>
- </div>
- )}
- </div>
- </div>
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <a
+                href="https://student.vocaplace.com"
+                id="btn-enroll-hero-bottom"
+                className="w-full sm:w-auto h-12 px-8 bg-blue-900 text-white text-xs font-bold flex items-center justify-center hover:bg-blue-800 transition-colors whitespace-nowrap"
+              >
+                Enroll in Program
+              </a>
+              {course.isaEnabled && (
+                <div className="flex items-center gap-2 text-xs font-bold text-slate-800">
+                  <ShieldCheck className="w-5 h-5 text-green-600"/>
+                  <span>Contractual 100% Placement Guarantee (₹4–8 LPA)</span>
+                </div>
+              )}
+            </div>
+          </div>
 
  {/* Right Column: Thumbnail / Video Preview */}
  <div className="lg:col-span-5">

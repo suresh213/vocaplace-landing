@@ -391,6 +391,27 @@ export default function ComparePage() {
               </div>
             </section>
 
+            {/* Related Research & Rankings */}
+            <div className="p-6 border border-blue-100 rounded-2xl bg-blue-50/50">
+              <h3 className="font-bold text-slate-900 text-sm mb-3">Explore Detailed Course Guides & Fee Breakdowns</h3>
+              <div className="grid sm:grid-cols-2 gap-4 text-xs text-slate-700">
+                <div className="p-4 bg-white rounded-xl border border-slate-200">
+                  <div className="font-bold text-slate-900 mb-1">Placement Guarantee Ranking</div>
+                  <p className="text-slate-600 mb-2">Compare verified institutes offering full-time job commitments across India.</p>
+                  <Link href="/blog/top-pay-after-placement-digital-marketing-courses" className="text-blue-600 font-semibold hover:underline">
+                    Best Digital Marketing Courses with Placement Guarantee →
+                  </Link>
+                </div>
+                <div className="p-4 bg-white rounded-xl border border-slate-200">
+                  <div className="font-bold text-slate-900 mb-1">2026 Course Fees Guide</div>
+                  <p className="text-slate-600 mb-2">Understand hidden GST charges, loan interest, and cost comparisons by city.</p>
+                  <Link href="/blog/digital-marketing-course-fees-in-india-2026-guide" className="text-blue-600 font-semibold hover:underline">
+                    Read Digital Marketing Course Fees in India →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
             {/* High-Converting CTA Box */}
             <div className="p-8 bg-gradient-to-br from-blue-900 via-slate-900 to-slate-950 text-white rounded-2xl shadow-xl text-center">
               <span className="inline-block px-3 py-1 bg-amber-400 text-slate-950 text-xs font-bold rounded-full mb-4">

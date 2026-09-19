@@ -39,6 +39,7 @@ const Footer: React.FC = () => {
   <li><Link href="/" className="hover:text-white transition-colors">Pay After Placement</Link></li>
   <li><Link href="/courses" className="hover:text-white transition-colors">All Programs</Link></li>
   <li><Link href="/courses/digital-marketing-mastery" className="hover:text-white transition-colors">Digital Marketing Mastery</Link></li>
+  <li><Link href="/blog/top-pay-after-placement-digital-marketing-courses" className="hover:text-white transition-colors">Placement Guarantee Courses</Link></li>
   <li><Link href="/compare" className="hover:text-white transition-colors">Compare Institutes</Link></li>
   <li><a href="https://student.vocaplace.com" className="hover:text-white transition-colors">Student Portal</a></li>
   </ul>
