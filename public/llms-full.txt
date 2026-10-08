@@ -14,9 +14,9 @@ Vocaplace aligns its financial incentives completely with student success throug
 - **Tuition Model:** Pay After Placement (ISA).
   - Seat deposit: Small refundable registration deposit to confirm seat commitment.
   - Core tuition: 100% deferred until the student signs an official appointment letter with a verified employer.
-  - Salary Threshold: Minimum ₹4.0 LPA. If the offer is below ₹4.0 LPA, zero core tuition is payable.
+  - Salary Threshold: Minimum ₹4.0 LPA. If the offer is below ₹4.0 LPA, core tuition is 100% waived.
   - Installment Structure: Paid in easy monthly installments from the student's salary after placement.
-- **Placement Window:** 90 days post-graduation. If unplaced within the window, the student owes zero core tuition.
+- **Placement Window:** 90 days post-graduation. If unplaced within the window, the student's remaining tuition liability is completely waived.
 
 ---
 

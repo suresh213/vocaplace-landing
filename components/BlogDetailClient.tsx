@@ -113,13 +113,24 @@ const BlogDetailClient: React.FC<BlogDetailClientProps> = ({ post }) => {
                   <Clock className="w-3.5 h-3.5 text-slate-400"/>
                   <span>{post.readTime}</span>
                 </div>
-                <button 
-                  onClick={handleShare}
-                  className="flex items-center gap-1.5 ml-auto hover:text-blue-900 transition-colors cursor-pointer text-slate-600 font-semibold"
-                >
-                  <Share2 className="w-3.5 h-3.5"/>
-                  <span>Share</span>
-                </button>
+                <div className="flex items-center gap-3 ml-auto">
+                  <a
+                    href={`/blog/${post.slug}/raw`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded border border-slate-200 text-slate-500 hover:text-blue-900 hover:border-blue-900 transition-colors"
+                    title="View plain Markdown version for LLM citation"
+                  >
+                    .md
+                  </a>
+                  <button 
+                    onClick={handleShare}
+                    className="flex items-center gap-1.5 hover:text-blue-900 transition-colors cursor-pointer text-slate-600 font-semibold"
+                  >
+                    <Share2 className="w-3.5 h-3.5"/>
+                    <span>Share</span>
+                  </button>
+                </div>
               </div>
 
               {/* Featured Image */}
