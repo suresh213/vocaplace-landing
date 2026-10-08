@@ -68,7 +68,7 @@ export default function CareerHubPage() {
           <div className="max-w-5xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-800/60 border border-blue-700/60 text-amber-300 text-xs font-bold mb-6">
               <Sparkles size={14} className="text-amber-400" />
-              <span>Programmatic Career Transition Hub · Class of 2026</span>
+              <span>Specialized Degree Career Transition Hub · Class of 2026</span>
             </div>
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight max-w-4xl mx-auto">
