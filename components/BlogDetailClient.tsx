@@ -95,26 +95,35 @@ const BlogDetailClient: React.FC<BlogDetailClientProps> = ({ post }) => {
               </h1>
 
               {/* Meta information */}
-              <div className="flex flex-wrap items-center gap-6 py-4 border-y border-slate-100 mb-8 text-[11px] text-slate-500">
+              <div className="flex flex-wrap items-center gap-4 sm:gap-6 py-4 border-y border-slate-100 mb-8 text-[11px] text-slate-500">
                 <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4"/>
-                  <span>{post.date}</span>
+                  <img 
+                    src={post.author.avatar} 
+                    alt={post.author.name} 
+                    className="w-5 h-5 rounded-full object-cover border border-slate-200" 
+                  />
+                  <span className="font-semibold text-slate-800">By {post.author.name}</span>
+                  <span className="text-slate-400">({post.author.role})</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4"/>
+                <div className="flex items-center gap-1.5">
+                  <Calendar className="w-3.5 h-3.5 text-slate-400"/>
+                  <span>Updated: {post.date}</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <Clock className="w-3.5 h-3.5 text-slate-400"/>
                   <span>{post.readTime}</span>
                 </div>
                 <button 
                   onClick={handleShare}
-                  className="flex items-center gap-2 ml-auto hover:text-blue-900 transition-colors cursor-pointer"
+                  className="flex items-center gap-1.5 ml-auto hover:text-blue-900 transition-colors cursor-pointer text-slate-600 font-semibold"
                 >
-                  <Share2 className="w-4 h-4"/>
-                  <span>Share Article</span>
+                  <Share2 className="w-3.5 h-3.5"/>
+                  <span>Share</span>
                 </button>
               </div>
 
               {/* Featured Image */}
-              <div className="aspect-[16/9] w-full overflow-hidden border border-slate-200 mb-8 bg-slate-100">
+              <div className="aspect-[16/9] w-full overflow-hidden border border-slate-200 mb-6 bg-slate-100 rounded-lg">
                 <div
                   className="w-full h-full bg-cover bg-center bg-no-repeat"
                   style={{ backgroundImage: `url(${post.coverImage})` }}
@@ -122,6 +131,26 @@ const BlogDetailClient: React.FC<BlogDetailClientProps> = ({ post }) => {
                   aria-label={post.title}
                 />
               </div>
+
+              {/* Executive Summary / Quick Takeaways (AI Citation & TL;DR Box) */}
+              {post.excerpt && (
+                <div className="mb-8 p-5 bg-gradient-to-r from-blue-50/90 to-slate-50 border-l-4 border-blue-900 rounded-r-xl shadow-sm">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Sparkles className="w-4 h-4 text-amber-500 shrink-0" />
+                    <span className="text-xs font-bold uppercase tracking-wider text-blue-950">
+                      Quick Summary &amp; Key Takeaways (2026)
+                    </span>
+                  </div>
+                  <p className="text-sm text-slate-700 leading-relaxed font-medium">
+                    {post.excerpt}
+                  </p>
+                  <div className="mt-3 pt-3 border-t border-blue-100 flex flex-wrap gap-x-6 gap-y-1.5 text-[11px] text-slate-600 font-medium">
+                    <span>⚡ Model: <strong className="text-blue-950 font-bold">Pay After Placement (ISA)</strong></span>
+                    <span>🎯 Guarantee: <strong className="text-blue-950 font-bold">100% Job Guarantee (₹4–8 LPA)</strong></span>
+                    <span>👨‍🏫 Mentor: <strong className="text-blue-950 font-bold">Wajed Sk (Victoria Univ Australia)</strong></span>
+                  </div>
+                </div>
+              )}
 
               {/* Parsed Markdown content */}
               <div className="prose prose-slate max-w-none">
