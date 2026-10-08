@@ -39,6 +39,7 @@ const Footer: React.FC = () => {
   <li><Link href="/" className="hover:text-white transition-colors">Pay After Placement</Link></li>
   <li><Link href="/courses" className="hover:text-white transition-colors">All Programs</Link></li>
   <li><Link href="/courses/digital-marketing-mastery" className="hover:text-white transition-colors">Digital Marketing Mastery</Link></li>
+  <li><Link href="/career" className="hover:text-white transition-colors">Degree Career Tracks</Link></li>
   <li><Link href="/blog/top-pay-after-placement-digital-marketing-courses" className="hover:text-white transition-colors">Placement Guarantee Courses</Link></li>
   <li><Link href="/compare" className="hover:text-white transition-colors">Compare Institutes</Link></li>
   <li><a href="https://student.vocaplace.com" rel="nofollow noopener noreferrer" className="hover:text-white transition-colors">Student Portal</a></li>
@@ -89,6 +90,24 @@ const Footer: React.FC = () => {
           <Link href="/blog/internshala-digital-marketing-course-with-placement-guarantee-review" className="hover:text-white transition-colors">Internshala Course Review</Link>
           <span className="text-slate-700">•</span>
           <Link href="/blog/digital-marketing-course-fees-in-india-2026-guide" className="hover:text-white transition-colors">Course Fees Guide 2026</Link>
+        </div>
+      </div>
+
+      {/* Degree & Background Career Transitions */}
+      <div className="py-5 border-t border-slate-800 text-xs text-slate-400">
+        <p className="font-semibold text-slate-300 mb-2">Career Transitions by College Degree:</p>
+        <div className="flex flex-wrap gap-x-4 gap-y-2 text-[11px]">
+          <Link href="/career/bba-to-digital-marketing" className="hover:text-white transition-colors">BBA to Digital Marketing</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/career/bcom-to-digital-marketing" className="hover:text-white transition-colors">B.Com to Performance Marketing</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/career/btech-to-digital-marketing" className="hover:text-white transition-colors">B.Tech / Engineers to Growth</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/career/bpo-switch-to-digital-marketing" className="hover:text-white transition-colors">BPO to Digital Marketing</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/career/ba-arts-to-digital-marketing" className="hover:text-white transition-colors">BA (Arts &amp; Humanities)</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/career" className="text-amber-400 font-semibold hover:text-amber-300 transition-colors">View All Degree Tracks →</Link>
         </div>
       </div>
 

@@ -1,16 +1,18 @@
 import { MetadataRoute } from 'next';
 import { blogPosts } from '../services/blogData';
 import { coursesData } from '../services/courseData';
+import { careerTracks } from '../services/careerData';
 
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
- const baseUrl = 'https://vocaplace.com';
+  const baseUrl = 'https://vocaplace.com';
 
   // Priority and frequency mapping for base routes
   const routeMeta: Record<string, { priority: number; changeFrequency: 'daily' | 'weekly' | 'monthly' }> = {
     '': { priority: 1.0, changeFrequency: 'daily' },
     '/compare': { priority: 0.90, changeFrequency: 'daily' },
+    '/career': { priority: 0.90, changeFrequency: 'daily' },
     '/mentor/wajed': { priority: 0.90, changeFrequency: 'daily' },
     '/courses': { priority: 0.85, changeFrequency: 'daily' },
     '/blog': { priority: 0.85, changeFrequency: 'daily' },
@@ -38,6 +40,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.95,
   }));
 
+  // Career Transition routes (Programmatic SEO tracks by degree)
+  const careerRoutes = careerTracks.map((track) => ({
+    url: `${baseUrl}/career/${track.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }));
+
   // Blog routes (authoritative guides and clusters)
   const blogRoutes = blogPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
@@ -46,5 +56,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
-  return [...routes, ...courseRoutes, ...blogRoutes];
+  return [...routes, ...courseRoutes, ...careerRoutes, ...blogRoutes];
 }

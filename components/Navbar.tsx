@@ -65,6 +65,12 @@ const Navbar: React.FC = () => {
    Compare
  </Link>
  <Link 
+   href="/career"
+   className={`text-xs font-semibold transition-colors ${isActive('/career') || (pathname && pathname.startsWith('/career')) ? 'text-blue-900' : 'text-slate-500 hover:text-blue-900'}`}
+ >
+   Career Tracks
+ </Link>
+ <Link 
    href="/mentor/wajed"
    className={`text-xs font-semibold transition-colors ${isActive('/mentor/wajed') ? 'text-blue-900' : 'text-slate-500 hover:text-blue-900'}`}
  >
@@ -100,6 +106,9 @@ const Navbar: React.FC = () => {
  </Link>
  <Link href="/compare" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-900 py-3 border-b border-slate-100">
  Compare Institutes
+ </Link>
+ <Link href="/career" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-900 py-3 border-b border-slate-100">
+ Career Tracks
  </Link>
  <Link href="/hire-talent"onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-900 py-3 border-b border-slate-100">
  Hire Talent
