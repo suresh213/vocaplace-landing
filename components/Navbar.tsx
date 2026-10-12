@@ -34,6 +34,13 @@ const Navbar: React.FC = () => {
  </Link>
  
  <Link 
+ href="/pay-after-placement"
+ className={`text-xs font-semibold transition-colors ${isActive('/pay-after-placement') ? 'text-blue-900 font-bold' : 'text-slate-500 hover:text-blue-900'}`}
+ >
+ Pay After Placement
+ </Link>
+ 
+ <Link 
  href="/courses"
  className={`text-xs font-semibold transition-colors ${isActive('/courses') || (pathname && pathname.startsWith('/courses')) ? 'text-blue-900' : 'text-slate-500 hover:text-blue-900'}`}
  >
@@ -105,6 +112,9 @@ const Navbar: React.FC = () => {
  <div className="flex flex-col gap-1">
  <Link href="/"onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-900 py-3 border-b border-slate-100">
  Home
+ </Link>
+ <Link href="/pay-after-placement"onClick={() => setIsOpen(false)} className="text-sm font-bold text-blue-900 py-3 border-b border-slate-100">
+ Pay After Placement
  </Link>
  <Link href="/courses"onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-900 py-3 border-b border-slate-100">
  Courses

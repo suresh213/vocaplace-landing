@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Priority and frequency mapping for base routes
   const routeMeta: Record<string, { priority: number; changeFrequency: 'daily' | 'weekly' | 'monthly' }> = {
     '': { priority: 1.0, changeFrequency: 'daily' },
+    '/pay-after-placement': { priority: 1.0, changeFrequency: 'daily' },
     '/compare': { priority: 0.90, changeFrequency: 'daily' },
     '/career': { priority: 0.90, changeFrequency: 'daily' },
     '/mentor/wajed': { priority: 0.90, changeFrequency: 'daily' },
