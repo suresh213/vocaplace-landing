@@ -346,7 +346,7 @@ export default function ComparePage() {
                 Many online bootcamps rely on pre-recorded video lectures recorded years ago, with teaching assistants handling queries. 
               </p>
               <p>
-                At Vocaplace, your lead instructor is <strong>Wajed Sk</strong> — Online Faculty at Victoria University Australia, former Chief Digital Marketing Instructor at Unacademy, and corporate trainer who has guided 5,000+ students to successful placements.
+                At Vocaplace, your lead instructor is <strong>Wajed Sk</strong> - Online Faculty at Victoria University Australia, former Chief Digital Marketing Instructor at Unacademy, and corporate trainer who has guided 5,000+ students to successful placements.
               </p>
             </section>
 

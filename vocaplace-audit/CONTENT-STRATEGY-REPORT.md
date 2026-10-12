@@ -130,7 +130,7 @@ graph TD
 Every blog post will feature 3 calibrated conversion zones:
 1. **Key Takeaways Box (Top 20%):** Quick summary + subtle CTA banner (*"Want to learn this hands-on? Check our Pay After Placement program"*).
 2. **Inline Value Offer (Middle 50%):** Downloadable asset (e.g. *Free 2026 Salary Report & Syllabus PDF* in exchange for Name + Phone + Email).
-3. **Sticky Bottom Bar / Bottom CTA (End of Post):** Direct application form trigger (*"Limited seats for next Monday batch — 100% Job Guarantee. Apply Now →"*).
+3. **Sticky Bottom Bar / Bottom CTA (End of Post):** Direct application form trigger (*"Limited seats for next Monday batch - 100% Job Guarantee. Apply Now →"*).
 
 ---
 

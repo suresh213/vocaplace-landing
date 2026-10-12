@@ -73,7 +73,7 @@ export default function AboutPage() {
  Marketing Academy
  </h1>
  <p className="text-blue-200 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
- We were founded with one mission: make quality digital marketing education accessible to everyone, and ensure every graduate gets a job — before they pay a single rupee.
+ We were founded with one mission: make quality digital marketing education accessible to everyone, and ensure every graduate gets a job - before they pay a single rupee.
  </p>
  <div className="flex flex-wrap justify-center gap-4">
  <Link href="/courses"className="h-12 px-8 bg-amber-400 text-blue-950 font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-amber-300 transition-colors">
@@ -114,7 +114,7 @@ export default function AboutPage() {
  </div>
  <h2 className="text-xl font-bold text-slate-900 mb-3">Our Mission</h2>
  <p className="text-slate-600 leading-relaxed text-sm">
- To make high-quality digital marketing education accessible to every aspiring professional — regardless of their background, location, or financial situation. We believe skills and placement should come before payment.
+ To make high-quality digital marketing education accessible to every aspiring professional - regardless of their background, location, or financial situation. We believe skills and placement should come before payment.
  </p>
  </div>
  <div className="bg-amber-50 rounded-2xl border border-amber-100 p-8">
@@ -138,7 +138,7 @@ export default function AboutPage() {
  Vocaplace was founded in 2023 by industry veterans who had witnessed firsthand the frustrating gap between academic marketing theory and real-world campaign requirements. Talented graduates couldn't run campaigns. Agencies couldn't find ready-to-hire talent.
  </p>
  <p className="text-slate-600 leading-relaxed mb-4 text-sm">
- We decided to build the bridge ourselves — a comprehensive, placement-first academy that transforms motivated learners into job-ready professionals in just 12 weeks. And with our pay-after-placement model and 100% job guarantee, we aligned our success directly with student outcomes.
+ We decided to build the bridge ourselves - a comprehensive, placement-first academy that transforms motivated learners into job-ready professionals in just 12 weeks. And with our pay-after-placement model and 100% job guarantee, we aligned our success directly with student outcomes.
  </p>
  <p className="text-slate-600 leading-relaxed text-sm">
  Today, 5,000+ students have been placed, 100+ companies trust us for their marketing hires, and our 94% placement rate speaks for itself. We're just getting started.
@@ -176,7 +176,7 @@ export default function AboutPage() {
  { num: '03', title: 'Continuous Innovation', desc: 'The digital marketing landscape changes daily. Our curriculum evolves with it.' },
  { num: '04', title: 'Radical Transparency', desc: 'Honest feedback, real placement data, clear fees. No fine print, no false promises.' },
  { num: '05', title: 'True Partnership', desc: 'We only succeed when our students, companies and mentors succeed together.' },
- { num: '06', title: 'Long-Term Thinking', desc: 'We care about your entire career journey — not just landing your first job.' },
+ { num: '06', title: 'Long-Term Thinking', desc: 'We care about your entire career journey - not just landing your first job.' },
  ].map((v, i) => (
  <div key={i} className="p-6 bg-white rounded-2xl border border-slate-100 hover:border-blue-200 hover: transition-all duration-300">
  <div className="text-3xl font-black text-blue-900/15 mb-3">{v.num}</div>
@@ -200,7 +200,7 @@ export default function AboutPage() {
  <div className="lg:col-span-2 relative min-h-[320px]">
  <Image
  src="/mentor.jpeg"
- alt="Wajed Sk — Lead Instructor at Vocaplace"
+ alt="Wajed Sk - Lead Instructor at Vocaplace"
  fill
  className="object-cover object-top"
  />
@@ -216,7 +216,7 @@ export default function AboutPage() {
  {/* Details */}
  <div className="lg:col-span-3 p-8">
  <p className="text-slate-600 text-sm leading-relaxed mb-5">
- With over <strong>20 years of real-world experience</strong> in Digital Transformation, Performance Marketing, and Brand Strategy, Wajed Sk brings exceptional industry expertise and classroom passion to every session. He currently serves as <strong>Online Faculty & Digital Transformation Consultant at Victoria University, Australia</strong> — one of only three professionals from India in this role.
+ With over <strong>20 years of real-world experience</strong> in Digital Transformation, Performance Marketing, and Brand Strategy, Wajed Sk brings exceptional industry expertise and classroom passion to every session. He currently serves as <strong>Online Faculty & Digital Transformation Consultant at Victoria University, Australia</strong> - one of only three professionals from India in this role.
  </p>
  <div className="grid sm:grid-cols-2 gap-3 mb-6">
  {[
@@ -250,17 +250,17 @@ export default function AboutPage() {
  <section className="py-16 px-6">
  <div className="max-w-3xl mx-auto text-center">
  <h2 className="text-3xl font-bold text-slate-900 mb-4">Join Our Mission</h2>
- <p className="text-slate-500 text-lg mb-8">Whether you're a student or a company — there's a place for you in the Vocaplace ecosystem.</p>
+ <p className="text-slate-500 text-lg mb-8">Whether you're a student or a company - there's a place for you in the Vocaplace ecosystem.</p>
  <div className="flex flex-col sm:flex-row justify-center gap-4">
         <ApplyNowButton
           source="About Page CTA - Enroll Now"
           className="h-14 px-8 bg-blue-900 text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-blue-800 transition-colors cursor-pointer"
         >
-          For Students — Enroll Now
+          For Students - Enroll Now
           <ArrowRight size={16} />
         </ApplyNowButton>
  <Link href="/hire-talent"className="h-14 px-8 border border-blue-900 text-blue-900 font-bold rounded-xl flex items-center justify-center hover:bg-blue-50 transition-colors">
- For Companies — Hire Talent
+ For Companies - Hire Talent
  </Link>
  </div>
  </div>

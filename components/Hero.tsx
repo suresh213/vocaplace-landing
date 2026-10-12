@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
               className="text-lg text-blue-100 max-w-xl leading-relaxed"
             >
               Master SEO, Performance Google Ads, Meta Ads, and AI Automation in 120 days.
-              Land a ₹4–8 LPA marketing job first — pay tuition only after placement with our 100% job guarantee.
+              Land a ₹4–8 LPA marketing job first - pay tuition only after placement with our 100% job guarantee.
             </motion.p>
 
             {/* Benefit bullets */}
@@ -155,7 +155,7 @@ const Hero: React.FC = () => {
                 <p className="text-slate-700 text-sm leading-relaxed italic">
                   "I got placed at a top agency at ₹7 LPA - and I only paid <em>after</em> my offer letter arrived. Best decision of my life."
                 </p>
-                <p className="text-slate-400 text-xs mt-2 font-semibold">— Priya S., SEO Manager at BrandFlow</p>
+                <p className="text-slate-400 text-xs mt-2 font-semibold"> - Priya S., SEO Manager at BrandFlow</p>
               </div>
 
               {/* Stats row */}

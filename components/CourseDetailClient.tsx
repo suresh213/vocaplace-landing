@@ -22,7 +22,7 @@ const EnrollmentButton: React.FC<{ courseTitle: string }> = ({ courseTitle }) =>
       id="btn-enroll-action-sidebar"
       className="w-full py-3 bg-blue-900 text-white text-xs font-bold hover:bg-blue-800 transition-colors text-center block cursor-pointer"
     >
-      Apply Now — Pay After Placement
+      Apply Now - Pay After Placement
     </button>
   );
 };

@@ -84,7 +84,7 @@ const CoursesPage: React.FC = () => {
  <span className="text-amber-400">Designed to Get You Placed.</span>
  </h1>
  <p className="text-blue-200 text-lg max-w-2xl mx-auto">
- We don't offer 20 half-baked programs. We offer one world-class program — comprehensive, placement-guaranteed, and crafted by an instructor with 20+ years of real industry experience.
+ We don't offer 20 half-baked programs. We offer one world-class program - comprehensive, placement-guaranteed, and crafted by an instructor with 20+ years of real industry experience.
  </p>
  </div>
  </section>
@@ -203,7 +203,7 @@ const CoursesPage: React.FC = () => {
                 source="Courses Page - Digital Marketing Mastery Card"
                 className="flex-1 h-14 bg-blue-900 text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-blue-800 transition-colors text-sm cursor-pointer"
               >
-                Enroll Now — Pay After Placement
+                Enroll Now - Pay After Placement
                 <ArrowRight size={16} />
               </ApplyNowButton>
  </div>

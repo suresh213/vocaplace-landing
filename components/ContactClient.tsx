@@ -84,7 +84,7 @@ const ContactClient: React.FC = () => {
             <span className="text-amber-400">Digital Marketing Career</span>
           </h1>
           <p className="text-blue-200 text-lg max-w-2xl mx-auto mb-8">
-            Whether you're a student ready to start, a professional looking to switch careers, or a company wanting to hire — our team is here to help.
+            Whether you're a student ready to start, a professional looking to switch careers, or a company wanting to hire - our team is here to help.
           </p>
           {/* Quick contact pills */}
           <div className="flex flex-wrap justify-center gap-4">
@@ -329,9 +329,9 @@ const ContactClient: React.FC = () => {
             <div className="bg-green-50 rounded-2xl border border-green-100 p-6">
               <h3 className="font-bold text-slate-900 mb-2 text-sm">Response Time Commitment</h3>
               {[
-                'WhatsApp & Chat — within 30 mins',
-                'Phone calls — within 2 hours',
-                'Email responses — within 24 hours',
+                'WhatsApp & Chat - within 30 mins',
+                'Phone calls - within 2 hours',
+                'Email responses - within 24 hours',
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-2 text-sm text-slate-600 mt-2">
                   <CheckCircle size={14} className="text-green-500 shrink-0" />

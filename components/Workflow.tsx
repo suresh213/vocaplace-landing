@@ -9,22 +9,22 @@ const features = [
  {
  icon: Heart,
  title:"We Genuinely Care About Your Success",
- desc:"Our placement team works tirelessly — crafting your resume, coaching you for interviews, and connecting you with the right companies. We don't stop until you have an offer in hand.",
+ desc:"Our placement team works tirelessly - crafting your resume, coaching you for interviews, and connecting you with the right companies. We don't stop until you have an offer in hand.",
  },
  {
  icon: Users,
  title:"Small Batches, Personal Attention",
- desc:"We keep our batches small so every student gets direct mentorship. No getting lost in a crowd of thousands — your growth is our personal responsibility.",
+ desc:"We keep our batches small so every student gets direct mentorship. No getting lost in a crowd of thousands - your growth is our personal responsibility.",
  },
  {
  icon: Building2,
  title:"200+ Hiring Partners Ready to Hire You",
- desc:"We've built relationships with top agencies, startups, and MNCs across India. When you graduate, you walk into a warm network — not a cold job hunt.",
+ desc:"We've built relationships with top agencies, startups, and MNCs across India. When you graduate, you walk into a warm network - not a cold job hunt.",
  },
  {
  icon: Briefcase,
  title:"Real Projects, Not Just Theory",
- desc:"You'll work on live campaigns for real businesses during the course. By graduation, you have a portfolio with actual results — not just a certificate.",
+ desc:"You'll work on live campaigns for real businesses during the course. By graduation, you have a portfolio with actual results - not just a certificate.",
  },
 ];
 

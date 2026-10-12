@@ -14,7 +14,7 @@ const testimonials = [
  gradient:"from-blue-500 to-purple-600",
  },
  {
- text:"We've hired 8 candidates from Vocaplace over the past year. Every single one was job-ready from day one — they knew Meta Ads, Google Analytics, and content strategy. I'd recommend this program to any agency looking for fresh talent.",
+ text:"We've hired 8 candidates from Vocaplace over the past year. Every single one was job-ready from day one - they knew Meta Ads, Google Analytics, and content strategy. I'd recommend this program to any agency looking for fresh talent.",
  name:"Rahul Mehta",
  title:"HR Director, WebScale Agency",
  type:"Hiring Partner",

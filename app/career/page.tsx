@@ -76,7 +76,7 @@ export default function CareerHubPage() {
             </h1>
             
             <p className="text-base sm:text-lg text-blue-100/90 max-w-3xl mx-auto mb-8 font-normal leading-relaxed">
-              Whether you are trapped in low-paying campus sales, repetitive Tally accounting, mass-IT bench periods, or rotational BPO shifts—discover how your background translates directly into high-growth Performance Marketing in 120 days.
+              Whether you are trapped in low-paying campus sales, repetitive Tally accounting, mass-IT bench periods, or rotational BPO shifts - discover how your background translates directly into high-growth Performance Marketing in 120 days.
             </p>
 
             <div className="flex flex-wrap justify-center gap-6 text-xs text-blue-200">

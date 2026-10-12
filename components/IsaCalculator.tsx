@@ -62,7 +62,7 @@ export default function IsaCalculator() {
             <span className="text-amber-400">Vocaplace Charges a Flat ₹50k Fee Once Placed. That's It!</span>
           </h3>
           <p className="text-blue-200 text-xs sm:text-sm mt-3 max-w-2xl mx-auto leading-relaxed">
-            See how traditional edtech bootcamps overprice after placement by extracting a percentage cut of your income. Vocaplace protects your hard work with a transparent <strong>flat ₹50,000 fee</strong>—payable in easy installments only after you secure your offer letter.
+            See how traditional edtech bootcamps overprice after placement by extracting a percentage cut of your income. Vocaplace protects your hard work with a transparent <strong>flat ₹50,000 fee</strong> - payable in easy installments only after you secure your offer letter.
           </p>
         </div>
 
@@ -331,7 +331,7 @@ export default function IsaCalculator() {
             onClick={() => openModal({ source: `ISA Calculator Flat 50k (CTC: ₹${ctc}L)` })}
             className="w-full sm:w-auto h-14 px-8 bg-amber-400 hover:bg-amber-300 text-blue-950 font-extrabold text-sm rounded-xl inline-flex items-center justify-center gap-2 transition-all shadow-xl hover:shadow-amber-400/20 cursor-pointer"
           >
-            Apply for Next Batch — Pay Flat ₹50k Only After Placement
+            Apply for Next Batch - Pay Flat ₹50k Only After Placement
             <ArrowRight size={16} />
           </button>
           <p className="text-slate-400 text-[11px] mt-2.5">

@@ -380,7 +380,7 @@ export const careerTracks: CareerTrack[] = [
       },
       {
         question: 'How do I explain switching from B.Com to digital marketing in interviews?',
-        answer: 'Highlight that digital marketing—especially performance marketing—is the commercial engine of modern business. You can explain how your accounting and economics training allows you to evaluate ad campaigns through true financial ROI (contribution margins, CAC to LTV ratio) rather than vanity vanity metrics like likes and impressions.'
+        answer: 'Highlight that digital marketing - especially performance marketing - is the commercial engine of modern business. You can explain how your accounting and economics training allows you to evaluate ad campaigns through true financial ROI (contribution margins, CAC to LTV ratio) rather than vanity vanity metrics like likes and impressions.'
       },
       {
         question: 'What is the duration of Vocaplace\'s Pay After Placement program for B.Com freshers?',
@@ -550,7 +550,7 @@ export const careerTracks: CareerTrack[] = [
     faqs: [
       {
         question: 'Is digital marketing a good career choice for B.Tech engineers in India?',
-        answer: 'Yes, it is one of the fastest-growing fields for engineers seeking high-paying non-coding or low-coding careers. Because tech companies value technical fluency, engineers who understand marketing automation, server-side tracking, and programmatic SEO often command packages of ₹5.0 to ₹8.5 LPA—substantially higher than mass IT service packages.'
+        answer: 'Yes, it is one of the fastest-growing fields for engineers seeking high-paying non-coding or low-coding careers. Because tech companies value technical fluency, engineers who understand marketing automation, server-side tracking, and programmatic SEO often command packages of ₹5.0 to ₹8.5 LPA - substantially higher than mass IT service packages.'
       },
       {
         question: 'Will switching from engineering to digital marketing hurt my long-term career?',
@@ -798,7 +798,7 @@ export const careerTracks: CareerTrack[] = [
     excerpt: 'Worried that a Bachelor of Arts degree only leads to low-paying content writing (₹15,000/mo) or civil service exam waiting cycles? Discover how BA graduates leverage storytelling, psychology, and creativity to become high-earning Creative Strategists and Content Leads earning ₹4.5–7.5 LPA.',
     targetAudience: 'BA graduates in English, Journalism, Psychology, Sociology, and Mass Communication seeking creative, dynamic corporate marketing careers.',
     heroHeadline: 'Turn Your Storytelling & Psychology Mindset into a ₹4.5–7.5 LPA Digital Career',
-    heroSubheadline: 'The digital marketing industry does not need math geniuses—it needs people who understand human emotion, persuasive copywriting, and viral hooks. Master live ad campaigns and AI workflows in 120 days.',
+    heroSubheadline: 'The digital marketing industry does not need math geniuses - it needs people who understand human emotion, persuasive copywriting, and viral hooks. Master live ad campaigns and AI workflows in 120 days.',
     averageCampusSalary: '₹2.0 LPA – ₹2.8 LPA',
     vocaplaceAverageSalary: '₹4.5 LPA – ₹7.5 LPA',
     salaryCeiling3Years: '₹8.5 LPA – ₹13.0 LPA',
@@ -910,7 +910,7 @@ export const careerTracks: CareerTrack[] = [
       },
       {
         question: 'What is the difference between content writing and a Creative Strategist role?',
-        answer: 'Content writers typically write basic blog articles for low pay (₹15k–₹22k/month). In contrast, a Creative Strategist or Performance Marketer conceptualizes ad creative angles, scripts high-converting video hooks, manages live advertising budgets, and directly generates revenue—commanding starting packages of ₹4.5 to ₹7.5 LPA.'
+        answer: 'Content writers typically write basic blog articles for low pay (₹15k–₹22k/month). In contrast, a Creative Strategist or Performance Marketer conceptualizes ad creative angles, scripts high-converting video hooks, manages live advertising budgets, and directly generates revenue - commanding starting packages of ₹4.5 to ₹7.5 LPA.'
       },
       {
         question: 'What starting salary can an arts graduate expect through Vocaplace?',

@@ -77,7 +77,7 @@ const Results: React.FC = () => {
  Your Learning Journey
  </span>
  <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
- From Beginner to Placed — In Just 120 Days
+ From Beginner to Placed - In Just 120 Days
  </h2>
  <p className="text-slate-500 text-lg max-w-2xl mx-auto">
  A clear, simple path from zero to a ₹4–8 LPA digital marketing career with a 100% job guarantee.

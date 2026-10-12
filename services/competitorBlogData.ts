@@ -46,7 +46,7 @@ To evaluate Intellipaat objectively, you must first understand how edtech instit
 When evaluating Intellipaat's course fees, several key factors emerge from student discussions:
 
 1. **High Total Price Point:** A full digital marketing or PG diploma program with Intellipaat typically totals between **₹75,000 and ₹1,40,000+ inclusive of GST**. For a student from a Tier-2 or Tier-3 city, this represents a significant capital commitment.
-2. **Strict Internal Qualification Hurdles:** Under many corporate Pay After Placement agreements, candidates must maintain 85%+ attendance, pass internal coding or marketing quizzes on the first attempt, and accept any job role offered—even if the salary is ₹15,000/month in a different city. Failing any benchmark can void the placement clause while keeping fee obligations intact.
+2. **Strict Internal Qualification Hurdles:** Under many corporate Pay After Placement agreements, candidates must maintain 85%+ attendance, pass internal coding or marketing quizzes on the first attempt, and accept any job role offered - even if the salary is ₹15,000/month in a different city. Failing any benchmark can void the placement clause while keeping fee obligations intact.
 3. **Reliance on Pre-Recorded Content:** Much of Intellipaat's foundational curriculum is delivered through self-paced video libraries rather than intensive, interactive live evening coaching. In fast-evolving fields like paid media and AI search optimization, static videos quickly become obsolete.
 
 ---
@@ -151,7 +151,7 @@ Why do Vocaplace graduates consistently command ₹4.5–8.5 LPA packages while 
 
 1. **Live Ad Capital vs Screen Recordings:** In local classroom centers, students watch an instructor click through Meta Ads Manager on a projector. At Vocaplace, every student manages live campaign budgets with real money, mastering Meta Advantage+ Shopping and Google Performance Max with strict CPA targets.
 2. **Generative Engine Optimization (GEO):** While traditional institutes still teach 2018 keyword density checklists, Vocaplace trains you on how to optimize brand content so generative AI engines like ChatGPT Search and Perplexity cite and recommend your client.
-3. **Marketing Automation & AI Workflows:** Students build end-to-end automated pipelines connecting lead forms to CRM databases via Zapier and custom Python scripts—skills in explosive demand across high-growth startups.
+3. **Marketing Automation & AI Workflows:** Students build end-to-end automated pipelines connecting lead forms to CRM databases via Zapier and custom Python scripts - skills in explosive demand across high-growth startups.
 
 ---
 

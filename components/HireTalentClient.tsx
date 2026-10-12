@@ -107,7 +107,7 @@ const HireTalentPage: React.FC = () => {
  <div className="max-w-6xl mx-auto">
  <div className="text-center mb-12">
  <h2 className="text-3xl font-bold text-slate-900 mb-3">Why 100+ Companies Trust Vocaplace</h2>
- <p className="text-slate-500 text-lg">Our graduates are trained on real campaigns — not just theory.</p>
+ <p className="text-slate-500 text-lg">Our graduates are trained on real campaigns - not just theory.</p>
  </div>
  <div className="grid md:grid-cols-3 gap-6">
  {[

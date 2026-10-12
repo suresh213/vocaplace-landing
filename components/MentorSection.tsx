@@ -29,7 +29,7 @@ const MentorSection: React.FC = () => {
  <div className="lg:col-span-2 relative min-h-[320px] lg:min-h-full">
  <Image
  src="/mentor.jpeg"
- alt="Wajed Sk — Lead Instructor at Vocaplace"
+ alt="Wajed Sk - Lead Instructor at Vocaplace"
  fill
  className="object-cover object-top"
  />
@@ -46,7 +46,7 @@ const MentorSection: React.FC = () => {
  {/* Details */}
  <div className="lg:col-span-3 p-8 lg:p-10 flex flex-col justify-center">
  <p className="text-slate-600 text-sm leading-relaxed mb-6">
- With over <strong>20 years of real-world experience</strong> in Digital Transformation, Performance Marketing, and Brand Strategy, Wajed Sk brings exceptional industry expertise and classroom passion to every session. He currently serves as <strong>Online Faculty & Digital Transformation Consultant at Victoria University, Australia</strong> — one of only three professionals from India in this role.
+ With over <strong>20 years of real-world experience</strong> in Digital Transformation, Performance Marketing, and Brand Strategy, Wajed Sk brings exceptional industry expertise and classroom passion to every session. He currently serves as <strong>Online Faculty & Digital Transformation Consultant at Victoria University, Australia</strong> - one of only three professionals from India in this role.
  </p>
  
  <div className="grid sm:grid-cols-2 gap-3 mb-8">

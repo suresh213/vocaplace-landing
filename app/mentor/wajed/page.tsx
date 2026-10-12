@@ -10,11 +10,11 @@ import {
 
 export const metadata: Metadata = {
   title: 'Learn from Wajed Sk: Best Digital Marketing Mentor in India',
-  description: 'Learn from Wajed Sk — Victoria University faculty, trained 5,000+ students at Unacademy, IIM & Google speaker. 20+ years experience. Join the next Vocaplace cohort.',
+  description: 'Learn from Wajed Sk - Victoria University faculty, trained 5,000+ students at Unacademy, IIM & Google speaker. 20+ years experience. Join the next Vocaplace cohort.',
   alternates: { canonical: '/mentor/wajed' },
   keywords: ['Wajed Sk digital marketing', 'best digital marketing trainer in India', 'Victoria University digital marketing faculty', 'Unacademy digital marketing mentor', 'top marketing educators India'],
   openGraph: {
-    title: 'Wajed Sk — Lead Digital Marketing Instructor | Vocaplace',
+    title: 'Wajed Sk - Lead Digital Marketing Instructor | Vocaplace',
     description: '20+ years experience · Victoria University Australia · Unacademy Chief Instructor · IIM & Google Speaker',
     url: 'https://vocaplace.com/mentor/wajed',
     type: 'profile',
@@ -32,8 +32,8 @@ const expertise = [
 
 const institutions = [
  { name:"Victoria University, Australia", role:"Online Faculty & Digital Transformation Consultant (Current · 3 days/week)", highlight: true },
- { name:"Unacademy", role:"Chief Digital Marketing Instructor — trained 5,000+ learners", highlight: true },
- { name:"LINC Education Group, Singapore", role:"Faculty & Industry Mentor — international university programs", highlight: true },
+ { name:"Unacademy", role:"Chief Digital Marketing Instructor - trained 5,000+ learners", highlight: true },
+ { name:"LINC Education Group, Singapore", role:"Faculty & Industry Mentor - international university programs", highlight: true },
  { name:"IIM", role:"Guest Faculty, Trainer & Speaker", highlight: false },
  { name:"Accenture", role:"Corporate Workshop Delivery", highlight: false },
  { name:"Google MSME", role:"Guest Speaker & Trainer", highlight: false },
@@ -138,7 +138,7 @@ export default function MentorPage() {
  <div className="relative w-48 h-64 md:w-56 md:h-72 rounded-3xl overflow-hidden border-4 border-white/30 mb-6 group">
  <Image
  src="/mentor.jpeg"
- alt="Wajed Sk — Lead Digital Marketing Instructor"
+ alt="Wajed Sk - Lead Digital Marketing Instructor"
  fill
  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
  />
@@ -196,19 +196,19 @@ export default function MentorPage() {
  <div className="lg:col-span-2 space-y-6">
  <h2 className="text-2xl font-bold text-slate-900">About Wajed Sk</h2>
  <p className="text-slate-600 leading-relaxed">
- With over <strong>20 years of real-world experience</strong> in marketing and branding — spanning Digital Transformation, Performance Marketing, and Brand Strategy — Wajed Sk brings both industry excellence and classroom relevance to every session he delivers.
+ With over <strong>20 years of real-world experience</strong> in marketing and branding - spanning Digital Transformation, Performance Marketing, and Brand Strategy - Wajed Sk brings both industry excellence and classroom relevance to every session he delivers.
  </p>
  <p className="text-slate-600 leading-relaxed">
  As a certified trainer, marketing consultant, and industry mentor, Wajed has delivered training and digital marketing programs for India's leading EdTech platforms such as <strong>Unacademy</strong>, and has trained professionals on <strong>Relevel by Unacademy</strong> and <strong>LINC EdTech (Singapore)</strong>, while delivering multiple workshops and guest lectures at <strong>IIM, Accenture, Google, Byju's, IISWBM, IITs</strong>, and several other institutions.
  </p>
  <p className="text-slate-600 leading-relaxed">
- Wajed currently serves as <strong>Online Faculty & Digital Transformation Consultant at Victoria University, Australia</strong> — one of only three professionals from India offered this prestigious role. He contributes to AI-enabled learning transformation projects, digital adoption frameworks, AI literacy initiatives, and the development of self-paced learning pathways for students and staff.
+ Wajed currently serves as <strong>Online Faculty & Digital Transformation Consultant at Victoria University, Australia</strong> - one of only three professionals from India offered this prestigious role. He contributes to AI-enabled learning transformation projects, digital adoption frameworks, AI literacy initiatives, and the development of self-paced learning pathways for students and staff.
  </p>
  <p className="text-slate-600 leading-relaxed">
  As <strong>Chief Digital Marketing Instructor at Unacademy</strong>, he trained and mentored 5,000+ learners and working professionals in Digital Marketing, Marketing Analytics, AI Marketing Automation, Agentic Marketing, SEO, PPC, Content Strategy, ORM, and Growth Marketing using live campaigns, industry projects, and real-world business case studies.
  </p>
  <p className="text-slate-600 leading-relaxed">
- His industry experience spans <strong>B2B, B2C, Healthcare, Manufacturing, FMCG, E-Commerce, EdTech, and Technology</strong> sectors across India, Singapore, Australia, the Middle East, and the UK. His teaching philosophy is built on <em>simplifying complex concepts using practical, campaign-based examples</em> — enabling students to not only learn but also apply their knowledge confidently from day one.
+ His industry experience spans <strong>B2B, B2C, Healthcare, Manufacturing, FMCG, E-Commerce, EdTech, and Technology</strong> sectors across India, Singapore, Australia, the Middle East, and the UK. His teaching philosophy is built on <em>simplifying complex concepts using practical, campaign-based examples</em> - enabling students to not only learn but also apply their knowledge confidently from day one.
  </p>
 
  {/* Sectors */}
@@ -296,7 +296,7 @@ export default function MentorPage() {
             source="Mentor Page - Wajed Profile CTA"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-blue-900 text-white font-bold rounded-xl hover:bg-blue-800 transition-colors cursor-pointer"
           >
-            Enroll Now — Pay After Placement
+            Enroll Now - Pay After Placement
             <ArrowRight size={18} />
           </ApplyNowButton>
  <Link
