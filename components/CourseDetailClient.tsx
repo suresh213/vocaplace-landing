@@ -13,7 +13,7 @@ import IsaCalculator from './IsaCalculator';
 import InlineLeadForm from './InlineLeadForm';
 
 // Internal Enrollment widget supporting button action with validation success popup
-const EnrollmentButton: React.FC<{ price: number; courseTitle: string }> = ({ price, courseTitle }) => {
+const EnrollmentButton: React.FC<{ courseTitle: string }> = ({ courseTitle }) => {
   const { openModal } = useApplyModal();
   return (
     <button
@@ -22,7 +22,7 @@ const EnrollmentButton: React.FC<{ price: number; courseTitle: string }> = ({ pr
       id="btn-enroll-action-sidebar"
       className="w-full py-3 bg-blue-900 text-white text-xs font-bold hover:bg-blue-800 transition-colors text-center block cursor-pointer"
     >
-      Secure Your Seat
+      Apply Now — Pay After Placement
     </button>
   );
 };
@@ -372,13 +372,15 @@ const CourseDetailClient: React.FC<CourseDetailClientProps> = ({ course }) => {
  Enrollment Details
  </h3>
 
- {/* Price section */}
+ {/* Pay After Placement Commitment */}
  <div className="space-y-1">
- <span className="text-[10px] font-bold text-slate-400 block">Program Fee</span>
- <div className="flex items-baseline gap-2">
- <span className="text-3xl font-extrabold text-slate-900">₹{course.price.toLocaleString('en-IN')}</span>
- <span className="text-xs text-slate-500">all-inclusive</span>
+ <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-green-100 text-green-800 text-[10px] font-bold rounded-full border border-green-200">
+ Pay After Placement
  </div>
+ <div className="flex items-baseline gap-2">
+ <span className="text-2xl sm:text-3xl font-extrabold text-slate-900">100% Job Guarantee</span>
+ </div>
+ <span className="text-xs text-slate-500 block">Core tuition deferred until placed (₹4–8 LPA)</span>
  </div>
 
  {/* ISA details */}
@@ -447,7 +449,7 @@ const CourseDetailClient: React.FC<CourseDetailClientProps> = ({ course }) => {
  </div>
 
  {/* CTA Enroll Button */}
- <EnrollmentButton price={course.price} courseTitle={course.title} />
+ <EnrollmentButton courseTitle={course.title} />
 
  </div>
  </div>

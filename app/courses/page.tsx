@@ -105,9 +105,11 @@ const CoursesPage: React.FC = () => {
  <p className="text-slate-500 text-sm">{course.subtitle}</p>
  </div>
  <div className="text-right shrink-0">
- <div className="text-xs text-slate-400 mb-1">Program Fee</div>
- <div className="text-2xl font-black text-blue-900">₹{course.price.toLocaleString('en-IN')}</div>
- <div className="text-xs text-green-600 font-semibold">Pay After Placement</div>
+ <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-100 text-green-800 text-xs font-bold rounded-full mb-1 border border-green-200">
+ Pay After Placement
+ </div>
+ <div className="text-xl sm:text-2xl font-black text-blue-900">100% Job Guarantee</div>
+ <div className="text-xs text-slate-500 font-medium">Core tuition deferred until placed</div>
  </div>
  </div>
 

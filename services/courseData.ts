@@ -31,7 +31,7 @@ export interface CourseDetail {
   thumbnailUrl: string;
   videoUrl: string;
   description: string;
-  price: number;
+  price?: number;
   isaEnabled: boolean;
   durationInDays: number;
   durationInMonths: number;
@@ -55,7 +55,6 @@ export const coursesData: CourseDetail[] = [
     thumbnailUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1470&q=80",
     videoUrl: "https://www.youtube.com/watch?v=QhhYosA3dpE",
     description: "A production-style digital marketing program covering SEO, Google Ads, social media advertising, and AI-driven workflows. The course includes live Zoom classes, mentor reviews, task submissions, and ISA-enabled enrollment.",
-    price: 14999,
     isaEnabled: true,
     durationInDays: 120,
     durationInMonths: 4,
