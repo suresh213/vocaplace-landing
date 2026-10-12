@@ -121,9 +121,17 @@ const Footer: React.FC = () => {
         <div className="flex flex-wrap gap-x-4 gap-y-2 text-[11px]">
           <Link href="/blog/digital-marketing-course-in-bangalore-with-placement-guarantee" className="hover:text-white transition-colors">Bangalore</Link>
           <span className="text-slate-700">•</span>
-          <Link href="/blog/digital-marketing-course-in-delhi-ncr-with-100-placement" className="hover:text-white transition-colors">Delhi NCR (Gurgaon &amp; Noida)</Link>
+          <Link href="/blog/digital-marketing-course-in-delhi-ncr-with-100-placement" className="hover:text-white transition-colors">Delhi NCR</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-noida-with-placement-guarantee" className="hover:text-white transition-colors">Noida</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-gurgaon-with-placement-guarantee" className="hover:text-white transition-colors">Gurgaon</Link>
           <span className="text-slate-700">•</span>
           <Link href="/blog/digital-marketing-course-in-mumbai-with-placement-guarantee" className="hover:text-white transition-colors">Mumbai</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-thane-with-placement-guarantee" className="hover:text-white transition-colors">Thane</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-navi-mumbai-with-placement-guarantee" className="hover:text-white transition-colors">Navi Mumbai</Link>
           <span className="text-slate-700">•</span>
           <Link href="/blog/digital-marketing-course-in-hyderabad-with-job-guarantee" className="hover:text-white transition-colors">Hyderabad</Link>
           <span className="text-slate-700">•</span>
@@ -135,13 +143,45 @@ const Footer: React.FC = () => {
           <span className="text-slate-700">•</span>
           <Link href="/blog/digital-marketing-course-in-ahmedabad-with-100-placement" className="hover:text-white transition-colors">Ahmedabad</Link>
           <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-surat-with-placement-guarantee" className="hover:text-white transition-colors">Surat</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-vadodara-with-placement-guarantee" className="hover:text-white transition-colors">Vadodara</Link>
+          <span className="text-slate-700">•</span>
           <Link href="/blog/digital-marketing-course-in-jaipur-with-placement-guarantee" className="hover:text-white transition-colors">Jaipur</Link>
           <span className="text-slate-700">•</span>
-          <Link href="/blog/digital-marketing-course-in-kochi-with-job-guarantee" className="hover:text-white transition-colors">Kochi</Link>
+          <Link href="/blog/digital-marketing-course-in-lucknow-with-placement-guarantee" className="hover:text-white transition-colors">Lucknow</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-kanpur-with-placement-guarantee" className="hover:text-white transition-colors">Kanpur</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-patna-with-placement-guarantee" className="hover:text-white transition-colors">Patna</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-ranchi-with-placement-guarantee" className="hover:text-white transition-colors">Ranchi</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-bhopal-with-placement-guarantee" className="hover:text-white transition-colors">Bhopal</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-indore-with-placement-guarantee" className="hover:text-white transition-colors">Indore</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-raipur-with-placement-guarantee" className="hover:text-white transition-colors">Raipur</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-nagpur-with-placement-guarantee" className="hover:text-white transition-colors">Nagpur</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-bhubaneswar-with-placement-guarantee" className="hover:text-white transition-colors">Bhubaneswar</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-guwahati-with-placement-guarantee" className="hover:text-white transition-colors">Guwahati</Link>
           <span className="text-slate-700">•</span>
           <Link href="/blog/digital-marketing-course-in-chandigarh-with-placement" className="hover:text-white transition-colors">Chandigarh</Link>
           <span className="text-slate-700">•</span>
-          <Link href="/blog/digital-marketing-course-in-indore-with-placement-guarantee" className="hover:text-white transition-colors">Indore</Link>
+          <Link href="/blog/digital-marketing-course-in-ludhiana-with-placement-guarantee" className="hover:text-white transition-colors">Ludhiana</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-kochi-with-job-guarantee" className="hover:text-white transition-colors">Kochi</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-trivandrum-with-placement-guarantee" className="hover:text-white transition-colors">Trivandrum</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-coimbatore-with-placement-guarantee" className="hover:text-white transition-colors">Coimbatore</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-visakhapatnam-with-placement-guarantee" className="hover:text-white transition-colors">Visakhapatnam</Link>
+          <span className="text-slate-700">•</span>
+          <Link href="/blog/digital-marketing-course-in-vijayawada-with-placement-guarantee" className="hover:text-white transition-colors">Vijayawada</Link>
         </div>
       </div>
 

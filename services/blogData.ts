@@ -1,21 +1,6 @@
-export interface BlogPost {
-  title: string;
-  excerpt: string;
-  content: string;
-  slug: string;
-  tags: string[];
-  readTime: string;
-  date: string;
-  author: {
-    name: string;
-    role: string;
-    avatar: string;
-  };
-  coverImage: string;
-  metaTitle: string;
-  metaDescription: string;
-  faqs?: { question: string; answer: string }[];
-}
+export type { BlogPost } from './blogTypes';
+import type { BlogPost } from './blogTypes';
+import { additionalCityBlogPosts } from './additionalCityBlogData';
 
 export const blogPosts: BlogPost[] = [
   {
@@ -2255,5 +2240,6 @@ Don't settle for junior instructors reading off a PowerPoint slide. If you want 
       "answer": "In Delhi NCR and Bangalore, reputable courses range from ₹45,000 to ₹1,60,000. In Pune, fees average ₹35,000 to ₹1,20,000. Vocaplace provides live online training accessible across all cities with uniform Pay After Placement terms."
     }
   ]
-}
+},
+  ...additionalCityBlogPosts,
 ];
