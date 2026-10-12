@@ -2,6 +2,8 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ShieldCheck, Check, X, Star, ArrowRight, Award, GraduationCap, Users } from 'lucide-react';
+import IsaCalculator from '@/components/IsaCalculator';
+import InlineLeadForm from '@/components/InlineLeadForm';
 
 export const metadata: Metadata = {
   title: 'Kraftshala vs IIDE vs Vocaplace (2026): Fees, Placements & Real Reviews',
@@ -348,6 +350,11 @@ export default function ComparePage() {
               </p>
             </section>
 
+            {/* Interactive Calculator */}
+            <div className="pt-4 mb-8">
+              <IsaCalculator />
+            </div>
+
             {/* Frequently Asked Questions */}
             <section className="pt-6 border-t border-slate-200">
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
@@ -410,6 +417,16 @@ export default function ComparePage() {
                   </Link>
                 </div>
               </div>
+            </div>
+
+            {/* Inline Application Form Hook */}
+            <div className="my-8">
+              <InlineLeadForm
+                title="Choose Accountable Education: Apply for Pay After Placement"
+                subtitle="Avoid upfront tuition debt and non-refundable fees. Train for 120 days under Victoria University faculty Wajed Sk and pay tuition only after receiving a verified ₹4–8 LPA job offer."
+                source="Compare Page Inline Form"
+                ctaText="Apply for Next Batch (Pay After Placement)"
+              />
             </div>
 
             {/* High-Converting CTA Box */}

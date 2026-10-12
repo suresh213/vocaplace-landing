@@ -38,6 +38,8 @@ import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 import ApplyNowButton from '../components/ApplyNowButton';
 import IsaCalculator from '../components/IsaCalculator';
+import CityDirectory from '../components/CityDirectory';
+import InlineLeadForm from '../components/InlineLeadForm';
 
 export default function Home() {
   const courseSchema = {
@@ -184,6 +186,7 @@ export default function Home() {
      <IsaCalculator />
    </div>
  </section>
+ <CityDirectory />
  <FAQ />
  {/* CTA Section */}
  <section className="py-16 md:py-20 px-6 bg-gradient-to-br from-blue-900 to-blue-800">
@@ -194,6 +197,14 @@ export default function Home() {
  <p className="text-blue-200 text-base md:text-lg mb-8 max-w-xl mx-auto">
  Join 5,000+ students who transformed their careers. Pay only after you get placed. 100% Job Guarantee, 100% commitment.
  </p>
+ <div className="mb-10 text-left">
+   <InlineLeadForm
+     title="Apply for Next Monday Cohort (Pay After Placement)"
+     subtitle="120 Days live training with real ad budgets under Victoria University faculty Wajed Sk. Core tuition deferred until placed."
+     source="Homepage Bottom Embedded Form"
+     ctaText="Submit Application (Pay After Placement)"
+   />
+ </div>
  <div className="flex flex-col sm:flex-row justify-center gap-4">
         <ApplyNowButton
           source="Homepage Bottom CTA - Start Free Journey"

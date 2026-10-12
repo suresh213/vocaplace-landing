@@ -9,6 +9,8 @@ import {
 } from 'lucide-react';
 import { CourseDetail, CourseTask } from '../services/courseData';
 import { useApplyModal } from './ApplyModalContext';
+import IsaCalculator from './IsaCalculator';
+import InlineLeadForm from './InlineLeadForm';
 
 // Internal Enrollment widget supporting button action with validation success popup
 const EnrollmentButton: React.FC<{ price: number; courseTitle: string }> = ({ price, courseTitle }) => {
@@ -507,6 +509,29 @@ const CourseDetailClient: React.FC<CourseDetailClientProps> = ({ course }) => {
  </div>
  </div>
  </section>
+
+  {/* Interactive Pay After Placement Calculator */}
+  <section className="px-6 max-w-7xl mx-auto mb-16 border-t border-slate-200 pt-16">
+    <div className="mb-8 text-center max-w-2xl mx-auto">
+      <h2 className="text-2xl font-bold text-slate-900 mb-2">
+        Calculate Your Pay After Placement Investment
+      </h2>
+      <p className="text-xs sm:text-sm text-slate-500">
+        See exactly how your tuition is structured. Pay in manageable monthly installments only after landing a verified job paying ₹4.0–8.5 LPA.
+      </p>
+    </div>
+    <IsaCalculator />
+  </section>
+
+  {/* Embedded Application Form */}
+  <section className="px-6 max-w-7xl mx-auto mb-16">
+    <InlineLeadForm
+      title="Apply for Digital Marketing Mastery & AI Automation"
+      subtitle="Join the next live evening cohort mentored by Victoria University faculty Wajed Sk. 100% Job Guarantee with core tuition deferred until placed."
+      source="Course Detail Page Inline Form"
+      ctaText="Apply Now (Pay After Placement)"
+    />
+  </section>
  </div>
  );
 };

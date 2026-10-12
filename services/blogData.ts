@@ -1,6 +1,7 @@
 export type { BlogPost } from './blogTypes';
 import type { BlogPost } from './blogTypes';
 import { additionalCityBlogPosts } from './additionalCityBlogData';
+import { competitorBlogPosts } from './competitorBlogData';
 
 export const blogPosts: BlogPost[] = [
   {
@@ -2242,4 +2243,5 @@ Don't settle for junior instructors reading off a PowerPoint slide. If you want 
   ]
 },
   ...additionalCityBlogPosts,
+  ...competitorBlogPosts,
 ];

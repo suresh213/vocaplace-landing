@@ -8,6 +8,8 @@ import {
 } from 'lucide-react';
 import ApplyNowButton from '../../components/ApplyNowButton';
 import IsaCalculator from '../../components/IsaCalculator';
+import CityDirectory from '../../components/CityDirectory';
+import InlineLeadForm from '../../components/InlineLeadForm';
 
 export const metadata: Metadata = {
   title: 'Pay After Placement Digital Marketing Course India | 100% Job Guarantee | Vocaplace',
@@ -371,6 +373,9 @@ export default function PayAfterPlacementPage() {
         </div>
       </section>
 
+      {/* Explore Placement Hubs Across India (32 Cities) */}
+      <CityDirectory />
+
       {/* Comprehensive User-Searched FAQ Section */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
@@ -417,19 +422,27 @@ export default function PayAfterPlacementPage() {
           <p className="text-blue-200 text-sm sm:text-base mb-8 max-w-xl mx-auto">
             Join hundreds of students who transformed their careers with deferred tuition peace of mind. 100% Job Guarantee backed by legal agreement.
           </p>
+          <div className="mb-10 text-left">
+            <InlineLeadForm
+              title="Apply for Next Monday Batch (Pay After Placement)"
+              subtitle="120 Days live training with real ad budgets under Victoria University faculty Wajed Sk. Core tuition deferred until placed."
+              source="Pay After Placement Bottom Section"
+              ctaText="Submit Application (Pay After Placement)"
+            />
+          </div>
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <ApplyNowButton
-              source="Pay After Placement Bottom Banner"
-              className="w-full sm:w-auto h-14 px-8 bg-amber-400 hover:bg-amber-300 text-blue-950 font-extrabold text-sm rounded-xl flex items-center justify-center gap-2 transition-all cursor-pointer shadow-xl"
+            <Link
+              href="/courses/digital-marketing-mastery"
+              className="w-full sm:w-auto h-12 px-8 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs rounded-xl flex items-center justify-center transition-all"
             >
-              Apply Now — Pay After Placement
-              <ArrowRight size={16} />
-            </ApplyNowButton>
+              Explore 120-Day Curriculum
+            </Link>
             <Link
               href="/contact"
-              className="w-full sm:w-auto h-14 px-8 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-sm rounded-xl flex items-center justify-center transition-all"
+              className="w-full sm:w-auto h-12 px-8 bg-transparent hover:bg-white/10 text-slate-300 hover:text-white font-semibold text-xs rounded-xl flex items-center justify-center transition-all"
             >
-              Book 1-on-1 Counseling Call
+              Book 1-on-1 Counseling Call →
             </Link>
           </div>
         </div>
