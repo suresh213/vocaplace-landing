@@ -4,8 +4,10 @@ import React from 'react';
 import { ArrowRight, CheckCircle, Star, Users, Building, Award } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useApplyModal } from './ApplyModalContext';
 
 const Hero: React.FC = () => {
+  const { openModal } = useApplyModal();
   return (
     <section className="relative min-h-[90vh] flex flex-col pt-24 pb-16 bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 overflow-hidden">
 
@@ -79,14 +81,13 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.35 }}
               className="flex flex-col sm:flex-row gap-4 pt-2"
             >
-              <a
-                href="https://student.vocaplace.com"
-                rel="nofollow noopener noreferrer"
-                className="h-14 px-8 bg-amber-400 text-blue-950 text-base font-bold flex items-center justify-center gap-2 hover:bg-amber-300 transition-colors rounded-lg whitespace-nowrap shadow-lg shadow-amber-400/20"
+              <button
+                onClick={() => openModal({ source: 'Hero CTA Button' })}
+                className="h-14 px-8 bg-amber-400 text-blue-950 text-base font-bold flex items-center justify-center gap-2 hover:bg-amber-300 transition-colors rounded-lg whitespace-nowrap shadow-lg shadow-amber-400/20 cursor-pointer"
               >
                 Apply (Pay After Placement)
                 <ArrowRight size={18} />
-              </a>
+              </button>
               <Link
                 href="/courses/digital-marketing-mastery"
                 className="h-14 px-8 bg-white/10 border border-white/30 text-white text-base font-semibold flex items-center justify-center hover:bg-white/20 transition-colors rounded-lg whitespace-nowrap"

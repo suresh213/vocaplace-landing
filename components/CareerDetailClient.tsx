@@ -22,6 +22,7 @@ import {
   UserCheck,
   Target
 } from 'lucide-react';
+import { useApplyModal } from './ApplyModalContext';
 
 interface CareerDetailClientProps {
   track: CareerTrack;
@@ -29,6 +30,7 @@ interface CareerDetailClientProps {
 
 export default function CareerDetailClient({ track }: CareerDetailClientProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const { openModal } = useApplyModal();
 
   return (
     <div className="pt-24 pb-20 bg-white min-h-screen">
@@ -84,14 +86,13 @@ export default function CareerDetailClient({ track }: CareerDetailClientProps) {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
-            <a
-              href="https://student.vocaplace.com"
-              rel="nofollow noopener noreferrer"
-              className="h-13 px-8 bg-amber-400 text-blue-950 text-sm font-bold flex items-center justify-center gap-2 hover:bg-amber-300 transition-colors rounded-xl shadow-lg shadow-amber-400/20"
+            <button
+              onClick={() => openModal({ source: `Career Hero: ${track.degreeShort}`, defaultDegree: track.degreeShort })}
+              className="h-13 px-8 bg-amber-400 text-blue-950 text-sm font-bold flex items-center justify-center gap-2 hover:bg-amber-300 transition-colors rounded-xl shadow-lg shadow-amber-400/20 cursor-pointer"
             >
               Apply via Pay After Placement
               <ArrowRight size={16} />
-            </a>
+            </button>
             <Link
               href="/contact"
               className="h-13 px-6 bg-white/10 border border-white/20 text-white text-sm font-semibold flex items-center justify-center hover:bg-white/20 transition-colors rounded-xl"
@@ -471,14 +472,13 @@ export default function CareerDetailClient({ track }: CareerDetailClientProps) {
             Join 5,000+ graduates who transformed their careers. Pay core tuition only after receiving your official job offer.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="https://student.vocaplace.com"
-              rel="nofollow noopener noreferrer"
-              className="h-14 px-8 bg-amber-400 text-blue-950 text-sm font-bold flex items-center justify-center gap-2 hover:bg-amber-300 transition-colors rounded-xl"
+            <button
+              onClick={() => openModal({ source: `Career Bottom: ${track.degreeShort}`, defaultDegree: track.degreeShort })}
+              className="h-14 px-8 bg-amber-400 text-blue-950 text-sm font-bold flex items-center justify-center gap-2 hover:bg-amber-300 transition-colors rounded-xl cursor-pointer"
             >
               Enroll Now (Pay After Placement)
               <ArrowRight size={16} />
-            </a>
+            </button>
             <Link
               href="/courses/digital-marketing-mastery"
               className="h-14 px-8 bg-white/10 border border-white/20 text-white text-sm font-semibold flex items-center justify-center hover:bg-white/20 transition-colors rounded-xl"

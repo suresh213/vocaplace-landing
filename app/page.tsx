@@ -36,6 +36,7 @@ import Workflow from '../components/Workflow';
 import MentorSection from '../components/MentorSection';
 import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
+import ApplyNowButton from '../components/ApplyNowButton';
 
 export default function Home() {
   const courseSchema = {
@@ -172,13 +173,12 @@ export default function Home() {
  Join 5,000+ students who transformed their careers. Pay only after you get placed. 100% Job Guarantee, 100% commitment.
  </p>
  <div className="flex flex-col sm:flex-row justify-center gap-4">
- <a
- href="https://student.vocaplace.com"
- rel="nofollow noopener noreferrer"
- className="h-14 px-8 bg-amber-400 text-blue-950 text-base font-bold flex items-center justify-center gap-2 hover:bg-amber-300 transition-colors rounded-xl whitespace-nowrap"
- >
- Start Your Free Journey →
- </a>
+        <ApplyNowButton
+          source="Homepage Bottom CTA - Start Free Journey"
+          className="h-14 px-8 bg-amber-400 text-blue-950 text-base font-bold flex items-center justify-center gap-2 hover:bg-amber-300 transition-colors rounded-xl whitespace-nowrap cursor-pointer"
+        >
+          Start Your Free Journey →
+        </ApplyNowButton>
  <a
  href="/contact"
  className="h-14 px-8 bg-white/10 border border-white/30 text-white text-base font-semibold flex items-center justify-center hover:bg-white/20 transition-colors rounded-xl whitespace-nowrap"

@@ -1,3 +1,4 @@
+import ApplyNowButton from "../../../components/ApplyNowButton";
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -291,14 +292,13 @@ export default function MentorPage() {
  Join thousands of students who have transformed their careers under his mentorship.
  </p>
  <div className="flex flex-col sm:flex-row justify-center gap-4">
- <a
- href="https://student.vocaplace.com"
- rel="nofollow noopener noreferrer"
- className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-blue-900 text-white font-bold rounded-xl hover:bg-blue-800 transition-colors"
- >
- Enroll Now — Pay After Placement
- <ArrowRight size={18} />
- </a>
+          <ApplyNowButton
+            source="Mentor Page - Wajed Profile CTA"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-blue-900 text-white font-bold rounded-xl hover:bg-blue-800 transition-colors cursor-pointer"
+          >
+            Enroll Now — Pay After Placement
+            <ArrowRight size={18} />
+          </ApplyNowButton>
  <Link
  href="/courses"
  className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-blue-900 text-blue-900 font-semibold rounded-xl hover:bg-blue-50 transition-colors"

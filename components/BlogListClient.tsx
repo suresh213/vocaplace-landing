@@ -4,9 +4,11 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Search, Calendar, Clock, ArrowRight } from 'lucide-react';
 import { blogPosts } from '../services/blogData';
+import { useApplyModal } from './ApplyModalContext';
 
 const BlogListClient: React.FC = () => {
- const [searchQuery, setSearchQuery] = useState('');
+  const { openModal } = useApplyModal();
+  const [searchQuery, setSearchQuery] = useState('');
  const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
  // Extract all unique tags
@@ -66,12 +68,13 @@ const BlogListClient: React.FC = () => {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0 w-full md:w-auto">
-            <Link
-              href="/contact"
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-xl text-center transition-colors shadow whitespace-nowrap"
+            <button
+              type="button"
+              onClick={() => openModal({ source: 'Blog List Featured Banner' })}
+              className="px-6 py-3 bg-amber-400 hover:bg-amber-300 text-blue-950 text-xs font-bold rounded-xl text-center transition-colors shadow whitespace-nowrap cursor-pointer"
             >
               Apply for Next Cohort →
-            </Link>
+            </button>
             <Link
               href="/courses/digital-marketing-mastery"
               className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white text-xs font-semibold rounded-xl text-center transition-colors border border-white/20 whitespace-nowrap"

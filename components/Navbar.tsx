@@ -5,9 +5,11 @@ import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { useApplyModal } from './ApplyModalContext';
 
 const Navbar: React.FC = () => {
  const [isOpen, setIsOpen] = useState(false);
+  const { openModal } = useApplyModal();
  const pathname = usePathname();
 
  const isActive = (path: string) => pathname === path;
@@ -81,9 +83,12 @@ const Navbar: React.FC = () => {
  {/* Desktop Actions */}
  <div className="hidden lg:flex items-center gap-4">
  <Link href="/contact"className="text-xs font-semibold text-slate-500 hover:text-blue-900">Contact</Link>
- <a href="https://student.vocaplace.com" rel="nofollow noopener noreferrer" className="flex items-center h-9 px-5 bg-blue-900 text-white text-xs font-semibold hover:bg-blue-800 transition-colors rounded-lg">
- Apply Now
- </a>
+ <button 
+   onClick={() => openModal({ source: 'Navbar Desktop' })}
+   className="flex items-center h-9 px-5 bg-blue-900 text-white text-xs font-semibold hover:bg-blue-800 transition-colors rounded-lg cursor-pointer"
+ >
+   Apply Now
+ </button>
  </div>
 
  {/* Mobile Toggle */}
@@ -128,9 +133,12 @@ const Navbar: React.FC = () => {
  </div>
  
  <div className="mt-auto space-y-3">
- <a href="https://student.vocaplace.com" rel="nofollow noopener noreferrer" className="block text-center w-full py-3 bg-blue-900 text-white text-sm font-semibold rounded-lg">
- Apply Now
- </a>
+ <button 
+   onClick={() => { setIsOpen(false); openModal({ source: 'Navbar Mobile' }); }}
+   className="block text-center w-full py-3 bg-blue-900 text-white text-sm font-semibold rounded-lg cursor-pointer"
+ >
+   Apply Now
+ </button>
  </div>
  </div>
  </div>

@@ -5,6 +5,8 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Script from 'next/script';
 import UtmForwarder from '../components/UtmForwarder';
+import { ApplyModalProvider } from '../components/ApplyModalContext';
+import ApplyModal from '../components/ApplyModal';
 
 const inter = Inter({
  subsets: ['latin'],
@@ -148,14 +150,17 @@ export default function RootLayout({
     />
   ))}
 
- <div className="min-h-screen flex flex-col">
- <UtmForwarder />
- <Navbar />
- <main className="flex-grow">
- {children}
- </main>
- <Footer />
- </div>
+        <ApplyModalProvider>
+          <div className="min-h-screen flex flex-col">
+            <UtmForwarder />
+            <Navbar />
+            <main className="flex-grow">
+              {children}
+            </main>
+            <Footer />
+            <ApplyModal />
+          </div>
+        </ApplyModalProvider>
  </body>
  </html>
  );

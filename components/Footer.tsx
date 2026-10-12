@@ -1,9 +1,13 @@
+"use client";
+
+import { useApplyModal } from "./ApplyModalContext";
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Mail, Phone, Instagram, Linkedin, Youtube } from 'lucide-react';
 
 const Footer: React.FC = () => {
+  const { openModal } = useApplyModal();
  return (
  <footer className="bg-slate-900 text-slate-400 pt-16 pb-8">
  <div className="max-w-7xl mx-auto px-6">
@@ -42,7 +46,7 @@ const Footer: React.FC = () => {
   <li><Link href="/career" className="hover:text-white transition-colors">Degree Career Tracks</Link></li>
   <li><Link href="/blog/top-pay-after-placement-digital-marketing-courses" className="hover:text-white transition-colors">Placement Guarantee Courses</Link></li>
   <li><Link href="/compare" className="hover:text-white transition-colors">Compare Institutes</Link></li>
-  <li><a href="https://student.vocaplace.com" rel="nofollow noopener noreferrer" className="hover:text-white transition-colors">Student Portal</a></li>
+   <li><button type="button" onClick={() => openModal({ source: "Footer - Apply for Admission" })} className="hover:text-white transition-colors text-left cursor-pointer">Apply for Admission</button></li>
   </ul>
   </div>
 

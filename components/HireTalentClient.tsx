@@ -1,11 +1,62 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Check, ArrowRight, Users, Briefcase, Building, Shield, Clock, TrendingUp, Star, CheckCircle } from 'lucide-react';
+import { Check, ArrowRight, Users, Briefcase, Building, Shield, Clock, TrendingUp, Star, CheckCircle, Loader2 } from 'lucide-react';
 
 const HireTalentPage: React.FC = () => {
+  const [formData, setFormData] = useState({
+    companyName: '',
+    industry: '',
+    role: '',
+    numPositions: '1',
+    skills: '',
+    contactName: '',
+    phone: '',
+    email: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    try {
+      const res = await fetch('/api/lead/hr', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          source: 'Hire Talent Page - Requirement Form',
+        }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || 'Failed to submit requirement. Please try again.');
+      }
+
+      setIsSuccess(true);
+    } catch (err: any) {
+      setErrorMessage(err.message || 'Something went wrong. Please check your connection.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
  return (
  <div className="bg-white">
 
@@ -188,47 +239,169 @@ const HireTalentPage: React.FC = () => {
  <div className="max-w-2xl mx-auto">
  <h2 className="text-2xl font-bold text-slate-900 text-center mb-2">Submit Your Hiring Requirement</h2>
  <p className="text-slate-500 text-center text-sm mb-8">Our hiring team will call you back within 24 hours.</p>
- <form className="bg-white rounded-2xl border border-slate-100 p-8 space-y-5"onSubmit={(e) => e.preventDefault()}>
- <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
- <div>
- <label className="block text-sm font-semibold text-slate-700 mb-2">Company Name</label>
- <input type="text"className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-sm focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all"required />
- </div>
- <div>
- <label className="block text-sm font-semibold text-slate-700 mb-2">Industry</label>
- <input type="text"className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-sm focus:outline-none focus:border-blue-600 transition-all"required />
- </div>
- </div>
- <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
- <div>
- <label className="block text-sm font-semibold text-slate-700 mb-2">Role / Position</label>
- <input type="text"className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-sm focus:outline-none focus:border-blue-600 transition-all"required />
- </div>
- <div>
- <label className="block text-sm font-semibold text-slate-700 mb-2">Number of Positions</label>
- <input type="number"min="1"className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-sm focus:outline-none focus:border-blue-600 transition-all"required />
- </div>
- </div>
- <div>
- <label className="block text-sm font-semibold text-slate-700 mb-2">Required Skills</label>
- <textarea rows={3} placeholder="e.g., SEO, Google Ads, Meta Ads, GA4, AI tools..."className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-sm focus:outline-none focus:border-blue-600 transition-all resize-none"required />
- </div>
- <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
- <div>
- <label className="block text-sm font-semibold text-slate-700 mb-2">Contact Name</label>
- <input type="text"className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-sm focus:outline-none focus:border-blue-600 transition-all"required />
- </div>
- <div>
- <label className="block text-sm font-semibold text-slate-700 mb-2">Phone</label>
- <input type="tel"className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-sm focus:outline-none focus:border-blue-600 transition-all"required />
- </div>
- </div>
- <button type="submit"className="w-full h-14 bg-blue-900 text-white font-bold rounded-xl hover:bg-blue-800 transition-colors flex items-center justify-center gap-2 text-base">
- Submit Requirement
- <ArrowRight size={18} />
- </button>
- <p className="text-center text-xs text-slate-400">Our team will reach out within 24 hours · No obligation</p>
- </form>
+        {isSuccess ? (
+          <div className="bg-white rounded-2xl border border-green-200 p-8 text-center space-y-4 shadow-sm">
+            <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto">
+              <CheckCircle size={32} />
+            </div>
+            <h3 className="text-2xl font-bold text-slate-900">Requirement Submitted!</h3>
+            <p className="text-slate-600 text-sm max-w-md mx-auto leading-relaxed">
+              Thank you for partnering with Vocaplace. Our corporate hiring team has received your requirement and will contact you via WhatsApp / phone within 24 hours with pre-screened candidate profiles.
+            </p>
+            <div className="pt-2">
+              <button
+                type="button"
+                onClick={() => {
+                  setIsSuccess(false);
+                  setFormData({
+                    companyName: "",
+                    industry: "",
+                    role: "",
+                    numPositions: "1",
+                    skills: "",
+                    contactName: "",
+                    phone: "",
+                    email: "",
+                  });
+                }}
+                className="px-6 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl transition-colors"
+              >
+                Submit Another Requirement
+              </button>
+            </div>
+          </div>
+        ) : (
+          <form className="bg-white rounded-2xl border border-slate-100 p-8 space-y-5 shadow-sm" onSubmit={handleSubmit}>
+            {errorMessage && (
+              <div className="p-4 bg-red-50 border border-red-200 text-red-700 rounded-xl text-xs font-medium">
+                {errorMessage}
+              </div>
+            )}
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Company Name *</label>
+                <input
+                  type="text"
+                  name="companyName"
+                  value={formData.companyName}
+                  onChange={handleChange}
+                  placeholder="e.g. Acme Media Pvt Ltd"
+                  className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-sm text-slate-900 focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Industry</label>
+                <input
+                  type="text"
+                  name="industry"
+                  value={formData.industry}
+                  onChange={handleChange}
+                  placeholder="e.g. D2C, EdTech, Agency, FinTech"
+                  className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-sm text-slate-900 focus:outline-none focus:border-blue-600 transition-all"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Role / Position *</label>
+                <input
+                  type="text"
+                  name="role"
+                  value={formData.role}
+                  onChange={handleChange}
+                  placeholder="e.g. Performance Marketing Executive"
+                  className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-sm text-slate-900 focus:outline-none focus:border-blue-600 transition-all"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Number of Positions</label>
+                <input
+                  type="number"
+                  name="numPositions"
+                  min="1"
+                  value={formData.numPositions}
+                  onChange={handleChange}
+                  className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-sm text-slate-900 focus:outline-none focus:border-blue-600 transition-all"
+                  required
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-slate-700 mb-2">Required Skills / Tools</label>
+              <textarea
+                rows={3}
+                name="skills"
+                value={formData.skills}
+                onChange={handleChange}
+                placeholder="e.g. Google Ads, Meta Ads, SEO, GA4, Canva, High ROAS Funnels..."
+                className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-sm text-slate-900 focus:outline-none focus:border-blue-600 transition-all resize-none"
+              />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Contact Person Name *</label>
+                <input
+                  type="text"
+                  name="contactName"
+                  value={formData.contactName}
+                  onChange={handleChange}
+                  placeholder="Your Name"
+                  className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-sm text-slate-900 focus:outline-none focus:border-blue-600 transition-all"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Phone / WhatsApp *</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="+91 98765 43210"
+                  className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-sm text-slate-900 focus:outline-none focus:border-blue-600 transition-all"
+                  required
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-slate-700 mb-2">Official Work Email</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="hr@yourcompany.com"
+                className="w-full bg-white border border-slate-200 rounded-xl p-3.5 text-sm text-slate-900 focus:outline-none focus:border-blue-600 transition-all"
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full h-14 bg-blue-900 text-white font-bold rounded-xl hover:bg-blue-800 transition-colors flex items-center justify-center gap-2 text-base disabled:opacity-70 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? (
+                <>
+                  <Loader2 size={18} className="animate-spin" />
+                  Submitting Requirement...
+                </>
+              ) : (
+                <>
+                  Submit Requirement to Hiring Team
+                  <ArrowRight size={18} />
+                </>
+              )}
+            </button>
+            <p className="text-center text-xs text-slate-400">Our hiring partnerships team will reach out within 24 hours · Zero recruitment fees</p>
+          </form>
+        )}
  </div>
  </section>
  </div>

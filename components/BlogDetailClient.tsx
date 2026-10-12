@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, Share2, Award, ChevronRight, CheckCircle2, ChevronDown, Sparkles, PhoneCall, MessageCircle } from 'lucide-react';
 import { BlogPost, blogPosts } from '../services/blogData';
+import BlogLeadHook from './BlogLeadHook';
+import { useApplyModal } from './ApplyModalContext';
 
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -17,6 +19,7 @@ interface BlogDetailClientProps {
 
 const BlogDetailClient: React.FC<BlogDetailClientProps> = ({ post }) => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const { openModal } = useApplyModal();
 
   // Extract Table of Contents items (any line starting with ##, ###, or ####)
   const tocItems = post.content
@@ -225,6 +228,9 @@ const BlogDetailClient: React.FC<BlogDetailClientProps> = ({ post }) => {
                 </ReactMarkdown>
               </div>
 
+              {/* Interactive Blog Lead Form Hook */}
+              <BlogLeadHook postTitle={post.title} />
+
               {/* Interactive FAQs if present */}
               {post.faqs && post.faqs.length > 0 && (
                 <div className="mt-12 pt-8 border-t border-slate-200">
@@ -285,12 +291,12 @@ const BlogDetailClient: React.FC<BlogDetailClientProps> = ({ post }) => {
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <Link
-                      href="/contact"
-                      className="px-5 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs rounded-xl text-center transition-colors shadow-lg flex items-center justify-center gap-2"
+                    <button
+                      onClick={() => openModal({ source: `Blog CTA Box: ${post.title}` })}
+                      className="px-5 py-3 bg-amber-400 hover:bg-amber-300 text-blue-950 font-bold text-xs rounded-xl text-center transition-colors shadow-lg flex items-center justify-center gap-2 cursor-pointer"
                     >
                       <PhoneCall className="w-4 h-4"/> Apply for Next Batch
-                    </Link>
+                    </button>
                     <a
                       href="https://wa.me/918527647899?text=Hi%20Vocaplace%2C%20I%20am%20reading%20your%20blog%20and%20want%20to%20know%20more%20about%20the%20Pay%20After%20Placement%20course"
                       target="_blank"
@@ -442,12 +448,12 @@ const BlogDetailClient: React.FC<BlogDetailClientProps> = ({ post }) => {
               <p className="text-xs text-slate-300 leading-relaxed mb-6">
                 Get a ₹4–8 LPA job in 120 days. Learn Google Ads, SEO, and AI workflows from Victoria University faculty. Pay only after placement.
               </p>
-              <Link 
-                href="/courses/digital-marketing-mastery"
-                className="block w-full py-3 bg-blue-600 text-white text-center text-xs font-bold hover:bg-blue-500 transition-colors rounded-xl shadow"
+              <button 
+                onClick={() => openModal({ source: `Blog Sidebar: ${post.title}` })}
+                className="block w-full py-3 bg-amber-400 text-blue-950 text-center text-xs font-bold hover:bg-amber-300 transition-colors rounded-xl shadow cursor-pointer"
               >
                 Apply for Next Batch →
-              </Link>
+              </button>
             </div>
 
           </aside>
@@ -465,12 +471,13 @@ const BlogDetailClient: React.FC<BlogDetailClientProps> = ({ post }) => {
             </p>
           </div>
           <div className="flex items-center gap-3 w-full sm:w-auto justify-center">
-            <Link
-              href="/contact"
-              className="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-lg transition-colors shadow whitespace-nowrap"
+            <button
+              type="button"
+              onClick={() => openModal({ source: `Blog Sticky Bar: ${post.title}` })}
+              className="px-5 py-2 bg-amber-400 hover:bg-amber-300 text-blue-950 text-xs font-bold rounded-lg transition-colors shadow whitespace-nowrap cursor-pointer"
             >
               Apply Now →
-            </Link>
+            </button>
           </div>
         </div>
       </div>

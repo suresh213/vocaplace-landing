@@ -1,3 +1,4 @@
+import ApplyNowButton from "../../components/ApplyNowButton";
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -251,10 +252,13 @@ export default function AboutPage() {
  <h2 className="text-3xl font-bold text-slate-900 mb-4">Join Our Mission</h2>
  <p className="text-slate-500 text-lg mb-8">Whether you're a student or a company — there's a place for you in the Vocaplace ecosystem.</p>
  <div className="flex flex-col sm:flex-row justify-center gap-4">
- <a href="https://student.vocaplace.com" rel="nofollow noopener noreferrer" className="h-14 px-8 bg-blue-900 text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-blue-800 transition-colors">
- For Students — Enroll Now
- <ArrowRight size={16} />
- </a>
+        <ApplyNowButton
+          source="About Page CTA - Enroll Now"
+          className="h-14 px-8 bg-blue-900 text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-blue-800 transition-colors cursor-pointer"
+        >
+          For Students — Enroll Now
+          <ArrowRight size={16} />
+        </ApplyNowButton>
  <Link href="/hire-talent"className="h-14 px-8 border border-blue-900 text-blue-900 font-bold rounded-xl flex items-center justify-center hover:bg-blue-50 transition-colors">
  For Companies — Hire Talent
  </Link>

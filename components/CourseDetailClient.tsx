@@ -8,19 +8,21 @@ import {
  Check, ShieldCheck, ChevronDown, ChevronUp
 } from 'lucide-react';
 import { CourseDetail, CourseTask } from '../services/courseData';
+import { useApplyModal } from './ApplyModalContext';
 
 // Internal Enrollment widget supporting button action with validation success popup
 const EnrollmentButton: React.FC<{ price: number; courseTitle: string }> = ({ price, courseTitle }) => {
- return (
- <a
- href="https://student.vocaplace.com"
- rel="nofollow noopener noreferrer"
- id="btn-enroll-action-sidebar"
- className="w-full py-3 bg-blue-900 text-white text-xs font-bold hover:bg-blue-800 transition-colors text-center block"
- >
- Secure Your Seat
- </a>
- );
+  const { openModal } = useApplyModal();
+  return (
+    <button
+      type="button"
+      onClick={() => openModal({ source: `Course Sidebar - ${courseTitle}` })}
+      id="btn-enroll-action-sidebar"
+      className="w-full py-3 bg-blue-900 text-white text-xs font-bold hover:bg-blue-800 transition-colors text-center block cursor-pointer"
+    >
+      Secure Your Seat
+    </button>
+  );
 };
 
 interface CourseDetailClientProps {
@@ -28,7 +30,8 @@ interface CourseDetailClientProps {
 }
 
 const CourseDetailClient: React.FC<CourseDetailClientProps> = ({ course }) => {
- // State for expanded modules
+  const { openModal } = useApplyModal();
+  // State for expanded modules
  const [expandedModules, setExpandedModules] = useState<{ [key: string]: boolean }>({});
  // State for expanded tasks
  const [expandedTasks, setExpandedTasks] = useState<{ [key: string]: boolean }>({});
@@ -148,14 +151,14 @@ const CourseDetailClient: React.FC<CourseDetailClientProps> = ({ course }) => {
             </div>
 
             <div className="flex flex-col sm:flex-row items-center gap-4">
-              <a
-                href="https://student.vocaplace.com"
-                rel="nofollow noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => openModal({ source: `Course Hero - ${course.title}` })}
                 id="btn-enroll-hero-bottom"
-                className="w-full sm:w-auto h-12 px-8 bg-blue-900 text-white text-xs font-bold flex items-center justify-center hover:bg-blue-800 transition-colors whitespace-nowrap"
+                className="w-full sm:w-auto h-12 px-8 bg-blue-900 text-white text-xs font-bold flex items-center justify-center hover:bg-blue-800 transition-colors whitespace-nowrap cursor-pointer"
               >
                 Enroll in Program
-              </a>
+              </button>
               {course.isaEnabled && (
                 <div className="flex items-center gap-2 text-xs font-bold text-slate-800">
                   <ShieldCheck className="w-5 h-5 text-green-600"/>
