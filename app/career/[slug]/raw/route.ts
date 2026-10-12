@@ -69,7 +69,32 @@ ${phase.keyDeliverables.map((d) => `- ${d}`).join('\n')}`).join('\n\n')}
 
 ---
 
-## 5. Frequently Asked Questions (FAQ)
+## 5. Top Career Roles for ${track.degreeShort} Graduates
+
+${track.topJobRoles.map((role) => `### ${role.title} (${role.ctcRange})
+${role.description}`).join('\n\n')}
+
+---
+
+## 6. Industry Tools & AI Stack Mastered
+
+| Tool | Category | Practical Use Case |
+|---|---|---|
+${track.toolsMastered.map((t) => `| ${t.name} | ${t.category} | ${t.useCase} |`).join('\n')}
+
+---
+
+## 7. Real-World Student Transition Case Study
+
+- **Student:** ${track.studentScenario.name} (${track.studentScenario.city})
+- **Prior Background:** ${track.studentScenario.priorBackground}
+- **The Hurdle:** ${track.studentScenario.struggle}
+- **The 120-Day Pivot:** ${track.studentScenario.vocaplacePivot}
+- **Placement Outcome:** ${track.studentScenario.placedRole} (${track.studentScenario.package})
+
+---
+
+## 8. Frequently Asked Questions (FAQ)
 
 ${track.faqs.map((f) => `### Q: ${f.question}
 A: ${f.answer}`).join('\n\n')}

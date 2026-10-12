@@ -46,6 +46,25 @@ export interface CareerTrack {
     question: string;
     answer: string;
   }[];
+  topJobRoles: {
+    title: string;
+    ctcRange: string;
+    description: string;
+  }[];
+  toolsMastered: {
+    name: string;
+    category: string;
+    useCase: string;
+  }[];
+  studentScenario: {
+    name: string;
+    city: string;
+    priorBackground: string;
+    struggle: string;
+    vocaplacePivot: string;
+    placedRole: string;
+    package: string;
+  };
 }
 
 export const careerTracks: CareerTrack[] = [
@@ -189,7 +208,43 @@ export const careerTracks: CareerTrack[] = [
         question: 'How does Vocaplace\'s Pay After Placement model protect BBA students?',
         answer: 'Under our Pay After Placement model, your core tuition is completely deferred until you sign an official employment contract paying at least ₹4.0 LPA. If we do not successfully place you within 90 days of graduation, your remaining tuition liability is 100% waived.'
       }
-    ]
+    ],
+    topJobRoles: [
+      {
+        title: 'Performance Marketing Specialist',
+        ctcRange: '₹5.0 LPA – ₹8.5 LPA',
+        description: 'Managing paid client acquisition budgets across Google Ads (Search & Performance Max) and Meta Ads Manager with daily ROAS accountability.',
+      },
+      {
+        title: 'Growth Marketing Executive',
+        ctcRange: '₹4.5 LPA – ₹7.5 LPA',
+        description: 'Architecting full-funnel customer acquisition campaigns, conversion rate optimization (CRO) split tests, and retention funnels for D2C brands.',
+      },
+      {
+        title: 'Brand & Paid Social Strategist',
+        ctcRange: '₹4.2 LPA – ₹6.8 LPA',
+        description: 'Developing high-converting video creative hooks, UGC briefs, and Advantage+ shopping campaigns across Instagram, YouTube, and LinkedIn.',
+      },
+    ],
+    toolsMastered: [
+      { name: 'Google Ads Manager', category: 'Paid Search', useCase: 'High-intent search keyword bidding, negative match mining, and PMax campaigns' },
+      { name: 'Meta Ads Manager', category: 'Paid Social', useCase: 'Advantage+ campaigns, custom audiences, 3:2:2 rapid creative testing' },
+      { name: 'Google Analytics 4 (GA4)', category: 'Analytics', useCase: 'User exploration reports, multi-touch attribution, conversion event setup' },
+      { name: 'Google Tag Manager', category: 'Tracking', useCase: 'Event tracking, conversion pixels, form submission triggers' },
+      { name: 'Zapier & Make', category: 'Automation', useCase: 'Automating lead handoffs from ads directly into CRM and sales pipelines' },
+      { name: 'ChatGPT & Claude', category: 'AI Workflows', useCase: 'Prompt engineering for hundreds of localized ad angles and customer personas' },
+      { name: 'Unbounce / WordPress', category: 'CRO Landing Pages', useCase: 'Building high-converting landing pages with heatmaps and A/B split tests' },
+      { name: 'Ahrefs / Semrush', category: 'SEO', useCase: 'Keyword gap research, competitor backlink auditing, search intent mapping' },
+    ],
+    studentScenario: {
+      name: 'Aditya S.',
+      city: 'Pune',
+      priorBackground: 'BBA Marketing Graduate (Tier-3 College)',
+      struggle: 'Campus drives offered only ₹2.6 LPA for tele-calling insurance sales. Considered taking a ₹10 Lakh education loan for a private MBA, but realized seniors with ₹12L loans were securing the same ₹4.5L entry packages.',
+      vocaplacePivot: 'Joined Vocaplace evening cohort, managed ₹35,000 in real client Google & Meta ad spends, and built a verified ROAS case study portfolio reviewed directly by Wajed Sk.',
+      placedRole: 'Performance Marketing Executive at a funded D2C wellness brand in Bangalore',
+      package: '₹6.8 LPA',
+    },
   },
   {
     slug: 'bcom-to-digital-marketing',
@@ -331,7 +386,43 @@ export const careerTracks: CareerTrack[] = [
         question: 'What is the duration of Vocaplace\'s Pay After Placement program for B.Com freshers?',
         answer: 'The program runs for 120 days (4 months) with live evening Zoom sessions, allowing you to learn without disrupting college or exams. You pay your core tuition only after securing a qualifying job paying at least ₹4.0 LPA.'
       }
-    ]
+    ],
+    topJobRoles: [
+      {
+        title: 'E-Commerce Paid Media Buyer',
+        ctcRange: '₹5.2 LPA – ₹9.0 LPA',
+        description: 'Managing monthly media budgets of ₹5L–₹30L for e-commerce stores, calculating blended CAC, and optimizing ad spend for net contribution margin.',
+      },
+      {
+        title: 'Digital Marketing Data Analyst',
+        ctcRange: '₹4.8 LPA – ₹7.8 LPA',
+        description: 'Building custom GA4 attribution dashboards, cohort retention models, and Looker Studio reports to advise founders on growth profitability.',
+      },
+      {
+        title: 'Search Engine Marketing (SEM) Specialist',
+        ctcRange: '₹4.5 LPA – ₹7.2 LPA',
+        description: 'Running high-budget Google Shopping, Search, and Remarketing campaigns with strict Target CPA (tCPA) and Target ROAS (tROAS) bidding rules.',
+      },
+    ],
+    toolsMastered: [
+      { name: 'Google Ads (Search & Shopping)', category: 'Paid Media', useCase: 'Product feed optimization, merchant center setup, and ROAS-focused bidding' },
+      { name: 'Meta Ads Manager', category: 'Paid Social', useCase: 'Dynamic Product Ads (DPA) and catalogue sales targeting for online stores' },
+      { name: 'Google Analytics 4', category: 'Analytics', useCase: 'E-commerce purchase funnel drops, revenue attribution, lifetime value modeling' },
+      { name: 'Looker Studio', category: 'BI Dashboards', useCase: 'Creating automated executive dashboards combining ad spend with Shopify revenue' },
+      { name: 'Microsoft Excel / Sheets', category: 'Financial Modeling', useCase: 'Calculating blended CAC, MER (Marketing Efficiency Ratio), and profit margins' },
+      { name: 'Google Tag Manager', category: 'Tag Management', useCase: 'E-commerce data layer tracking for add-to-cart, checkout, and purchase values' },
+      { name: 'Shopify Analytics', category: 'E-Commerce', useCase: 'Store conversion rate analysis, cart abandonment recovery funnels' },
+      { name: 'ChatGPT AI', category: 'AI Workflows', useCase: 'Analyzing financial ad export CSVs and uncovering hidden wasted ad spend' },
+    ],
+    studentScenario: {
+      name: 'Pooja R.',
+      city: 'Delhi NCR',
+      priorBackground: 'B.Com Graduate, CA Inter Dropout',
+      struggle: 'Spent 2 years studying for CA Inter without clearing, leading to heavy career anxiety. Worked at a local CA audit firm earning ₹17,000/month preparing GST vouchers with no growth outlook.',
+      vocaplacePivot: 'Used her strong spreadsheet and P&L intuition to master e-commerce unit economics and Meta Ads Manager in Vocaplace\'s 120-day incubator.',
+      placedRole: 'Paid Media Analyst at a leading digital marketing agency in Gurugram',
+      package: '₹7.2 LPA',
+    },
   },
   {
     slug: 'btech-to-digital-marketing',
@@ -473,7 +564,43 @@ export const careerTracks: CareerTrack[] = [
         question: 'How does the Pay After Placement model work for engineering graduates?',
         answer: 'You pay a small refundable registration deposit to reserve your seat in the live cohort. Your core tuition is 100% deferred until you receive an official full-time job offer paying ₹4–8 LPA or higher. If you are not placed within 90 days of graduation, your remaining tuition is 100% waived.'
       }
-    ]
+    ],
+    topJobRoles: [
+      {
+        title: 'Technical SEO & Programmatic Growth Engineer',
+        ctcRange: '₹5.5 LPA – ₹9.5 LPA',
+        description: 'Architecting programmatic SEO architectures, resolving Core Web Vitals issues, and auditing crawl budgets for large-scale enterprise platforms.',
+      },
+      {
+        title: 'Marketing Automation & RevOps Specialist',
+        ctcRange: '₹5.0 LPA – ₹8.5 LPA',
+        description: 'Connecting CRMs (HubSpot, Salesforce), webhook triggers, and lead routing algorithms using Zapier, Make, and custom JavaScript snippets.',
+      },
+      {
+        title: 'Performance Marketing Technologist',
+        ctcRange: '₹5.0 LPA – ₹8.2 LPA',
+        description: 'Setting up Conversion API (CAPI) server-side tagging, offline conversion imports (OCI), and advanced predictive customer targeting.',
+      },
+    ],
+    toolsMastered: [
+      { name: 'Server-Side GTM', category: 'Tracking Architecture', useCase: 'Cloud server containers, Meta Conversions API (CAPI), first-party cookies' },
+      { name: 'Python for SEO & Data', category: 'Automation', useCase: 'Automated SERP scraping, sitemap XML generation, data mining via APIs' },
+      { name: 'Screaming Frog SEO Spider', category: 'Technical Audits', useCase: 'Full website crawl analysis, orphan page detection, canonical chain fixes' },
+      { name: 'Zapier & Make.com', category: 'RevOps Automation', useCase: 'Complex multi-step webhook workflows bridging ad platforms and CRM pipelines' },
+      { name: 'Google Analytics 4 & BigQuery', category: 'Data Infrastructure', useCase: 'Exporting raw event tables to BigQuery for SQL-based user path queries' },
+      { name: 'Google Ads & Performance Max', category: 'Paid Media', useCase: 'Managing algorithm-driven bidding strategies and custom intent audience segments' },
+      { name: 'Ahrefs & Semrush', category: 'Competitive Intelligence', useCase: 'Reverse-engineering competitor search funnels and backlink graph analysis' },
+      { name: 'WordPress & Webflow', category: 'Web Development', useCase: 'High-speed landing page architecture with sub-second LCP Core Web Vitals' },
+    ],
+    studentScenario: {
+      name: 'Karthik N.',
+      city: 'Hyderabad',
+      priorBackground: 'B.Tech (ECE), Tier-3 Engineering College',
+      struggle: 'Offered a ₹3.36 LPA role by an IT services firm with an indefinite 9-month onboarding delay and a 2-year service bond. Rejected repeatedly in product firm coding rounds due to intense DSA competition.',
+      vocaplacePivot: 'Discovered Technical SEO and Marketing Automation at Vocaplace; built server-side GTM tracking and programmatic SEO directories that impressed tech hiring managers.',
+      placedRole: 'Growth & Automation Engineer at a B2B SaaS company in Bangalore',
+      package: '₹8.0 LPA',
+    },
   },
   {
     slug: 'bpo-switch-to-digital-marketing',
@@ -615,7 +742,43 @@ export const careerTracks: CareerTrack[] = [
         question: 'What if I don\'t get placed after completing the 120-day program?',
         answer: 'Under our legally backed 100% Job Guarantee and Pay After Placement agreement, if you are not placed within 90 days of graduation at a minimum salary of ₹4.0 LPA, your entire remaining tuition liability is 100% waived.'
       }
-    ]
+    ],
+    topJobRoles: [
+      {
+        title: 'Performance Marketing Associate (Paid Search & Social)',
+        ctcRange: '₹4.5 LPA – ₹7.5 LPA',
+        description: 'Managing day-to-day campaign execution on Google and Meta Ads, monitoring lead cost thresholds, and generating qualified B2B/B2C leads.',
+      },
+      {
+        title: 'Direct-Response Copywriter & Creative Strategist',
+        ctcRange: '₹4.5 LPA – ₹7.0 LPA',
+        description: 'Converting deep customer objection intuition into high-converting video scripts, Instagram ad hooks, and email nurture drip campaigns.',
+      },
+      {
+        title: 'Lead Generation & CRM Campaign Manager',
+        ctcRange: '₹4.2 LPA – ₹6.8 LPA',
+        description: 'Managing inbound lead workflows, qualifying ad prospects, and optimizing multi-step WhatsApp and email follow-up automations.',
+      },
+    ],
+    toolsMastered: [
+      { name: 'Meta Ads Manager', category: 'Paid Social', useCase: 'Setting up lead form campaigns, custom lookalikes, and video view retargeting' },
+      { name: 'Google Search Ads', category: 'Paid Search', useCase: 'High-intent keyword selection, responsive search ads, and local call ads' },
+      { name: 'HubSpot & ActiveCampaign', category: 'CRM & Email', useCase: 'Building automated drip campaigns that convert cold leads into paying customers' },
+      { name: 'Canva Pro & CapCut', category: 'Creative Production', useCase: 'Designing high-converting ad visuals and editing UGC video hooks' },
+      { name: 'Zapier', category: 'Workflow Automation', useCase: 'Instantly syncing Facebook lead ads with Google Sheets and sales rep WhatsApp' },
+      { name: 'ChatGPT & Claude', category: 'AI Copywriting', useCase: 'Generating dozens of direct-response ad angles based on real customer pain points' },
+      { name: 'WordPress & Elementor', category: 'Landing Pages', useCase: 'Designing mobile-first lead capture pages with sub-2-second load times' },
+      { name: 'Google Analytics 4', category: 'Performance Tracking', useCase: 'Tracking lead source conversion paths and measuring true cost-per-acquisition' },
+    ],
+    studentScenario: {
+      name: 'Rohan M.',
+      city: 'Noida',
+      priorBackground: 'Senior Customer Care Executive (US Voice Process)',
+      struggle: 'Worked nocturnal 9:30 PM to 6:30 AM shifts for 3 years, causing severe sleep disruption and health issues. Salary was capped at ₹25,000/month with nominal 6% annual hikes and no career respect.',
+      vocaplacePivot: 'Attended Vocaplace live evening classes (8 PM – 10 PM) after waking up, applied objection-handling skills to paid ad copywriting, and mastered Meta Ads Manager.',
+      placedRole: 'Performance Marketing Specialist at a digital healthcare company in Gurugram',
+      package: '₹6.5 LPA (Fixed Day Shift)',
+    },
   },
   {
     slug: 'ba-arts-to-digital-marketing',
@@ -755,8 +918,44 @@ export const careerTracks: CareerTrack[] = [
       },
       {
         question: 'How does Pay After Placement work if I graduated with a BA degree?',
-        answer: 'All students enjoy the exact same transparent terms: you pay only a small refundable registration deposit to begin. Your core tuition is 100% deferred until you sign a full-time appointment letter paying at least ₹4.0 LPA. If you are not placed within 90 days of graduation, your remaining tuition liability is completely waived.'
+        answer: 'All students enjoy the exact same transparent terms: you pay only a small refundable registration deposit to begin. Your core tuition is 100% deferred until you sign a full-time appointment letter paying at least ₹4.0 LPA. If we do not successfully place you within 90 days of graduation, your remaining tuition liability is completely waived.'
       }
-    ]
+    ],
+    topJobRoles: [
+      {
+        title: 'Content Strategist & Editorial Lead',
+        ctcRange: '₹4.5 LPA – ₹7.2 LPA',
+        description: 'Planning and executing organic content pillars, SEO editorial roadmaps, and high-ranking thought leadership articles that drive inbound authority.',
+      },
+      {
+        title: 'Social Media & Brand Campaign Manager',
+        ctcRange: '₹4.2 LPA – ₹6.8 LPA',
+        description: 'Developing viral social media narratives, Instagram Reels hook strategies, and community engagement campaigns that build loyal audiences.',
+      },
+      {
+        title: 'Generative Engine Optimization (GEO) & AI Content Lead',
+        ctcRange: '₹4.8 LPA – ₹7.5 LPA',
+        description: 'Engineering prompt workflows and structured content models so brands get cited directly by ChatGPT, Perplexity, and Google AI Overviews.',
+      },
+    ],
+    toolsMastered: [
+      { name: 'ChatGPT & Claude (Prompt Mastery)', category: 'Generative AI', useCase: 'Advanced prompt chaining for audience persona research, hooks, and content briefs' },
+      { name: 'WordPress / Webflow CMS', category: 'Content Management', useCase: 'Publishing optimized articles with semantic headings, metadata, and schema markup' },
+      { name: 'Canva Pro & Figma Basics', category: 'Visual Content', useCase: 'Designing carousel graphics, infographic charts, and social media banners' },
+      { name: 'Ahrefs & Semrush', category: 'Content Research', useCase: 'Finding low-competition keyword opportunities and high-intent topic clusters' },
+      { name: 'Google Search Console', category: 'SEO Monitoring', useCase: 'Tracking organic keyword rankings, impressions, and click-through rates (CTR)' },
+      { name: 'Meta Creative Hub', category: 'Ad Concepts', useCase: 'Prototyping dynamic creative concepts and visual storyboards for paid media teams' },
+      { name: 'Google Analytics 4', category: 'Content Analytics', useCase: 'Analyzing user engagement duration, bounce rate, and content assisted conversions' },
+      { name: 'Notion & Trello', category: 'Editorial Workflow', useCase: 'Managing multi-author content calendars and cross-channel distribution pipelines' },
+    ],
+    studentScenario: {
+      name: 'Ananya D.',
+      city: 'Kolkata',
+      priorBackground: 'BA English Literature Graduate',
+      struggle: 'Faced family pressure to sit for banking and SSC clerical exams. Took freelance writing gigs on Upwork paying ₹0.25/word (barely ₹11,000/month), feeling undervalued despite strong writing ability.',
+      vocaplacePivot: 'Learned that modern marketing values commercial conversion writing over academic essays. Mastered SEO topic clustering, AI workflows, and GEO citation architecture at Vocaplace.',
+      placedRole: 'Inbound Content Strategist at an enterprise B2B SaaS startup in Mumbai',
+      package: '₹5.8 LPA',
+    },
   }
 ];

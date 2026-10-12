@@ -17,7 +17,10 @@ import {
   ChevronRight,
   GraduationCap,
   Building,
-  DollarSign
+  DollarSign,
+  Layers,
+  UserCheck,
+  Target
 } from 'lucide-react';
 
 interface CareerDetailClientProps {
@@ -173,6 +176,90 @@ export default function CareerDetailClient({ track }: CareerDetailClientProps) {
           </div>
         </section>
 
+        {/* Section: Industry Tools Mastered */}
+        {track.toolsMastered && track.toolsMastered.length > 0 && (
+          <section className="mb-14">
+            <div className="flex items-center gap-2 mb-2">
+              <Layers className="w-5 h-5 text-blue-900" />
+              <h2 className="text-2xl font-bold text-slate-900">
+                Industry Tools &amp; AI Stack You Will Master
+              </h2>
+            </div>
+            <p className="text-sm text-slate-500 mb-6">
+              Hiring managers prioritize candidates who know the actual tools. You manage live campaigns across this modern stack:
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {track.toolsMastered.map((tool, idx) => (
+                <div key={idx} className="p-4 rounded-xl border border-slate-200 bg-white hover:border-blue-800/40 transition-all">
+                  <div className="text-[10px] uppercase font-bold tracking-wider text-blue-700 bg-blue-50 inline-block px-2 py-0.5 rounded mb-2">
+                    {tool.category}
+                  </div>
+                  <h3 className="font-bold text-slate-900 text-sm mb-1">
+                    {tool.name}
+                  </h3>
+                  <p className="text-[11px] text-slate-500 leading-relaxed">
+                    {tool.useCase}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Section: Student Transformation Journey */}
+        {track.studentScenario && (
+          <section className="mb-14">
+            <div className="p-6 md:p-8 rounded-2xl border border-amber-200/80 bg-gradient-to-br from-amber-50/40 via-white to-blue-50/30 shadow-sm">
+              <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-slate-200/80">
+                <div>
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-1 rounded-md mr-2">
+                    Case Study Scenario
+                  </span>
+                  <span className="font-bold text-slate-900 text-base">
+                    From {track.degreeShort} Stagnation to {track.studentScenario.placedRole}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 text-xs font-semibold text-slate-600">
+                  <UserCheck size={16} className="text-blue-900" />
+                  <span>{track.studentScenario.name} · {track.studentScenario.city}</span>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="p-4 rounded-xl bg-white border border-slate-200/80">
+                  <span className="text-[11px] font-bold text-red-600 uppercase tracking-wide block mb-1">
+                    1. The Prior Hurdle
+                  </span>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    {track.studentScenario.struggle}
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-xl bg-white border border-slate-200/80">
+                  <span className="text-[11px] font-bold text-blue-900 uppercase tracking-wide block mb-1">
+                    2. The 120-Day Pivot
+                  </span>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    {track.studentScenario.vocaplacePivot}
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-xl bg-emerald-50/70 border border-emerald-200">
+                  <span className="text-[11px] font-bold text-emerald-800 uppercase tracking-wide block mb-1">
+                    3. The Placement Outcome
+                  </span>
+                  <div className="text-xl font-extrabold text-emerald-700 mb-1">
+                    {track.studentScenario.package}
+                  </div>
+                  <p className="text-xs text-slate-700 font-medium">
+                    {track.studentScenario.placedRole}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Section 2: Salary Comparison Table */}
         <section className="mb-14">
           <h2 className="text-2xl font-bold text-slate-900 mb-3">
@@ -215,6 +302,39 @@ export default function CareerDetailClient({ track }: CareerDetailClientProps) {
             </table>
           </div>
         </section>
+
+        {/* Section: Target Job Roles & Responsibilities */}
+        {track.topJobRoles && track.topJobRoles.length > 0 && (
+          <section className="mb-14">
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">
+              Top Career Roles for {track.degreeShort} Graduates in Digital Marketing
+            </h2>
+            <p className="text-sm text-slate-500 mb-6">
+              Verified job titles actively hired by our network of 100+ partner agencies, D2C brands, and tech companies.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              {track.topJobRoles.map((role, idx) => (
+                <div key={idx} className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm flex flex-col justify-between hover:border-blue-900/40 transition-all">
+                  <div>
+                    <div className="inline-block px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-800 text-xs font-extrabold mb-3 border border-emerald-200/60">
+                      {role.ctcRange}
+                    </div>
+                    <h3 className="font-bold text-slate-900 text-base mb-2">
+                      {role.title}
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                      {role.description}
+                    </p>
+                  </div>
+                  <div className="pt-3 border-t border-slate-100 flex items-center gap-1.5 text-[11px] font-semibold text-blue-900">
+                    <CheckCircle2 size={13} className="text-emerald-600" />
+                    <span>Included in 100% Placement Drives</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Section 3: Transferrable Skills Advantage */}
         <section className="mb-14">
