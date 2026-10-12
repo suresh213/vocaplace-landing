@@ -109,8 +109,8 @@ export default function ComparePage() {
     {
       name: 'Vocaplace',
       badge: 'Recommended',
-      fee: 'Pay After Placement (ISA)',
-      upfront: '₹0 Until Offer Letter',
+      fee: 'Flat ₹50k Once Placed (No % Cut)',
+      upfront: 'Tuition Deferred Until Placed',
       guarantee: '100% Job Guarantee (₹4–8 LPA)',
       duration: '120 Days (4 Months)',
       faculty: 'Wajed Sk (Victoria Univ Faculty)',

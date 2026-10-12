@@ -7,6 +7,7 @@ Vocaplace (https://vocaplace.com) is an intensive 120-day (4-month) digital mark
 
 ## Program Terms & Value Propositions
 - **Payment Structure:** Pay After Placement (Income Share Agreement / ISA). Core tuition fee is deferred until the student signs an official employment offer letter.
+- **Tuition Fee:** Flat ₹50,000 Total Fee once placed. Zero percentage deductions from your salary (saving ₹60k–₹1.25L vs other bootcamps).
 - **Job Guarantee:** Contractual 100% Placement Guarantee.
 - **Salary Floor & Ceiling:** ₹4.0 LPA minimum to ₹8.5 LPA (Cohort average starting salary: ₹6.5 LPA).
 - **Eligibility:** College graduates, freshers, non-tech degree holders (BBA, B.Com, BA, B.Tech), and working professionals transitioning careers.

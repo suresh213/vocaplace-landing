@@ -280,8 +280,8 @@ export default function PayAfterPlacementPage() {
               },
               {
                 step: '04',
-                title: 'Income-Linked Repayment',
-                desc: 'Once placed and your first month salary is credited, pay tuition in predictable monthly installments. If not placed, you pay ₹0.',
+                title: 'Flat ₹50k Fee Once Placed',
+                desc: 'Once placed and your first month salary is credited, pay a flat ₹50,000 fee in easy monthly installments. Zero percentage deductions from your salary. If not placed, you pay ₹0.',
                 icon: DollarSign
               }
             ].map((st, i) => (
@@ -334,7 +334,7 @@ export default function PayAfterPlacementPage() {
                 </tr>
                 <tr>
                   <td className="p-4 font-bold text-slate-800">Total Course Fee</td>
-                  <td className="p-4 font-bold text-blue-900 bg-blue-50/50">Fixed Deferred Installments</td>
+                  <td className="p-4 font-bold text-blue-900 bg-blue-50/50">Flat ₹50,000 (No % Deductions)</td>
                   <td className="p-4 text-slate-600">₹1,75,820 (with GST)</td>
                   <td className="p-4 text-slate-600">₹1,65,000 to ₹6,50,000</td>
                   <td className="p-4 text-slate-600">₹1,15,000 to ₹1,50,000</td>

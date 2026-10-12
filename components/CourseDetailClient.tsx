@@ -517,7 +517,7 @@ const CourseDetailClient: React.FC<CourseDetailClientProps> = ({ course }) => {
         Calculate Your Pay After Placement Investment
       </h2>
       <p className="text-xs sm:text-sm text-slate-500">
-        See exactly how your tuition is structured. Pay in manageable monthly installments only after landing a verified job paying ₹4.0–8.5 LPA.
+        See how Vocaplace charges a flat ₹50,000 fee once placed (no percentage cuts from your paycheck), saving you up to ₹1.25 Lakhs compared to overpriced bootcamps.
       </p>
     </div>
     <IsaCalculator />
