@@ -59,6 +59,7 @@ const Footer: React.FC = () => {
   <li><Link href="/mentor/wajed" className="hover:text-white transition-colors">Lead Mentor (Wajed Sk)</Link></li>
   <li><Link href="/blog" className="hover:text-white transition-colors">Blog & Insights</Link></li>
   <li><Link href="/hire-talent" className="hover:text-white transition-colors">Hire Our Graduates</Link></li>
+  <li><Link href="/site-directory" className="hover:text-white transition-colors font-medium text-amber-300">Site Directory</Link></li>
   <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
   </ul>
   </div>
@@ -188,10 +189,12 @@ const Footer: React.FC = () => {
 
  <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
  <p>© 2026 Vocaplace Technologies Pvt. Ltd. All rights reserved.</p>
- <div className="flex gap-6">
+ <div className="flex flex-wrap gap-4 sm:gap-6">
+ <Link href="/site-directory" className="hover:text-white transition-colors">Site Directory</Link>
  <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
  <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
  <Link href="/refund" className="hover:text-white transition-colors">Refund Policy</Link>
+ <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">XML Sitemap</a>
  </div>
  </div>
  </div>

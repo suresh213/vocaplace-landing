@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '': { priority: 1.0, changeFrequency: 'daily' },
     '/pay-after-placement': { priority: 1.0, changeFrequency: 'daily' },
     '/syllabus': { priority: 0.95, changeFrequency: 'daily' },
+    '/site-directory': { priority: 0.90, changeFrequency: 'daily' },
     '/compare': { priority: 0.90, changeFrequency: 'daily' },
     '/career': { priority: 0.90, changeFrequency: 'daily' },
     '/mentor/wajed': { priority: 0.90, changeFrequency: 'daily' },
