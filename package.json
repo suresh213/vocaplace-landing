@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "index:all": "node scripts/index-now-all.mjs"
+    "index:all": "node scripts/index-now-all.mjs",
+    "index:google": "node scripts/google-fast-index.mjs"
   },
   "dependencies": {
     "@google/genai": "^1.38.0",

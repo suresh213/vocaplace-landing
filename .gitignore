@@ -27,3 +27,8 @@ dist-ssr
 .next/
 out/
 
+# Google Service Account keys & secrets
+google-service-account*.json
+*service_account*.json
+credentials*.json
+
