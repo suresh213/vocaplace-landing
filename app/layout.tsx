@@ -7,6 +7,8 @@ import Script from 'next/script';
 import UtmForwarder from '../components/UtmForwarder';
 import { ApplyModalProvider } from '../components/ApplyModalContext';
 import ApplyModal from '../components/ApplyModal';
+import StickyMobileCta from '../components/StickyMobileCta';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 const inter = Inter({
  subsets: ['latin'],
@@ -159,6 +161,8 @@ export default function RootLayout({
             </main>
             <Footer />
             <ApplyModal />
+            <StickyMobileCta />
+            <WhatsAppButton />
           </div>
         </ApplyModalProvider>
  </body>

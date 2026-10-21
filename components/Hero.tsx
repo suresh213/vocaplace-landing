@@ -1,13 +1,13 @@
 "use client";
 
 import React from 'react';
-import { ArrowRight, CheckCircle, Star, Users, Building, Award } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Building, Award, Download } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useApplyModal } from './ApplyModalContext';
 
 const Hero: React.FC = () => {
-  const { openModal } = useApplyModal();
+  const { openModal, openSyllabusModal } = useApplyModal();
   return (
     <section className="relative min-h-[90vh] flex flex-col pt-24 pb-16 bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 overflow-hidden">
 
@@ -82,19 +82,30 @@ const Hero: React.FC = () => {
               className="flex flex-col sm:flex-row gap-4 pt-2"
             >
               <button
-                onClick={() => openModal({ source: 'Hero CTA Button' })}
+                onClick={() => openModal({ source: 'Hero Primary - Apply' })}
                 className="h-14 px-8 bg-amber-400 text-blue-950 text-base font-bold flex items-center justify-center gap-2 hover:bg-amber-300 transition-colors rounded-lg whitespace-nowrap shadow-lg shadow-amber-400/20 cursor-pointer"
               >
                 Apply (Pay After Placement)
                 <ArrowRight size={18} />
               </button>
-              <Link
-                href="/courses/digital-marketing-mastery"
-                className="h-14 px-8 bg-white/10 border border-white/30 text-white text-base font-semibold flex items-center justify-center hover:bg-white/20 transition-colors rounded-lg whitespace-nowrap"
+              <button
+                onClick={() => openSyllabusModal({ source: 'Hero Secondary - Download Syllabus' })}
+                className="h-14 px-8 bg-white/10 border border-white/30 text-white text-base font-semibold flex items-center justify-center gap-2 hover:bg-white/20 transition-colors rounded-lg whitespace-nowrap cursor-pointer"
               >
-                Explore 120-Day Curriculum
-              </Link>
+                <Download size={18} className="text-amber-400" />
+                Download Syllabus (PDF)
+              </button>
             </motion.div>
+
+            {/* Quick link below CTAs */}
+            <div className="pt-1">
+              <Link 
+                href="/courses/digital-marketing-mastery" 
+                className="text-xs text-blue-300 hover:text-white underline underline-offset-4 transition-colors"
+              >
+                Looking for syllabus preview? Explore 120-Day Modules &amp; Outcomes →
+              </Link>
+            </div>
 
             {/* Social proof */}
             <motion.div

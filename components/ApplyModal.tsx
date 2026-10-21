@@ -49,6 +49,8 @@ export default function ApplyModal() {
 
   if (!isOpen) return null;
 
+  const isSyllabus = options.mode === 'syllabus';
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -60,7 +62,8 @@ export default function ApplyModal() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...formData,
-          source: options.source || (typeof window !== 'undefined' ? window.location.pathname : 'Website Modal'),
+          source: options.source || (isSyllabus ? 'Website Syllabus Modal' : (typeof window !== 'undefined' ? window.location.pathname : 'Website Modal')),
+          notes: isSyllabus ? 'Requested 120-Day Detailed Curriculum PDF' : undefined,
         }),
       });
 
@@ -103,14 +106,14 @@ export default function ApplyModal() {
 
           <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-blue-800 text-amber-300 text-xs font-bold mb-2.5 border border-blue-700">
             <Sparkles size={13} className="text-amber-400" />
-            <span>Pay After Placement (ISA) · Class of 2026</span>
+            <span>{isSyllabus ? '120-Day Curriculum · Download Syllabus (PDF)' : 'Pay After Placement (ISA) · Class of 2026'}</span>
           </div>
 
           <h2 className="text-xl sm:text-2xl font-extrabold text-white leading-snug">
-            Apply for 120-Day Digital Marketing Incubator
+            {isSyllabus ? 'Download Complete 120-Day Syllabus' : 'Apply for 120-Day Digital Marketing Incubator'}
           </h2>
           <p className="text-xs sm:text-sm text-blue-200 mt-1.5">
-            100% Job Guarantee (₹4–8 LPA) · Core tuition deferred until placed
+            {isSyllabus ? 'Week-by-week module breakdown, live ad budgets, AI tools & placement report' : '100% Job Guarantee (₹4–8 LPA) · Core tuition deferred until placed'}
           </p>
         </div>
 
@@ -122,17 +125,30 @@ export default function ApplyModal() {
                 <CheckCircle2 size={36} />
               </div>
               <h3 className="text-2xl font-bold text-slate-900">
-                Application Received!
+                {isSyllabus ? 'Curriculum Access Granted!' : 'Application Received!'}
               </h3>
               <p className="text-sm text-slate-600 max-w-sm mx-auto leading-relaxed">
-                Thank you for applying. Our senior admissions counselor will connect with you on WhatsApp within <strong>2 hours</strong> with the complete syllabus and demo schedule.
+                {isSyllabus ? (
+                  <>We logged your request and sent a copy to your WhatsApp. You can also view or print the full syllabus guide online right now.</>
+                ) : (
+                  <>Thank you for applying. Our senior admissions counselor will connect with you on WhatsApp within <strong>2 hours</strong> with the complete syllabus and demo schedule.</>
+                )}
               </p>
-              <div className="pt-4">
+              <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+                {isSyllabus && (
+                  <a
+                    href="/syllabus"
+                    onClick={closeModal}
+                    className="w-full sm:w-auto px-6 py-3 bg-amber-400 text-blue-950 text-sm font-bold rounded-xl hover:bg-amber-300 transition-colors shadow-sm text-center"
+                  >
+                    View 120-Day Syllabus Guide →
+                  </a>
+                )}
                 <button
                   onClick={closeModal}
-                  className="px-6 py-3 bg-blue-900 text-white text-sm font-bold rounded-xl hover:bg-blue-800 transition-colors"
+                  className="w-full sm:w-auto px-6 py-3 bg-blue-900 text-white text-sm font-bold rounded-xl hover:bg-blue-800 transition-colors"
                 >
-                  Close &amp; Continue Browsing
+                  Close &amp; Continue
                 </button>
               </div>
             </div>
@@ -230,11 +246,11 @@ export default function ApplyModal() {
                   {isSubmitting ? (
                     <>
                       <Loader2 size={18} className="animate-spin text-blue-950" />
-                      Submitting Application...
+                      {isSyllabus ? 'Unlocking Syllabus...' : 'Submitting Application...'}
                     </>
                   ) : (
                     <>
-                      Submit Application (Pay After Placement)
+                      {isSyllabus ? 'Download 120-Day Syllabus (Instant Access)' : 'Submit Application (Pay After Placement)'}
                       <ArrowRight size={16} />
                     </>
                   )}

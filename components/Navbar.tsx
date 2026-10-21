@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Menu, X, ChevronDown, Users, GraduationCap, Info } from 'lucide-react';
+import { Menu, X, ChevronDown, Users, GraduationCap, Info, BookOpen } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -99,6 +99,16 @@ const Navbar: React.FC = () => {
                     <div className="text-[10px] text-slate-400 font-normal">By Degree &amp; Background</div>
                   </div>
                 </Link>
+                <Link 
+                  href="/syllabus" 
+                  className="flex items-center gap-2.5 px-4 py-2.5 text-xs text-slate-700 hover:bg-slate-50 hover:text-blue-900 transition-colors"
+                >
+                  <BookOpen size={14} className="text-emerald-600 shrink-0" />
+                  <div>
+                    <div className="font-bold text-slate-900">120-Day Syllabus</div>
+                    <div className="text-[10px] text-slate-400 font-normal">Modules &amp; Outcomes</div>
+                  </div>
+                </Link>
                 <div className="my-1 border-t border-slate-100" />
                 <Link 
                   href="/about" 
@@ -151,6 +161,10 @@ const Navbar: React.FC = () => {
             </Link>
             <Link href="/courses" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-900 py-3 border-b border-slate-100">
               Courses
+            </Link>
+            <Link href="/syllabus" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-900 py-3 border-b border-slate-100 flex items-center justify-between">
+              <span>120-Day Syllabus Guide</span>
+              <span className="text-[10px] bg-amber-100 text-amber-900 font-bold px-2 py-0.5 rounded">PDF</span>
             </Link>
             <Link href="/compare" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-900 py-3 border-b border-slate-100">
               Compare Institutes

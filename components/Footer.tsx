@@ -42,6 +42,7 @@ const Footer: React.FC = () => {
   <ul className="space-y-3 text-sm">
   <li><Link href="/pay-after-placement" className="hover:text-white transition-colors">Pay After Placement Model</Link></li>
   <li><Link href="/courses" className="hover:text-white transition-colors">All Programs</Link></li>
+  <li><Link href="/syllabus" className="hover:text-white transition-colors">120-Day Syllabus Guide</Link></li>
   <li><Link href="/courses/digital-marketing-mastery" className="hover:text-white transition-colors">Digital Marketing Mastery</Link></li>
   <li><Link href="/career" className="hover:text-white transition-colors">Degree Career Tracks</Link></li>
   <li><Link href="/blog/top-pay-after-placement-digital-marketing-courses" className="hover:text-white transition-colors">Placement Guarantee Courses</Link></li>

@@ -10,6 +10,8 @@ import ApplyNowButton from '../../components/ApplyNowButton';
 import IsaCalculator from '../../components/IsaCalculator';
 import CityDirectory from '../../components/CityDirectory';
 import InlineLeadForm from '../../components/InlineLeadForm';
+import PlacementTicker from '../../components/PlacementTicker';
+import EligibilityQuiz from '../../components/EligibilityQuiz';
 
 export const metadata: Metadata = {
   title: 'Pay After Placement Digital Marketing Course India | 100% Job Guarantee | Vocaplace',
@@ -236,9 +238,13 @@ export default function PayAfterPlacementPage() {
         </div>
       </section>
 
-      {/* Interactive Calculator Section */}
+      {/* Verified Placement Marquee */}
+      <PlacementTicker />
+
+      {/* Interactive Eligibility & Calculator Section */}
       <section id="calculator" className="py-20 px-6 bg-slate-50">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto space-y-16">
+          <EligibilityQuiz />
           <IsaCalculator />
         </div>
       </section>

@@ -5,12 +5,14 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 interface ModalOptions {
   source?: string;
   defaultDegree?: string;
+  mode?: 'apply' | 'syllabus';
 }
 
 interface ApplyModalContextType {
   isOpen: boolean;
   options: ModalOptions;
   openModal: (options?: ModalOptions) => void;
+  openSyllabusModal: (options?: Omit<ModalOptions, 'mode'>) => void;
   closeModal: () => void;
 }
 
@@ -21,7 +23,12 @@ export const ApplyModalProvider: React.FC<{ children: React.ReactNode }> = ({ ch
   const [options, setOptions] = useState<ModalOptions>({});
 
   const openModal = (opts?: ModalOptions) => {
-    setOptions(opts || {});
+    setOptions(opts || { mode: 'apply' });
+    setIsOpen(true);
+  };
+
+  const openSyllabusModal = (opts?: Omit<ModalOptions, 'mode'>) => {
+    setOptions({ ...(opts || {}), mode: 'syllabus' });
     setIsOpen(true);
   };
 
@@ -43,7 +50,7 @@ export const ApplyModalProvider: React.FC<{ children: React.ReactNode }> = ({ ch
   }, []);
 
   return (
-    <ApplyModalContext.Provider value={{ isOpen, options, openModal, closeModal }}>
+    <ApplyModalContext.Provider value={{ isOpen, options, openModal, openSyllabusModal, closeModal }}>
       {children}
     </ApplyModalContext.Provider>
   );
@@ -56,6 +63,7 @@ export const useApplyModal = () => {
       isOpen: false,
       options: {},
       openModal: () => {},
+      openSyllabusModal: () => {},
       closeModal: () => {},
     };
   }

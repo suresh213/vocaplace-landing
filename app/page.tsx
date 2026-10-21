@@ -40,6 +40,8 @@ import ApplyNowButton from '../components/ApplyNowButton';
 import IsaCalculator from '../components/IsaCalculator';
 import CityDirectory from '../components/CityDirectory';
 import InlineLeadForm from '../components/InlineLeadForm';
+import PlacementTicker from '../components/PlacementTicker';
+import EligibilityQuiz from '../components/EligibilityQuiz';
 
 export default function Home() {
   const courseSchema = {
@@ -176,13 +178,15 @@ export default function Home() {
       </p>
     </section>
   <Hero />
+  <PlacementTicker />
  <Results />
  <Curriculum />
  <Workflow />
  <MentorSection />
  <Testimonials />
  <section className="py-20 px-6 bg-slate-50">
-   <div className="max-w-5xl mx-auto">
+   <div className="max-w-5xl mx-auto space-y-16">
+     <EligibilityQuiz />
      <IsaCalculator />
    </div>
  </section>

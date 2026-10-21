@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import {
  ArrowLeft, Clock, BookOpen, Users, CheckCircle,
- Send, Award, AlertCircle, PlayCircle,
+ Send, Award, AlertCircle, PlayCircle, Download,
  Check, ShieldCheck, ChevronDown, ChevronUp
 } from 'lucide-react';
 import { CourseDetail, CourseTask } from '../services/courseData';
@@ -14,16 +14,26 @@ import InlineLeadForm from './InlineLeadForm';
 
 // Internal Enrollment widget supporting button action with validation success popup
 const EnrollmentButton: React.FC<{ courseTitle: string }> = ({ courseTitle }) => {
-  const { openModal } = useApplyModal();
+  const { openModal, openSyllabusModal } = useApplyModal();
   return (
-    <button
-      type="button"
-      onClick={() => openModal({ source: `Course Sidebar - ${courseTitle}` })}
-      id="btn-enroll-action-sidebar"
-      className="w-full py-3 bg-blue-900 text-white text-xs font-bold hover:bg-blue-800 transition-colors text-center block cursor-pointer"
-    >
-      Apply Now - Pay After Placement
-    </button>
+    <div className="space-y-2">
+      <button
+        type="button"
+        onClick={() => openModal({ source: `Course Sidebar - ${courseTitle}` })}
+        id="btn-enroll-action-sidebar"
+        className="w-full py-3 bg-blue-900 text-white text-xs font-bold hover:bg-blue-800 transition-colors text-center block cursor-pointer"
+      >
+        Apply Now - Pay After Placement
+      </button>
+      <button
+        type="button"
+        onClick={() => openSyllabusModal({ source: `Course Sidebar Download Syllabus - ${courseTitle}` })}
+        className="w-full py-2.5 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-800 text-xs font-semibold transition-colors text-center flex items-center justify-center gap-1.5 cursor-pointer"
+      >
+        <Download size={14} className="text-amber-500" />
+        Download Syllabus (PDF)
+      </button>
+    </div>
   );
 };
 
@@ -32,7 +42,7 @@ interface CourseDetailClientProps {
 }
 
 const CourseDetailClient: React.FC<CourseDetailClientProps> = ({ course }) => {
-  const { openModal } = useApplyModal();
+  const { openModal, openSyllabusModal } = useApplyModal();
   // State for expanded modules
  const [expandedModules, setExpandedModules] = useState<{ [key: string]: boolean }>({});
  // State for expanded tasks
@@ -152,22 +162,31 @@ const CourseDetailClient: React.FC<CourseDetailClientProps> = ({ course }) => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center gap-3">
               <button
                 type="button"
                 onClick={() => openModal({ source: `Course Hero - ${course.title}` })}
                 id="btn-enroll-hero-bottom"
-                className="w-full sm:w-auto h-12 px-8 bg-blue-900 text-white text-xs font-bold flex items-center justify-center hover:bg-blue-800 transition-colors whitespace-nowrap cursor-pointer"
+                className="w-full sm:w-auto h-12 px-7 bg-amber-400 hover:bg-amber-300 text-blue-950 text-xs font-extrabold flex items-center justify-center transition-colors whitespace-nowrap cursor-pointer shadow-sm"
               >
-                Enroll in Program
+                Apply (Pay After Placement)
               </button>
-              {course.isaEnabled && (
-                <div className="flex items-center gap-2 text-xs font-bold text-slate-800">
-                  <ShieldCheck className="w-5 h-5 text-green-600"/>
-                  <span>Contractual 100% Placement Guarantee (₹4–8 LPA)</span>
-                </div>
-              )}
+              <button
+                type="button"
+                onClick={() => openSyllabusModal({ source: `Course Hero Download Syllabus - ${course.title}` })}
+                id="btn-syllabus-hero-bottom"
+                className="w-full sm:w-auto h-12 px-6 bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 text-xs font-bold flex items-center justify-center gap-2 transition-colors whitespace-nowrap cursor-pointer"
+              >
+                <Download size={14} className="text-amber-500" />
+                Download 120-Day Syllabus (PDF)
+              </button>
             </div>
+            {course.isaEnabled && (
+              <div className="flex items-center gap-2 text-xs font-bold text-slate-800 pt-1">
+                <ShieldCheck className="w-5 h-5 text-green-600"/>
+                <span>Contractual 100% Placement Guarantee (₹4–8 LPA) · Flat ₹50k fee once placed</span>
+              </div>
+            )}
           </div>
 
  {/* Right Column: Thumbnail / Video Preview */}

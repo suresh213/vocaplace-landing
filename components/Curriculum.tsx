@@ -7,7 +7,7 @@ import { Search, Megaphone, Globe, Bot } from 'lucide-react';
 import { useApplyModal } from './ApplyModalContext';
 
 const Curriculum = () => {
-  const { openModal } = useApplyModal();
+  const { openModal, openSyllabusModal } = useApplyModal();
  const programs = [
  {
  title:"Search Engine Optimization (SEO)",
@@ -111,16 +111,16 @@ const Curriculum = () => {
  className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10"
  >
           <button
-            onClick={() => openModal({ source: 'Curriculum Download Syllabus' })}
+            onClick={() => openSyllabusModal({ source: 'Curriculum Section Download Syllabus' })}
             className="inline-flex items-center gap-2 px-8 py-4 bg-blue-900 text-white font-bold rounded-xl hover:bg-blue-800 transition-colors text-base cursor-pointer"
           >
-            Download Full Syllabus
+            Download Full Syllabus (PDF)
           </button>
  <Link
  href="/courses/digital-marketing-mastery"
  className="inline-flex items-center gap-2 px-8 py-4 bg-slate-100 text-slate-800 font-semibold rounded-xl hover:bg-slate-200 transition-colors text-base border border-slate-200"
  >
- Explore 120-Day Modules &amp; Fees →
+ Explore 120-Day Modules &amp; Outcomes →
  </Link>
  </motion.div>
  </div>
