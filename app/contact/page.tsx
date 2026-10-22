@@ -18,11 +18,11 @@ export default function ContactPage() {
       '@type': 'EducationalOrganization',
       name: 'Vocaplace',
       url: 'https://vocaplace.com',
-      telephone: '+918882788412',
+      telephone: '+918240127751',
       email: 'hello@vocaplace.com',
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+918882788412',
+        telephone: '+918240127751',
         contactType: 'Course Admissions & Inquiries',
         areaServed: 'IN',
         availableLanguage: ['English', 'Hindi']

@@ -103,7 +103,7 @@ export default function PrivacyPage() {
               <div className="bg-slate-50 border border-slate-200 p-4 rounded-xl mt-2 text-xs">
                 <p className="font-bold text-slate-900">Vocaplace Technologies Pvt. Ltd.</p>
                 <p>Email: <a href="mailto:hello@vocaplace.com" className="text-blue-900 underline">hello@vocaplace.com</a></p>
-                <p>Phone: +91 88827 88412</p>
+                <p>Phone: +91 82401 27751</p>
               </div>
             </section>
           </div>
