@@ -298,7 +298,7 @@ const BlogDetailClient: React.FC<BlogDetailClientProps> = ({ post }) => {
                       <PhoneCall className="w-4 h-4"/> Apply for Next Batch
                     </button>
                     <a
-                      href="https://wa.me/918527647899?text=Hi%20Vocaplace%2C%20I%20am%20reading%20your%20blog%20and%20want%20to%20know%20more%20about%20the%20Pay%20After%20Placement%20course"
+                      href="https://wa.me/918882788412?text=Hi%20Vocaplace%2C%20I%20am%20reading%20your%20blog%20and%20want%20to%20know%20more%20about%20the%20Pay%20After%20Placement%20course"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-5 py-3 bg-green-600 hover:bg-green-500 text-white font-bold text-xs rounded-xl text-center transition-colors shadow-lg flex items-center justify-center gap-2"

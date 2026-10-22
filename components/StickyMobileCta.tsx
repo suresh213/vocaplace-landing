@@ -45,7 +45,7 @@ export default function StickyMobileCta() {
         <div className="flex items-center gap-2 shrink-0">
           {/* WhatsApp Direct */}
           <a
-            href="https://wa.me/918527647899?text=Hi%20Vocaplace!%20I%20am%20interested%20in%20the%20Pay%20After%20Placement%20Digital%20Marketing%20Course."
+            href="https://wa.me/918882788412?text=Hi%20Vocaplace!%20I%20am%20interested%20in%20the%20Pay%20After%20Placement%20Digital%20Marketing%20Course."
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat with Counselor on WhatsApp"

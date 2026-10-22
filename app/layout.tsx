@@ -70,7 +70,7 @@ export default function RootLayout({
       logo: 'https://vocaplace.com/logo.webp',
       image: 'https://vocaplace.com/logo.jpeg',
       description: 'India\'s #1 Pay After Placement Digital Marketing Course & AI Automation Bootcamp.',
-      telephone: '+918527647899',
+      telephone: '+918882788412',
       email: 'hello@vocaplace.com',
       sameAs: [
         'https://www.linkedin.com/company/vocaplace',
@@ -78,7 +78,7 @@ export default function RootLayout({
       ],
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+918527647899',
+        telephone: '+918882788412',
         contactType: 'Admissions & Student Support',
         areaServed: 'IN',
         availableLanguage: ['English', 'Hindi']
