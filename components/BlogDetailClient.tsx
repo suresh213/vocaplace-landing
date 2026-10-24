@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, Share2, Award, ChevronRight, CheckCircle2, ChevronDown, Sparkles, PhoneCall, MessageCircle } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, Share2, Award, ChevronRight, CheckCircle2, ChevronDown, Sparkles, PhoneCall, MessageCircle, Phone } from 'lucide-react';
 import { BlogPost, blogPosts } from '../services/blogData';
 import BlogLeadHook from './BlogLeadHook';
 import { useApplyModal } from './ApplyModalContext';
@@ -290,13 +290,20 @@ const BlogDetailClient: React.FC<BlogDetailClientProps> = ({ post }) => {
                     </div>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-3">
+                  <div className="flex flex-col sm:flex-row flex-wrap gap-3">
                     <button
                       onClick={() => openModal({ source: `Blog CTA Box: ${post.title}` })}
                       className="px-5 py-3 bg-amber-400 hover:bg-amber-300 text-blue-950 font-bold text-xs rounded-xl text-center transition-colors shadow-lg flex items-center justify-center gap-2 cursor-pointer"
                     >
                       <PhoneCall className="w-4 h-4"/> Apply for Next Batch
                     </button>
+                    <a
+                      href="tel:+918240127751"
+                      data-call-source={`Blog CTA Box Call: ${post.title}`}
+                      className="px-5 py-3 bg-blue-900 hover:bg-blue-800 text-white font-bold text-xs rounded-xl text-center transition-colors shadow-lg flex items-center justify-center gap-2"
+                    >
+                      <Phone className="w-4 h-4"/> Call Admissions
+                    </a>
                     <a
                       href="https://wa.me/918240127751?text=Hi%20Vocaplace%2C%20I%20am%20reading%20your%20blog%20and%20want%20to%20know%20more%20about%20the%20Pay%20After%20Placement%20course"
                       target="_blank"

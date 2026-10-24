@@ -63,7 +63,7 @@ const Testimonials: React.FC = () => {
  whileInView={{ opacity: 1, y: 0 }}
  viewport={{ once: true }}
  transition={{ delay: i * 0.1 }}
- className="bg-white p-6 rounded-2xl border border-slate-100 hover: transition-all duration-300 flex flex-col"
+ className="bg-white p-6 rounded-2xl border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col"
  >
  {/* Type badge */}
  <span className="self-start px-3 py-1 text-xs font-bold rounded-full bg-blue-50 text-blue-700 border border-blue-100 mb-4">

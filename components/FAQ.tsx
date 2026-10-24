@@ -6,7 +6,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 const faqs = [
   {
     q: "How does the Pay After Placement model work step by step?",
-    a: "Under our Pay After Placement model, your core tuition is completely deferred until you land a job. You undergo 120 days of live training under Victoria University faculty Wajed Sk, manage real Google & Meta ad budgets, and build a verified client portfolio. Once you receive an offer letter of at least ₹4.0–8.0 LPA and your first month salary is credited, you pay your tuition in easy monthly installments. If you do not get placed within 90 days, you pay ₹0 in tuition."
+    a: "Under our Pay After Placement model, your core tuition is completely deferred until you land a job. You undergo 120 days of live training under Victoria University faculty Wajed Sk, manage real Google & Meta ad budgets, and build a verified client portfolio. Once you receive an offer letter of at least ₹4.0–8.0 LPA and your first month salary is credited, you pay a transparent flat ₹50,000 fee in easy monthly installments (₹5,000/mo over 10 months). If you do not get placed within 90 days, you pay ₹0 in tuition."
   },
   {
     q: "Is Pay After Placement in digital marketing real or fake? How does Vocaplace guarantee it?",
@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     q: "How do Vocaplace course fees compare to Kraftshala's ₹1,75,820 fees?",
-    a: "Kraftshala's Marketing Launchpad charges ₹1,49,000 + 18% GST (totaling ₹1,75,820) and requires a 20% upfront payment or bank loan. In contrast, Vocaplace defers your core tuition entirely until placement. You pay nothing in tuition upfront, saving over ₹1,20,000 in immediate capital risk while getting live mentorship under Victoria University faculty."
+    a: "Kraftshala's Marketing Launchpad charges ₹1,49,000 + 18% GST (totaling ₹1,75,820) and requires an upfront payment or mandatory bank loan. In contrast, Vocaplace charges a transparent flat ₹50,000 fee once placed - saving you over ₹1,25,000. Your core tuition is completely deferred until placement, with zero percentage deductions from your salary."
   },
   {
     q: "Are there any hidden NBFC bank loans, interest charges, or penalty clauses?",

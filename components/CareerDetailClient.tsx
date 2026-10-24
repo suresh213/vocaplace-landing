@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { CareerTrack } from '../services/careerData';
 import { 
   ArrowRight, 
@@ -406,9 +407,11 @@ export default function CareerDetailClient({ track }: CareerDetailClientProps) {
         {/* Lead Mentor Feature (Wajed Sk) */}
         <section className="mb-14 p-8 rounded-2xl bg-gradient-to-br from-blue-950 to-slate-900 text-white">
           <div className="flex flex-col md:flex-row items-center gap-6">
-            <img
+            <Image
               src="/mentor.jpeg"
               alt="Wajed Sk Lead Mentor"
+              width={112}
+              height={112}
               className="w-24 h-24 md:w-28 md:h-28 rounded-2xl object-cover border-2 border-amber-400 shrink-0"
             />
             <div>

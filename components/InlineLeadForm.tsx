@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Sparkles, ShieldCheck, ArrowRight, Loader2, CheckCircle2 } from 'lucide-react';
 import { useApplyModal } from './ApplyModalContext';
+import { getStoredAttribution } from './UtmForwarder';
 
 interface InlineLeadFormProps {
   title?: string;
@@ -40,7 +41,7 @@ export default function InlineLeadForm({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...formData,
-          source: source,
+          source: `${source}${getStoredAttribution()}`,
         }),
       });
 

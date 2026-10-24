@@ -50,8 +50,8 @@ const HireTalentPage: React.FC = () => {
       }
 
       setIsSuccess(true);
-    } catch (err: any) {
-      setErrorMessage(err.message || 'Something went wrong. Please check your connection.');
+    } catch (err: unknown) {
+      setErrorMessage(err instanceof Error ? err.message : 'Something went wrong. Please check your connection.');
     } finally {
       setIsSubmitting(false);
     }
@@ -115,7 +115,7 @@ const HireTalentPage: React.FC = () => {
  { title: 'Skills You Can Verify', desc: 'Every graduate holds a verified Vocaplace certification. You can review their actual project work and campaign reports before hiring.', points: ['Campaign portfolio included', 'Certified competencies', 'Performance history shared'] },
  { title: 'Save Lakhs on Training', desc: 'Typical onboarding for a digital marketing fresher costs ₹1–2L in training time. Our graduates skip that entirely.', points: ['4-month intensive training done', 'Soft skills ready', 'Agency workflow familiar'] },
  ].map((b, i) => (
- <div key={i} className="p-8 bg-white rounded-2xl border border-slate-100 hover: transition-all duration-300 flex flex-col">
+ <div key={i} className="p-8 bg-white rounded-2xl border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col">
  <h3 className="text-lg font-bold text-slate-900 mb-3">{b.title}</h3>
  <p className="text-slate-500 text-sm mb-6 flex-grow leading-relaxed">{b.desc}</p>
  <ul className="space-y-2 pt-5 border-t border-slate-100">

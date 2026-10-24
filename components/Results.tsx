@@ -38,8 +38,8 @@ const steps = [
  },
  {
  num:"05",
- title:"Pay After Placement",
- desc:"Once you receive your offer letter, you pay the course fee in installments with our 100% job guarantee.",
+ title:"Pay After Placement (Flat ₹50k)",
+ desc:"Once you receive your verified offer letter of ₹4.0+ LPA, you pay a flat ₹50,000 fee in easy monthly installments. That's it - no percentage cuts.",
  icon:"✅",
  },
 ];

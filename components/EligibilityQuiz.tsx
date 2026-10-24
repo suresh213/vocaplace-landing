@@ -6,6 +6,7 @@ import {
   GraduationCap, Briefcase, TrendingUp, Loader2, Award
 } from 'lucide-react';
 import { useApplyModal } from './ApplyModalContext';
+import { getStoredAttribution } from './UtmForwarder';
 
 export default function EligibilityQuiz() {
   const { openSyllabusModal } = useApplyModal();
@@ -51,7 +52,7 @@ export default function EligibilityQuiz() {
           phone: formData.phone,
           city: formData.city,
           degree: degree,
-          source: 'Eligibility Screener Quiz',
+          source: `Eligibility Screener Quiz${getStoredAttribution()}`,
           notes: `Eligibility Screener: Target CTC: ${targetCtc}, Profile Match: 98% High Priority`,
         }),
       });

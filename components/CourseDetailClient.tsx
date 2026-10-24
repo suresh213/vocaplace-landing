@@ -206,7 +206,7 @@ const CourseDetailClient: React.FC<CourseDetailClientProps> = ({ course }) => {
  rel="noopener noreferrer"
  className="absolute inset-0 flex items-center justify-center bg-slate-900/30 hover:bg-slate-900/50 transition-colors"
  >
- <PlayCircle className="w-16 h-16 text-white drop- hover:scale-110 transition-transform duration-200"/>
+ <PlayCircle className="w-16 h-16 text-white drop-shadow-lg hover:scale-110 transition-transform duration-200"/>
  </a>
  )}
  </div>

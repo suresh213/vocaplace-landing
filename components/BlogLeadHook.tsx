@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Sparkles, ShieldCheck, ArrowRight, Loader2, CheckCircle2 } from 'lucide-react';
 import { useApplyModal } from './ApplyModalContext';
+import { getStoredAttribution } from './UtmForwarder';
 
 interface BlogLeadHookProps {
   postTitle?: string;
@@ -31,7 +32,7 @@ export default function BlogLeadHook({ postTitle, className = '' }: BlogLeadHook
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...formData,
-          source: postTitle ? `Blog Inline: ${postTitle}` : 'Blog Inline Lead Form',
+          source: `${postTitle ? `Blog Inline: ${postTitle}` : 'Blog Inline Lead Form'}${getStoredAttribution()}`,
         }),
       });
 

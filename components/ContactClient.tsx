@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, MessageCircle, Users, Building, Briefcase, HeadphonesIcon, ArrowRight, CheckCircle, Loader2 } from 'lucide-react';
 import { useApplyModal } from './ApplyModalContext';
+import { getStoredAttribution } from './UtmForwarder';
 
 const ContactClient: React.FC = () => {
   const { openModal } = useApplyModal();
@@ -41,7 +42,7 @@ const ContactClient: React.FC = () => {
             phone: formData.phone,
             email: formData.email,
             notes: `[Subject: ${formData.subject}] ${formData.message}`,
-            source: 'Contact Us Page (Company/Partner)',
+            source: `Contact Us Page (Company/Partner)${getStoredAttribution()}`,
           }),
         });
         const data = await res.json();
@@ -56,7 +57,7 @@ const ContactClient: React.FC = () => {
             email: formData.email,
             degree: userType,
             notes: `[Subject: ${formData.subject}] ${formData.message}`,
-            source: 'Contact Us Page',
+            source: `Contact Us Page${getStoredAttribution()}`,
           }),
         });
         const data = await res.json();
@@ -64,8 +65,8 @@ const ContactClient: React.FC = () => {
       }
 
       setSubmitted(true);
-    } catch (err: any) {
-      setErrorMessage(err.message || 'Something went wrong. Please check your connection.');
+    } catch (err: unknown) {
+      setErrorMessage(err instanceof Error ? err.message : 'Something went wrong. Please check your connection.');
     } finally {
       setIsSubmitting(false);
     }

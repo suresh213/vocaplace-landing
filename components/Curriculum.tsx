@@ -75,7 +75,7 @@ const Curriculum = () => {
  whileInView={{ opacity: 1, y: 0 }}
  viewport={{ once: true }}
  transition={{ delay: idx * 0.1 }}
- className={`border rounded-2xl p-6 hover: transition-all duration-300 flex flex-col ${program.color}`}
+ className={`border rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col ${program.color}`}
  >
  <div className={`w-12 h-12 ${program.iconColor} rounded-xl flex items-center justify-center mb-5`}>
  <program.icon className="w-6 h-6 text-white"/>

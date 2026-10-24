@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useApplyModal } from './ApplyModalContext';
+import { getStoredAttribution } from './UtmForwarder';
 import { X, CheckCircle2, ShieldCheck, ArrowRight, Loader2, Sparkles, GraduationCap } from 'lucide-react';
 
 export default function ApplyModal() {
@@ -57,12 +58,15 @@ export default function ApplyModal() {
     setErrorMessage('');
 
     try {
+      const baseSource = options.source || (isSyllabus ? 'Website Syllabus Modal' : (typeof window !== 'undefined' ? window.location.pathname : 'Website Modal'));
+      const sourceWithAttribution = `${baseSource}${getStoredAttribution()}`;
+
       const res = await fetch('/api/lead/student', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...formData,
-          source: options.source || (isSyllabus ? 'Website Syllabus Modal' : (typeof window !== 'undefined' ? window.location.pathname : 'Website Modal')),
+          source: sourceWithAttribution,
           notes: isSyllabus ? 'Requested 120-Day Detailed Curriculum PDF' : undefined,
         }),
       });

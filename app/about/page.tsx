@@ -178,7 +178,7 @@ export default function AboutPage() {
  { num: '05', title: 'True Partnership', desc: 'We only succeed when our students, companies and mentors succeed together.' },
  { num: '06', title: 'Long-Term Thinking', desc: 'We care about your entire career journey - not just landing your first job.' },
  ].map((v, i) => (
- <div key={i} className="p-6 bg-white rounded-2xl border border-slate-100 hover:border-blue-200 hover: transition-all duration-300">
+ <div key={i} className="p-6 bg-white rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
  <div className="text-3xl font-black text-blue-900/15 mb-3">{v.num}</div>
  <h3 className="font-bold text-slate-900 mb-2">{v.title}</h3>
  <p className="text-sm text-slate-500 leading-relaxed">{v.desc}</p>
