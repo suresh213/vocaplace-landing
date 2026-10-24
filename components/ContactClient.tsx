@@ -88,7 +88,7 @@ const ContactClient: React.FC = () => {
           </p>
           {/* Quick contact pills */}
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+918240127751" className="flex items-center gap-2 px-5 py-3 bg-white/10 border border-white/20 rounded-full text-white text-sm font-medium hover:bg-white/20 transition-colors">
+            <a href="tel:+918240127751" data-call-source="Contact Page Hero Call Pill" className="flex items-center gap-2 px-5 py-3 bg-white/10 border border-white/20 rounded-full text-white text-sm font-medium hover:bg-white/20 transition-colors">
               <Phone size={15} className="text-amber-400" />
               +91 82401 27751
             </a>
@@ -298,7 +298,13 @@ const ContactClient: React.FC = () => {
                     <div>
                       <div className="text-xs font-semibold text-slate-400">{item.label}</div>
                       {item.href ? (
-                        <a href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined} className="text-sm font-bold text-slate-900 hover:text-blue-900 transition-colors">
+                        <a
+                          href={item.href}
+                          target={item.href.startsWith('http') ? '_blank' : undefined}
+                          rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                          data-call-source={item.href.startsWith('tel:') ? 'Contact Page Sidebar Call Link' : undefined}
+                          className="text-sm font-bold text-slate-900 hover:text-blue-900 transition-colors"
+                        >
                           {item.value}
                         </a>
                       ) : (

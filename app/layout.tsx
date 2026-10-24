@@ -9,6 +9,7 @@ import { ApplyModalProvider } from '../components/ApplyModalContext';
 import ApplyModal from '../components/ApplyModal';
 import StickyMobileCta from '../components/StickyMobileCta';
 import WhatsAppButton from '../components/WhatsAppButton';
+import CallTrackingListener from '../components/CallTrackingListener';
 
 const inter = Inter({
  subsets: ['latin'],
@@ -166,6 +167,7 @@ export default function RootLayout({
         <ApplyModalProvider>
           <div className="min-h-screen flex flex-col">
             <UtmForwarder />
+            <CallTrackingListener />
             <Navbar />
             <main className="flex-grow">
               {children}

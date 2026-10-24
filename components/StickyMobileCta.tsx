@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useApplyModal } from './ApplyModalContext';
-import { Sparkles, MessageCircle, ArrowRight } from 'lucide-react';
+import { Sparkles, MessageCircle, ArrowRight, Phone } from 'lucide-react';
 
 export default function StickyMobileCta() {
   const { openModal } = useApplyModal();
@@ -42,23 +42,33 @@ export default function StickyMobileCta() {
         </div>
 
         {/* Right Actions */}
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-1.5 shrink-0">
+          {/* Direct Call */}
+          <a
+            href="tel:+918240127751"
+            data-call-source="Sticky Mobile Bar Call Button"
+            aria-label="Call Admissions Counselor"
+            className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-blue-900 hover:bg-blue-800 text-white flex items-center justify-center shadow-sm transition-colors cursor-pointer"
+          >
+            <Phone size={17} />
+          </a>
+
           {/* WhatsApp Direct */}
           <a
             href="https://wa.me/918240127751?text=Hi%20Vocaplace!%20I%20am%20interested%20in%20the%20Pay%20After%20Placement%20Digital%20Marketing%20Course."
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat with Counselor on WhatsApp"
-            className="w-10 h-10 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-sm transition-colors cursor-pointer"
+            className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-sm transition-colors cursor-pointer"
           >
-            <MessageCircle size={20} />
+            <MessageCircle size={18} />
           </a>
 
           {/* Quick Apply Button */}
           <button
             type="button"
             onClick={() => openModal({ source: 'Sticky Mobile Bar' })}
-            className="h-10 px-4 bg-amber-400 hover:bg-amber-300 text-blue-950 font-extrabold text-xs rounded-xl flex items-center gap-1.5 shadow-md transition-colors cursor-pointer"
+            className="h-9 sm:h-10 px-3 sm:px-4 bg-amber-400 hover:bg-amber-300 text-blue-950 font-extrabold text-xs rounded-xl flex items-center gap-1.5 shadow-md transition-colors cursor-pointer"
           >
             <span>Apply Now</span>
             <ArrowRight size={14} />

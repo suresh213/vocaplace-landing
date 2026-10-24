@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Menu, X, ChevronDown, Users, GraduationCap, Info, BookOpen } from 'lucide-react';
+import { Menu, X, ChevronDown, Users, GraduationCap, Info, BookOpen, Phone } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -197,6 +197,15 @@ const Navbar: React.FC = () => {
             >
               Apply Now (Pay After Placement)
             </button>
+            <a 
+              href="tel:+918240127751"
+              data-call-source="Navbar Mobile Drawer Call Button"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center justify-center gap-2 w-full py-3 bg-slate-100 hover:bg-slate-200 text-slate-800 text-sm font-semibold rounded-xl transition-colors"
+            >
+              <Phone size={15} className="text-blue-900" />
+              <span>Call Admissions: +91 82401 27751</span>
+            </a>
           </div>
         </div>
       </div>
